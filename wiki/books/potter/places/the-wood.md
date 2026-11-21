@@ -1,7 +1,7 @@
 ---
 type: place
 book: potter
-sources: [peter-rabbit]
+sources: [peter-rabbit, benjamin-bunny]
 ---
 # The wood（樹林）
 
@@ -10,9 +10,12 @@ sources: [peter-rabbit]
 - 老鼠把豌豆和豆子搬回樹林裡的家。[src: peter-rabbit ¶26]
 - 樹林在花園外面，Peter 逃到這裡才安全："was safe at last in the wood outside the garden." [src: peter-rabbit ¶30]
 
+- 樹林在花園後面，裡面滿是兔子洞，Benjamin 的親戚住在這裡。[src: benjamin-bunny ¶5-6]
+- 傍晚太陽繞到樹林後面。[src: benjamin-bunny ¶43]
+
 ## 氛圍判斷（推論）
 - （推論）安全的地方：原文用 "safe at last" 描述 Peter 到了樹林。[src: peter-rabbit ¶30]
 
 ## 出現在
-- 篇章：[[peter-rabbit]]
+- 篇章：[[peter-rabbit]]、[[benjamin-bunny]]
 - 相鄰地點：[[mr-mcgregors-garden]]

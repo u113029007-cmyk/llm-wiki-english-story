@@ -6,6 +6,7 @@ sources: [peter-rabbit]
 # The Tale of Peter Rabbit（彼得兔的故事）
 
 - 所屬：[[potter-overview]]
+- 下一篇：[[benjamin-bunny]]
 
 ## 故事摘要（依段落順序）
 ### 1. 開場：媽媽的警告
@@ -54,10 +55,10 @@ sources: [peter-rabbit]
 
 ## 出場角色
 - 主要角色：[[peter]]、[[mrs-rabbit]]、[[mr-mcgregor]]、[[flopsy]]、[[mopsy]]、[[cottontail]]
+- 其他角色：[[mrs-mcgregor]]
 - 被提到的角色：[[benjamin-bunny-character]]
 
 ## 配角（不另建頁）
-- Mrs. McGregor：把爸爸做成派的人。[src: peter-rabbit ¶4]
 - 麻雀：鼓勵被網子纏住的 Peter。[src: peter-rabbit ¶17]
 - 老鼠：嘴裡含著豌豆，無法回答 Peter。[src: peter-rabbit ¶26]
 - 白貓：在池塘邊盯著金魚。[src: peter-rabbit ¶27]

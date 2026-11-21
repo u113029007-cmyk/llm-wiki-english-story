@@ -1,7 +1,7 @@
 ---
 type: vocabulary
 book: potter
-sources: [peter-rabbit]
+sources: [peter-rabbit, benjamin-bunny]
 ---
 # lettuces
 
@@ -11,5 +11,7 @@ sources: [peter-rabbit]
 ## 原文例句
 - "First he ate some lettuces and some French beans" [src: peter-rabbit ¶10]
 
+- "Benjamin, on the contrary, was perfectly at home, and ate a lettuce leaf." [src: benjamin-bunny ¶27]
+
 ## 出現在
-- 篇章：[[peter-rabbit]]
+- 篇章：[[peter-rabbit]]、[[benjamin-bunny]]

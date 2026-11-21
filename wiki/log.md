@@ -44,3 +44,14 @@ type: log
 - 修正：(1) 補上 `- `；(2) lint.py 改為忽略反引號內的文字，log 範例加上反引號。
 - lint 第 2 輪：全過（23 頁、112 個出處、24 個英文引句）。
 - 其他：總覽檔名改為 potter-overview.md（避免日後 Alice 撞名），AGENTS.md 同步更新。
+
+## [2026-11-21] ingest | The Tale of Benjamin Bunny
+- 觸發：Joanna 說「ingest benjamin-bunny」。寫頁面前先報告 5 行重點（第 2 次，最後一次需確認的 ingest）。
+- Joanna 決定：(1) Mrs. McGregor 第二次出現，依規則建頁；(2) 本篇的貓原文只寫 "The cat"，不建頁、不和第一篇的白貓連結，故事頁註明不能推定為同一隻；(3) 8 個單字照提案。
+- 新增頁面（11）：stories/benjamin-bunny；characters/old-mr-benjamin-bunny、mrs-mcgregor；vocabulary/cousin、widow、poorly、scarecrow、clogs、onions、basket、greenhouse。
+- 更新頁面（14）：stories/peter-rabbit（上下篇連結、Mrs. McGregor 移出配角）；characters/benjamin-bunny-character、peter、mrs-rabbit、mr-mcgregor、flopsy、mopsy、cottontail；places 三頁；vocabulary/lettuces、camomile-tea；potter-overview；index。
+- 跨篇連結：稻草人衣服（peter-rabbit ¶31 → benjamin-bunny ¶12、¶23）、兔媽媽是寡婦（peter-rabbit ¶4 → benjamin-bunny ¶7）、從 Benjamin 聽說貓（peter-rabbit ¶27 → benjamin-bunny ¶37-41）。
+- 寫入程式第 1 次執行失敗：Python 3.10 f-string 引號衝突，整支未執行，無半成品；修正後重跑。
+- lint 第 1 輪：全過（34 頁、231 個出處、42 個英文引句）。
+- 自我檢查發現 1 處腳本抓不到的問題：fir-tree-rabbit-hole 把「最整齊的兔子洞」直接寫成冷杉樹下的家，實為接合 ¶6 與 ¶9 的推論 → 改標（推論）並寫出根據。lint 重跑全過。
+- 其他：新增 .gitignore 忽略 Obsidian 的 .obsidian/ 設定資料夾。

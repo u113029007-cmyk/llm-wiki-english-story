@@ -1,7 +1,7 @@
 ---
 type: vocabulary
 book: potter
-sources: [peter-rabbit]
+sources: [peter-rabbit, benjamin-bunny]
 ---
 # camomile tea
 
@@ -11,5 +11,8 @@ sources: [peter-rabbit]
 ## 原文例句
 - "made some camomile tea" [src: peter-rabbit ¶35]
 
+## 相關用法
+- 第二篇只說 camomile（洋甘菊），沒有 tea："fetch some more camomile!" [src: benjamin-bunny ¶15]
+
 ## 出現在
-- 篇章：[[peter-rabbit]]
+- 篇章：[[peter-rabbit]]、[[benjamin-bunny]]
