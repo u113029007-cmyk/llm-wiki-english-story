@@ -22,7 +22,7 @@ wiki/
   log.md               時間紀錄，只能往後加
   sources.md           來源與版權紀錄
   books/potter/
-    overview.md        全書總覽，每次 ingest 後更新
+    potter-overview.md 全書總覽，每次 ingest 後更新（檔名加書名，避免日後 Alice 的總覽撞名）
     stories/           每篇故事一頁
     characters/        每個角色一頁
     places/            每個地點一頁
@@ -71,7 +71,7 @@ sources: [peter-rabbit, benjamin-bunny]
 - characters/：角色特徵、出現在哪幾篇、和其他角色的關係，全部附出處。
 - places/：分兩欄。「原文描述」附出處；「氛圍判斷」（例如偏暗、偏亮）一律標（推論）並寫根據哪段原文。供簡報配色使用。
 - vocabulary/：單字、原文例句（一字不改，附出處）、中文解釋、出現在哪幾篇。
-- overview.md：全書綜合整理，每次 ingest 後更新。
+- potter-overview.md（其他書用「書名-overview.md」）：全書綜合整理，每次 ingest 後更新。
 
 ## 5. 版權檢查（第一關）
 新來源進 raw/ 之前：

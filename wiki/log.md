@@ -29,7 +29,18 @@ type: log
 
 ## [2026-11-21] fix | 「每條都要有出處」改為腳本強制
 - 原本 lint 只把「沒出處的條列」列為提醒，因為頁面格式自由，腳本分不出哪行是事實。
-- 改法：AGENTS.md 規定 books/ 頁面只能用標題、條列、表格；每條條列與每列表格都要有 [src:]（只放連結、格式為「標籤：[[連結]]」的條列除外）。lint 第 2 項改為強制失敗。
+- 改法：AGENTS.md 規定 books/ 頁面只能用標題、條列、表格；每條條列與每列表格都要有 [src:]（只放連結、格式為 `標籤：[[連結]]`的條列除外）。lint 第 2 項改為強制失敗。
 - 驗證：測試頁中「Peter 吃了紅蘿蔔。」（無出處）、自由段落、無出處的表格列都被抓到；正確的條列、推論條列、純連結條列通過。
 - 測試時發現 lint 誤判：表格標題列被要求出處 → 修正為跳過標題列與分隔列。
 - 限制：腳本只能確認「有標出處、出處存在」，無法判斷中文摘要是否忠於原文（例：¶10 原文是 radishes 小蘿蔔，插圖描述卻是 carrot；若寫「吃了紅蘿蔔 [src: peter-rabbit ¶10]」腳本會通過）。這類錯誤交給新對話的 AI 審查。
+
+## [2026-11-21] ingest | The Tale of Peter Rabbit
+- 觸發：Joanna 說「ingest peter-rabbit」。
+- 寫頁面前先報告 5 行重點；Joanna 決定 Flopsy、Mopsy、Cottontail 各一頁，配角（Mrs. McGregor、麻雀、老鼠、白貓）只寫在故事頁。
+- 新增頁面（20）：stories/peter-rabbit；characters/peter、mrs-rabbit、flopsy、mopsy、cottontail、mr-mcgregor、benjamin-bunny-character；places/mr-mcgregors-garden、fir-tree-rabbit-hole、the-wood；vocabulary/naughty、mischief、lettuces、radishes、parsley、frightened、sieve、camomile-tea；potter-overview。
+- 更新頁面：index。
+- 跨篇線索：¶27 提到表弟 Benjamin Bunny，已建角色頁等下一篇補充。
+- lint 第 1 輪失敗 2 處：(1) 故事頁「所屬：」那行忘了加 `- `，違反條列格式（AI 寫頁錯誤）；(2) log.md 中說明規則用的範例 `標籤：[[連結]]` 被當成斷連結（lint 誤判）。
+- 修正：(1) 補上 `- `；(2) lint.py 改為忽略反引號內的文字，log 範例加上反引號。
+- lint 第 2 輪：全過（23 頁、112 個出處、24 個英文引句）。
+- 其他：總覽檔名改為 potter-overview.md（避免日後 Alice 撞名），AGENTS.md 同步更新。

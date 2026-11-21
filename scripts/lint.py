@@ -90,6 +90,7 @@ def main():
 
     inbound = {k: set() for k in pages}
     for name, t in texts.items():
+        t = re.sub(r"`[^`\n]*`", "", t)
         for m in LINK.finditer(t):
             tgt = m.group(1).strip()
             if tgt not in pages:

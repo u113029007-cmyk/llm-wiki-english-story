@@ -8,4 +8,22 @@ type: index
 - [[log]]：時間紀錄
 
 ## Beatrix Potter
-（尚未 ingest）
+- [[potter-overview]]：故事集總覽
+
+### 故事
+- [[peter-rabbit]]：The Tale of Peter Rabbit，Peter 偷跑進 Mr. McGregor 的花園
+
+### 角色
+- [[peter]]：調皮的主角，穿藍外套
+- [[mrs-rabbit]]：兔媽媽
+- [[flopsy]]、[[mopsy]]、[[cottontail]]：Peter 的三個乖巧手足
+- [[mr-mcgregor]]：花園主人
+- [[benjamin-bunny-character]]：Peter 的表弟（第一篇只被提到）
+
+### 地點
+- [[mr-mcgregors-garden]]：麥奎格先生的花園
+- [[fir-tree-rabbit-hole]]：兔子一家的家
+- [[the-wood]]：花園外的樹林
+
+### 單字
+- [[naughty]]、[[mischief]]、[[lettuces]]、[[radishes]]、[[parsley]]、[[frightened]]、[[sieve]]、[[camomile-tea]]
