@@ -89,7 +89,7 @@ sources: [peter-rabbit, benjamin-bunny]
 1. 確認該篇已通過版權檢查、已由腳本切好放在 raw/potter/。
 2. 讀該篇原文。
 3. 前兩次 ingest：寫頁面前，先用 5 行以內向使用者報告重點，等使用者確認再寫。之後的 ingest 可直接寫，完成後報告。
-4. 寫或更新：stories/ 該篇頁面、相關 characters/、places/、vocabulary/、overview.md。
+4. 寫或更新：stories/ 該篇頁面、相關 characters/、places/、vocabulary/、potter-overview.md。
 5. 更新 index.md（新頁面加一行）、sources.md。
 6. 在 log.md 最後加一筆（格式見第 10 節）。
 7. 執行腳本 lint（第 7 節）。全過才能 git commit，訊息格式：`ingest: 篇名`。
