@@ -79,7 +79,7 @@ sources: [peter-rabbit, benjamin-bunny]
 已查證：Beatrix Potter 卒於 1943-12-22（Britannica；Cambridge Orlando），台灣保護期 1993-12-31 屆滿。作者兼插畫家。
 
 ## 6. Ingest 流程（一次一篇）
-觸發：只有使用者明確說「ingest 某篇」時才開始。AI 不得自行開始下一篇 ingest。
+觸發：只有使用者明確說「ingest 某篇」時才開始，可一次指定多篇（例如「ingest flopsy-bunnies 和 mr-tod」），此時依序做完再一起報告。未被指定的篇，AI 不得自行開始。
 
 1. 確認該篇已通過版權檢查、已由腳本切好放在 raw/potter/。
 2. 讀該篇原文。

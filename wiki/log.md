@@ -18,3 +18,6 @@ type: log
   - AI 審查第 9 項加入「缺少的交叉連結」（Karpathy lint）。
   - 新增 7.5 節 Query：簡報大綱存回 Wiki 並記 log（Karpathy：好答案存回 Wiki）。
 - 刻意不做：Karpathy lint 的「用網路搜尋補資料缺口」，因本 Wiki 鐵則禁止外部知識。
+
+## [2026-11-21] fix | 觸發可一次指定多篇
+- Joanna 確認：「觸發」管 ingest 開始前，「前兩篇先報告重點」管 ingest 中途，兩者不衝突。改為可一次觸發多篇，依序做完一起報告。
