@@ -11,6 +11,7 @@
 ## 2. 資料夾結構
 ```
 CLAUDE.md              只有 @AGENTS.md
+notes/                 長篇分段閱讀時的筆記檔（執行紀錄）
 AGENTS.md              本檔
 scripts/               切篇編號、lint 等腳本
 raw/                   唯讀，AI 不得修改
@@ -87,7 +88,9 @@ sources: [peter-rabbit, benjamin-bunny]
 觸發：只有使用者明確說「ingest 某篇」時才開始，可一次指定多篇（例如「ingest flopsy-bunnies 和 mr-tod」），此時依序做完再一起報告。未被指定的篇，AI 不得自行開始。
 
 1. 確認該篇已通過版權檢查、已由腳本切好放在 raw/potter/。
-2. 讀該篇原文。
+2. 讀該篇原文。先執行 `python3 scripts/plan_reading.py 短ID`，依腳本輸出決定：
+   - 不超過 60 段：一次讀完。
+   - 超過 60 段：依腳本切的區段一段一段讀；每讀完一段，就把重點（角色、地點、事件、單字，每條附出處）寫進 `notes/短ID.md`。全部區段讀完才開始寫 wiki，寫頁面時依筆記檔，引句回 raw/ 再對一次。notes/ 檔要一起 commit。
 3. 前兩次 ingest：寫頁面前，先用 5 行以內向使用者報告重點，等使用者確認再寫。之後的 ingest 可直接寫，完成後報告。
 4. 寫或更新：stories/ 該篇頁面、相關 characters/、places/、vocabulary/、potter-overview.md。
 5. 更新 index.md（新頁面加一行）、sources.md。

@@ -55,3 +55,9 @@ type: log
 - lint 第 1 輪：全過（34 頁、231 個出處、42 個英文引句）。
 - 自我檢查發現 1 處腳本抓不到的問題：fir-tree-rabbit-hole 把「最整齊的兔子洞」直接寫成冷杉樹下的家，實為接合 ¶6 與 ¶9 的推論 → 改標（推論）並寫出根據。lint 重跑全過。
 - 其他：新增 .gitignore 忽略 Obsidian 的 .obsidian/ 設定資料夾。
+
+## [2026-11-21] setup | 長篇分段閱讀機制 scripts/plan_reading.py
+- 起因：mr-tod 有 156 段，是 peter-rabbit 的 4 倍多。原本「分段讀」只是對話裡的口頭計畫，換對話或換工具就會遺失，因此寫進規則與腳本。
+- 規則（AGENTS.md 第 6 節第 2 步）：超過 60 段就由腳本平均切段；每段讀完把重點寫進 notes/短ID.md；全部讀完才寫 wiki。
+- 門檻 60 為依目前資料選定（前兩篇 37、58 段一次讀完沒有問題），非研究標準，之後可調整。
+- 試跑：peter-rabbit 37、benjamin-bunny 58、flopsy-bunnies 57 段不分段；mr-tod 156 段分 3 段（¶1-52、¶53-104、¶105-156）。
