@@ -62,11 +62,31 @@ def main():
                 if seg not in body:
                     fails[1].append(f"{rel}: 引句片段「{seg}」不在 `{sid} {m.group(3)}`")
         if pages[name].is_relative_to(WIKI / "books"):
-            body_lines = t.split("---", 2)[-1].splitlines()
-            for i, line in enumerate(body_lines):
+            parts = t.split("---", 2)
+            body = parts[2] if t.startswith("---") and len(parts) == 3 else t
+            blines = body.splitlines()
+            sep = re.compile(r"\|[\s:|-]+\|?")
+            for li, line in enumerate(blines):
                 s = line.strip()
-                if s.startswith(("-", "*")) and len(s) > 12 and "[src:" not in s and "[[" not in s:
-                    warns.append(f"{rel}: 可能缺出處 → {s[:60]}")
+                nxt = blines[li + 1].strip() if li + 1 < len(blines) else ""
+                if not s or s.startswith("#"):
+                    continue
+                if s.startswith("|"):
+                    if sep.fullmatch(s) or sep.fullmatch(nxt):
+                        continue
+                    kind = "表格"
+                elif re.match(r"([-*]|\d+\.)\s", s):
+                    kind = "條列"
+                else:
+                    fails[2].append(f"{rel}: 自由段落（books/ 只能用標題、條列、表格）→ {s[:50]}"); continue
+                if "[src:" in s:
+                    continue
+                rest = LINK.sub("", s)
+                rest = re.sub(r"^([-*]|\d+\.)\s*", "", rest)
+                rest = re.sub(r"^[^：:]{0,15}[：:]", "", rest)
+                if re.sub(r"[\s、，,;；。.|*-]", "", rest) == "":
+                    continue
+                fails[2].append(f"{rel}: {kind}缺出處 → {s[:60]}")
 
     inbound = {k: set() for k in pages}
     for name, t in texts.items():
@@ -101,8 +121,6 @@ def main():
     for i in names:
         if fails[i]:
             out += ["", f"## 第 {i} 項失敗：{names[i]}"] + [f"- {x}" for x in fails[i]]
-    if warns:
-        out += ["", "## 提醒（不算失敗，請人工判斷）"] + [f"- {x}" for x in warns]
     report = "\n".join(out) + "\n"
     (ROOT / "reports").mkdir(exist_ok=True)
     (ROOT / "reports" / f"lint-{now.replace(' ', '_').replace(':', '')}.md").write_text(report, encoding="utf-8")
