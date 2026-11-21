@@ -61,3 +61,27 @@ type: log
 - 規則（AGENTS.md 第 6 節第 2 步）：超過 60 段就由腳本平均切段；每段讀完把重點寫進 notes/短ID.md；全部讀完才寫 wiki。
 - 門檻 60 為依目前資料選定（前兩篇 37、58 段一次讀完沒有問題），非研究標準，之後可調整。
 - 試跑：peter-rabbit 37、benjamin-bunny 58、flopsy-bunnies 57 段不分段；mr-tod 156 段分 3 段（¶1-52、¶53-104、¶105-156）。
+
+## [2026-11-21] ingest | The Tale of the Flopsy Bunnies
+- 觸發：Joanna 說「ingest flopsy-bunnies 和 mr-tod」（一次觸發兩篇，依 B 規則連續做完一起報告；本篇起不需寫前確認）。
+- plan_reading.py：57 段，一次讀完。
+- 新增頁面：stories/flopsy-bunnies；characters/flopsy-bunnies-children、thomasina-tittlemouse（本篇主要救援者，雖只出現一篇仍建頁）；places/mr-mcgregors-rubbish-heap、mr-mcgregors-house；vocabulary/soporific、slumber、sack、rubbish、doleful、despair、resourceful、improvident。
+- 跨篇連結：Benjamin 長大娶 Flopsy、Peter 開苗圃借高麗菜、萵苣第三次出現。
+- 第 5 篇候選線索：Thomasina Tittlemouse 說她認識 Peter [src: flopsy-bunnies ¶16]；sources.md 裡有一篇 mrs-tittlemouse，是否同一隻需讀原文才能確定。
+
+## [2026-11-21] ingest | The Tale of Mr. Tod
+- plan_reading.py：156 段，分 3 段（¶1-52、¶53-104、¶105-156）讀；每段讀完寫入 notes/mr-tod.md，三段讀完才寫 wiki。
+- 新增頁面：stories/mr-tod；characters/mr-tod-character（故事頁已用 mr-tod 檔名）、tommy-brock；places/mr-tod-stick-house、bull-banks-house；vocabulary/disagreeable、badger、snoring、oven、tunnel、furious、pail、grinning。
+- 原文名字差異（依第 8 節照原文記錄）：Benjamin 的爸爸在 benjamin-bunny 篇叫 old Mr. Benjamin Bunny，本篇叫 old Mr. Benjamin Bouncer／old Mr. Bouncer；本篇明說其子為 Benjamin Bunny，判定同一角色，兩名並記。
+- 數字差異照原文記錄、不推定：flopsy-bunnies 篇數到 6 隻，本篇 Benjamin 說 7 隻。
+- 本篇的兔子洞是 Benjamin 一家的，不能推定是冷杉樹下 Peter 家，未寫入 fir-tree-rabbit-hole。
+
+## [2026-11-21] lint | 兩篇 ingest 後
+- 兩篇合計：新增 26 頁、更新 12 頁。
+- 第 1 輪失敗 1 處：flopsy-bunnies 故事頁把 ¶20、¶23 兩個出處並排在引句後，引句實際在 ¶23，lint 以緊接引句的出處比對而失敗（AI 寫頁錯誤）。修正為各句各標。
+- 第 2 輪全過（60 頁、473 個出處、82 個英文引句）。
+- lint 過後自我重讀，發現 3 處腳本抓不到的問題並修正：
+  1. potter-overview「四篇最後都靠家人或朋友救出」與原文衝突（peter-rabbit ¶18 是自己逃出）→ 改寫為四篇各自的脫身方式並附出處。
+  2. mr-tod 故事頁「兩人角色互換」是比較詮釋，未標（推論）→ 補標。
+  3. tommy-brock 頁把「後來害了他」寫在連結條列的標籤裡，繞過「純連結條列免出處」的規則 → 移除，改為附出處的條列。
+- 發現規則漏洞：「標籤：[[連結]]」的標籤本身可以夾帶沒出處的說法，lint 目前無法檢查。待與 Joanna 討論補法。

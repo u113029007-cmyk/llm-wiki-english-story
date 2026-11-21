@@ -1,7 +1,7 @@
 ---
 type: character
 book: potter
-sources: [peter-rabbit, benjamin-bunny]
+sources: [benjamin-bunny, flopsy-bunnies, peter-rabbit]
 ---
 # Mr. McGregor（麥奎格先生）
 
@@ -19,9 +19,12 @@ sources: [peter-rabbit, benjamin-bunny]
 - 把 Peter 的外套和鞋子掛起來當稻草人嚇黑鳥。[src: peter-rabbit ¶31]
 - 第二篇和太太駕馬車出門。[src: benjamin-bunny ¶4]
 - 回來後看到很小的木鞋腳印、貓被從外面鎖在溫室，覺得困惑。[src: benjamin-bunny ¶55-57]
+- 把割下的草倒在睡著的小兔子身上，數著把牠們裝進麻袋。[src: flopsy-bunnies ¶17] [src: flopsy-bunnies ¶23]
+- 想把兔子賣掉買菸草，結果袋子裡是爛蔬菜，和太太吵架。[src: flopsy-bunnies ¶49] [src: flopsy-bunnies ¶52-53]
 
 ## 出現在
-- 篇章：[[peter-rabbit]]、[[benjamin-bunny]]
+- 篇章：[[peter-rabbit]]、[[benjamin-bunny]]、[[flopsy-bunnies]]
+- 家：[[mr-mcgregors-house]]、[[mr-mcgregors-rubbish-heap]]
 - 太太：[[mrs-mcgregor]]
 
 ## 相關地點

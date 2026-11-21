@@ -1,7 +1,7 @@
 ---
 type: character
 book: potter
-sources: [peter-rabbit, benjamin-bunny]
+sources: [benjamin-bunny, flopsy-bunnies, mr-tod, peter-rabbit]
 ---
 # Benjamin Bunny（班傑明兔）
 
@@ -21,10 +21,19 @@ sources: [peter-rabbit, benjamin-bunny]
 - 帶 Peter 從梨樹爬進花園拿回衣服，還裝洋蔥送阿姨。[src: benjamin-bunny ¶18] [src: benjamin-bunny ¶22-25]
 - 被爸爸拎著耳朵拉出籃子並挨打。[src: benjamin-bunny ¶52]
 
+## 長大以後
+- 娶了表妹 Flopsy，有很多孩子。[src: flopsy-bunnies ¶5]
+- 食物不夠時向 Peter 借高麗菜。[src: flopsy-bunnies ¶7]
+- 在垃圾堆睡前把紙袋套在頭上擋蒼蠅。[src: flopsy-bunnies ¶12]
+- 孩子被 Tommy Brock 偷走，立刻追出去，找 Peter 幫忙。[src: mr-tod ¶21] [src: mr-tod ¶27]
+- 這次換他驚慌、猶豫，被 Peter 催著進屋救孩子。[src: mr-tod ¶139] [src: mr-tod ¶144] [src: mr-tod ¶150]
+
 ## 出現在
-- 篇章：[[peter-rabbit]]、[[benjamin-bunny]]
+- 篇章：[[peter-rabbit]]、[[benjamin-bunny]]、[[flopsy-bunnies]]、[[mr-tod]]
 
 ## 相關角色
 - 表哥：[[peter]]
 - 爸爸：[[old-mr-benjamin-bunny]]
+- 妻子：[[flopsy]]
+- 孩子：[[flopsy-bunnies-children]]
 - 阿姨：[[mrs-rabbit]]

@@ -1,12 +1,13 @@
 ---
 type: story
 book: potter
-sources: [benjamin-bunny]
+sources: [benjamin-bunny, peter-rabbit]
 ---
 # The Tale of Benjamin Bunny（班傑明兔的故事）
 
 - 所屬：[[potter-overview]]
 - 前一篇：[[peter-rabbit]]
+- 下一篇：[[flopsy-bunnies]]
 
 ## 故事摘要（依段落順序）
 ### 1. Benjamin 出門找親戚

@@ -1,7 +1,7 @@
 ---
 type: character
 book: potter
-sources: [peter-rabbit, benjamin-bunny]
+sources: [benjamin-bunny, flopsy-bunnies, mr-tod, peter-rabbit]
 ---
 # Flopsy
 
@@ -13,9 +13,17 @@ sources: [peter-rabbit, benjamin-bunny]
 - 晚餐吃麵包、牛奶和黑莓。[src: peter-rabbit ¶37]
 - 第二篇被列為 Benjamin 的表親之一。[src: benjamin-bunny ¶6]
 
+## 長大以後
+- 嫁給表哥 Benjamin Bunny，生了很多孩子。[src: flopsy-bunnies ¶5]
+- 被稱為 Mrs. Flopsy Bunny，孩子被困時和 Benjamin 一起絕望。[src: flopsy-bunnies ¶26] [src: flopsy-bunnies ¶29]
+- 會釀櫻草酒。[src: mr-tod ¶16]
+- 發現孩子被偷，打了公公 old Mr. Bouncer，還收走他的菸斗、大掃除發洩。[src: mr-tod ¶20] [src: mr-tod ¶149]
+
 ## 出現在
-- 篇章：[[peter-rabbit]]、[[benjamin-bunny]]
+- 篇章：[[peter-rabbit]]、[[benjamin-bunny]]、[[flopsy-bunnies]]、[[mr-tod]]
 
 ## 相關角色
 - 家人：[[peter]]、[[mrs-rabbit]]
-- 表親：[[benjamin-bunny-character]]
+- 丈夫（原本是表親）：[[benjamin-bunny-character]]
+- 孩子：[[flopsy-bunnies-children]]
+- 公公：[[old-mr-benjamin-bunny]]

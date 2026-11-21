@@ -1,7 +1,7 @@
 ---
 type: character
 book: potter
-sources: [peter-rabbit, benjamin-bunny]
+sources: [benjamin-bunny, flopsy-bunnies, mr-tod, peter-rabbit]
 ---
 # Peter（彼得兔）
 
@@ -20,8 +20,14 @@ sources: [peter-rabbit, benjamin-bunny]
 - 害怕時眼睛睜得像棒棒糖一樣大。[src: benjamin-bunny ¶34]
 - 回家後媽媽因為衣服找回來而原諒他。[src: benjamin-bunny ¶58]
 
+## 長大以後
+- 開了一個苗圃，Benjamin 會向他借高麗菜："Flopsy's brother, Peter Rabbit, who kept a nursery garden." [src: flopsy-bunnies ¶7]
+- 老鼠 Thomasina Tittlemouse 說她認識 Peter。[src: flopsy-bunnies ¶16]
+- 還是穿藍外套，在草地找蒲公英。[src: mr-tod ¶27]
+- 變得冷靜、會推理，推斷出 Tommy Brock 的去向，並帶 Benjamin 救孩子。[src: mr-tod ¶35-36] [src: mr-tod ¶138]
+
 ## 出現在
-- 篇章：[[peter-rabbit]]、[[benjamin-bunny]]
+- 篇章：[[peter-rabbit]]、[[benjamin-bunny]]、[[flopsy-bunnies]]、[[mr-tod]]
 
 ## 相關角色
 - 家人：[[mrs-rabbit]]、[[flopsy]]、[[mopsy]]、[[cottontail]]、[[benjamin-bunny-character]]、[[old-mr-benjamin-bunny]]

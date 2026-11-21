@@ -1,7 +1,7 @@
 ---
 type: character
 book: potter
-sources: [peter-rabbit, benjamin-bunny]
+sources: [benjamin-bunny, mr-tod, peter-rabbit]
 ---
 # Cottontail
 
@@ -15,8 +15,13 @@ sources: [peter-rabbit, benjamin-bunny]
 - 被媽媽叫去拿洋甘菊。[src: benjamin-bunny ¶15]
 - Peter 回家後和他一起摺手帕。[src: benjamin-bunny ¶58]
 
+## 長大以後
+- 嫁給一隻黑兔子，搬到山上住："Cottontail had married a black rabbit, and gone to live on the hill" [src: mr-tod ¶36]
+- 有四五隻半大的小兔子，一隻黑的、其他是棕色的。[src: mr-tod ¶39]
+- 告訴 Peter 和 Benjamin 她看到 Tommy Brock 經過。[src: mr-tod ¶40]
+
 ## 出現在
-- 篇章：[[peter-rabbit]]、[[benjamin-bunny]]
+- 篇章：[[peter-rabbit]]、[[benjamin-bunny]]、[[mr-tod]]
 
 ## 相關角色
 - 家人：[[peter]]、[[mrs-rabbit]]

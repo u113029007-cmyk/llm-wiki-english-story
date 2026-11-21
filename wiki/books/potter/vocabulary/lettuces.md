@@ -1,7 +1,7 @@
 ---
 type: vocabulary
 book: potter
-sources: [peter-rabbit, benjamin-bunny]
+sources: [benjamin-bunny, flopsy-bunnies, peter-rabbit]
 ---
 # lettuces
 
@@ -13,5 +13,9 @@ sources: [peter-rabbit, benjamin-bunny]
 
 - "Benjamin, on the contrary, was perfectly at home, and ate a lettuce leaf." [src: benjamin-bunny ¶27]
 
+## 第三篇
+- "The Flopsy Bunnies simply stuffed lettuces." [src: flopsy-bunnies ¶11]
+
 ## 出現在
-- 篇章：[[peter-rabbit]]、[[benjamin-bunny]]
+- 篇章：[[peter-rabbit]]、[[benjamin-bunny]]、[[flopsy-bunnies]]
+- 相關單字：[[soporific]]
