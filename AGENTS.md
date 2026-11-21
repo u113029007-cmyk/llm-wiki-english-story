@@ -79,6 +79,8 @@ sources: [peter-rabbit, benjamin-bunny]
 已查證：Beatrix Potter 卒於 1943-12-22（Britannica；Cambridge Orlando），台灣保護期 1993-12-31 屆滿。作者兼插畫家。
 
 ## 6. Ingest 流程（一次一篇）
+觸發：只有使用者明確說「ingest 某篇」時才開始。AI 不得自行開始下一篇 ingest。
+
 1. 確認該篇已通過版權檢查、已由腳本切好放在 raw/potter/。
 2. 讀該篇原文。
 3. 前兩次 ingest：寫頁面前，先用 5 行以內向使用者報告重點，等使用者確認再寫。之後的 ingest 可直接寫，完成後報告。
@@ -101,7 +103,11 @@ sources: [peter-rabbit, benjamin-bunny]
 只給審查者 wiki/ 與 raw/，不給本次對話內容。檢查：
 7. 推論都有標（推論），且寫出根據。
 8. 頁面之間說法一致，以 raw/ 為準。
-9. 原文提到但還沒建頁的重要角色或地點。
+9. 原文提到但還沒建頁的重要角色或地點；以及應該互連卻沒有 [[連結]] 的頁面（缺少的交叉連結）。
+
+## 7.5 Query（例如產生簡報）
+- 依 Karpathy：好的答案要存回 Wiki。簡報完成後，把簡報大綱存成 wiki 頁面（放 books/potter/，連到它用到的頁面），並在 log.md 記一筆 `query`。
+- 簡報階段的詳細流程另寫規格檔，到時再與使用者討論。
 
 ## 8. 矛盾處理
 - Wiki 頁面之間不一致：是 AI 寫錯，以 raw/ 原文為準修正，記進 log.md。
