@@ -90,7 +90,7 @@ sources: [peter-rabbit, benjamin-bunny]
 
 ## 7. Lint
 ### 腳本 lint（每次 ingest 後執行，腳本說了才算）
-1. 英文引句在所標段落中找得到（比對前正規化：彎引號轉直引號、連續空白變一個、去掉斜體標記）。
+1. 英文引句在所標段落中找得到（比對前兩邊都正規化：彎引號 ‘’“” 轉直引號、刪除看不見的 U+FEFF、不換行連字號 U+2011 轉 -、… 轉 ...、連續空白變一個、去掉斜體標記）。
 2. 每個 `[src: ID ¶n]` 的 ID 存在於 sources.md，段落 ¶n 真的存在。
 3. 所有 `[[連結]]` 指向的頁面都存在。
 4. 沒有孤兒頁：每頁至少被一頁連到（index.md 不算）。
@@ -122,10 +122,12 @@ sources: [peter-rabbit, benjamin-bunny]
 - 更新頁面：...
 - lint：第 N 輪通過 / 失敗項目與修正
 ```
-其他類型：`lint`、`review`（AI 審查）、`query`（例如產生簡報）、`fix`。
+其他類型：`setup`（建置、腳本）、`lint`、`review`（AI 審查）、`query`（例如產生簡報）、`fix`。
 
 ## 11. 插圖
 - 插圖由腳本從 epub 取出，放 raw/assets/potter/，並產生 images.md：圖檔名 ↔ 篇名 ↔ 緊鄰段落 ¶。
+- images.md 的 alt 欄是 Standard Ebooks 製作者寫的描述，不是 Potter 原文，不得當故事事實引用。
+- raw 段落開頭的〔獻詞〕〔歌謠〕〔題詞〕〔副標題〕是腳本加的標記，不是原文。
 - Wiki 頁面不放圖。簡報階段才依 images.md 挑圖，圖說要標出對應段落。
 - 不得讓 AI 看圖猜內容當作事實。
 
