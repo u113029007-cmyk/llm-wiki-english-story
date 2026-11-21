@@ -10,10 +10,14 @@ sources: [benjamin-bunny, flopsy-bunnies, mr-tod, peter-rabbit]
 
 ## 跨篇角色（目前）
 - 主角：[[peter]]
-- 第二篇正式出場：[[benjamin-bunny-character]]、[[old-mr-benjamin-bunny]]
-- 兩篇以上出現的大人：[[mrs-rabbit]]、[[mr-mcgregor]]、[[mrs-mcgregor]]
-- 第三篇起的下一代：[[flopsy-bunnies-children]]
-- 第四篇的反派：[[mr-tod-character]]、[[tommy-brock]]
+- 第二篇 Benjamin 正式出場，他的爸爸也第一次出現。[src: benjamin-bunny ¶5] [src: benjamin-bunny ¶45]
+- 主要角色：[[benjamin-bunny-character]]、[[old-mr-benjamin-bunny]]
+- 兔媽媽、McGregor 夫婦在兩篇以上出現。[src: peter-rabbit ¶3] [src: benjamin-bunny ¶4] [src: flopsy-bunnies ¶42]
+- 其他角色：[[mrs-rabbit]]、[[mr-mcgregor]]、[[mrs-mcgregor]]
+- 第三篇起出現下一代：Benjamin 和 Flopsy 的孩子們。[src: flopsy-bunnies ¶5-6]
+- 孩子：[[flopsy-bunnies-children]]
+- 第四篇的兩個討人厭角色是 Mr. Tod 和 Tommy Brock。[src: mr-tod ¶2]
+- 對手：[[mr-tod-character]]、[[tommy-brock]]
 
 ## 綜合整理
 - 第一篇的核心衝突：兔媽媽禁止去 Mr. McGregor 的花園，Peter 不聽話跑進去。[src: peter-rabbit ¶3] [src: peter-rabbit ¶8]

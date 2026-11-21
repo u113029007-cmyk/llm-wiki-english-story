@@ -15,11 +15,12 @@ sources: [benjamin-bunny, mr-tod, peter-rabbit]
 
 - Benjamin 沿著樹林裡蜿蜒的小路追蹤 Tommy Brock，路上有小溪。[src: mr-tod ¶22]
 - 日落後樹林裡有貓頭鷹叫。[src: mr-tod ¶57]
+- 沿著樹林小路走到一片砍過的樹叢，就是 Mr. Tod 的木棍屋。[src: mr-tod ¶22-24]
 
 ## 氛圍判斷（推論）
 - （推論）安全的地方：原文用 "safe at last" 描述 Peter 到了樹林。[src: peter-rabbit ¶30]
 
 ## 出現在
 - 篇章：[[peter-rabbit]]、[[benjamin-bunny]]、[[mr-tod]]
-- 樹林裡的其他地點：[[mr-tod-stick-house]]
+- 相關地點：[[mr-tod-stick-house]]
 - 相鄰地點：[[mr-mcgregors-garden]]

@@ -36,6 +36,8 @@ def load_raw():
 
 def main():
     raw = load_raw()
+    m_al = re.search(r"^允許的標籤：(.+)$", (ROOT / "AGENTS.md").read_text(encoding="utf-8"), re.M)
+    allowed = set(x.strip() for x in m_al.group(1).split("、")) if m_al else set()
     sources_txt = (WIKI / "sources.md").read_text(encoding="utf-8")
     src_ids = set(re.findall(r"^\| `([\w-]+)` \|", sources_txt, re.M))
     pages = {p.stem: p for p in WIKI.rglob("*.md")}
@@ -83,8 +85,11 @@ def main():
                     continue
                 rest = LINK.sub("", s)
                 rest = re.sub(r"^([-*]|\d+\.)\s*", "", rest)
+                mlab = re.match(r"^([^：:]{0,15})[：:]", rest)
                 rest = re.sub(r"^[^：:]{0,15}[：:]", "", rest)
                 if re.sub(r"[\s、，,;；。.|*-]", "", rest) == "":
+                    if mlab and mlab.group(1).strip() not in allowed:
+                        fails[2].append(f"{rel}: 連結條列的標籤「{mlab.group(1).strip()}」不在 AGENTS.md 白名單 → {s[:60]}")
                     continue
                 fails[2].append(f"{rel}: {kind}缺出處 → {s[:60]}")
 

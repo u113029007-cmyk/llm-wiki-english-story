@@ -24,6 +24,6 @@ sources: [benjamin-bunny, flopsy-bunnies, mr-tod, peter-rabbit]
 
 ## 相關角色
 - 家人：[[peter]]、[[mrs-rabbit]]
-- 丈夫（原本是表親）：[[benjamin-bunny-character]]
+- 丈夫：[[benjamin-bunny-character]]
 - 孩子：[[flopsy-bunnies-children]]
 - 公公：[[old-mr-benjamin-bunny]]

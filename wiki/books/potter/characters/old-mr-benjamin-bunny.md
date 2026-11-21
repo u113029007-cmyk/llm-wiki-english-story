@@ -21,6 +21,7 @@ sources: [benjamin-bunny, mr-tod]
 - 救出 Benjamin 和 Peter，用鞭子處罰 Benjamin。[src: benjamin-bunny ¶52-53]
 
 ## 在 mr-tod 篇
+- 和 Tommy Brock 是朋友，兩人都討厭水獺和 Mr. Tod。[src: mr-tod ¶10]
 - 年紀很大，圍著圍巾在陽光下抽兔子菸草。[src: mr-tod ¶11]
 - 顧孫子時忘了他們，還請 Tommy Brock 進洞，害孫子被偷。[src: mr-tod ¶13] [src: mr-tod ¶16] [src: mr-tod ¶19]
 - 不肯承認，被媳婦 Flopsy 打，最後被原諒，收到新菸斗。[src: mr-tod ¶20] [src: mr-tod ¶155-156]
@@ -33,4 +34,4 @@ sources: [benjamin-bunny, mr-tod]
 - 姪子：[[peter]]
 - 媳婦：[[flopsy]]
 - 孫子：[[flopsy-bunnies-children]]
-- 曾是朋友：[[tommy-brock]]
+- 朋友：[[tommy-brock]]
