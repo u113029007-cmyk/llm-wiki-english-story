@@ -7,7 +7,8 @@ sources: [benjamin-bunny, flopsy-bunnies, peter-rabbit]
 
 ## 基本資料
 - 花園的主人，兔媽媽禁止孩子去他的花園。[src: peter-rabbit ¶3]
-- 妻子是 Mrs. McGregor，把兔爸爸做成派。[src: peter-rabbit ¶4]
+- （推論）妻子是 Mrs. McGregor：原文沒有 wife/husband 字樣，但兩人同乘馬車、同住一屋，她叫他 silly old man。[src: benjamin-bunny ¶4] [src: flopsy-bunnies ¶42-44]
+- 第一篇提到 Mrs. McGregor 把兔爸爸做成派。[src: peter-rabbit ¶4]
 
 - 稻草人頭上戴的是他的舊蘇格蘭帽。[src: benjamin-bunny ¶17]
 
@@ -24,7 +25,9 @@ sources: [benjamin-bunny, flopsy-bunnies, peter-rabbit]
 
 ## 出現在
 - 篇章：[[peter-rabbit]]、[[benjamin-bunny]]、[[flopsy-bunnies]]
-- 家：[[mr-mcgregors-house]]、[[mr-mcgregors-rubbish-heap]]
+- 家：[[mr-mcgregors-house]]
+- 相關地點：[[mr-mcgregors-rubbish-heap]]
+- 其他角色：[[peter]]、[[flopsy-bunnies-children]]
 - 太太：[[mrs-mcgregor]]
 
 ## 相關地點

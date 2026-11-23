@@ -11,7 +11,7 @@ sources: [mr-tod]
 - 用破桶當煙囪，冒煙代表 Mr. Tod 在家。[src: mr-tod ¶24]
 
 ## 氛圍判斷（推論）
-- （推論）外表漂亮但危險：周圍是一片藍色風信子，但讓 Benjamin 停下的是狐狸的味道。[src: mr-tod ¶23-24]
+- （推論）外表漂亮但危險：周圍是一片藍色風信子，但讓 Benjamin 停下的是狐狸般的味道（foxey flavour）。[src: mr-tod ¶23-24]
 
 ## 出現在
 - 篇章：[[mr-tod]]

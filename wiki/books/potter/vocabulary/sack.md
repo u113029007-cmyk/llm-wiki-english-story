@@ -11,7 +11,7 @@ sources: [flopsy-bunnies, mr-tod]
 ## 原文例句
 - "Mr. McGregor tied up the sack and left it on the wall." [src: flopsy-bunnies ¶24]
 
-- "He had a sack with something" [src: mr-tod ¶35]
+- "He had a sack with something 'live in it" [src: mr-tod ¶35]
 
 ## 出現在
 - 篇章：[[flopsy-bunnies]]、[[mr-tod]]

@@ -14,9 +14,9 @@ sources: [benjamin-bunny, flopsy-bunnies, mr-tod, peter-rabbit]
 - 第二篇被列為 Benjamin 的表親之一。[src: benjamin-bunny ¶6]
 
 ## 長大以後
-- 嫁給表哥 Benjamin Bunny，生了很多孩子。[src: flopsy-bunnies ¶5]
+- 嫁給表哥/表弟（原文 cousin）Benjamin Bunny，生了很多孩子。[src: flopsy-bunnies ¶5]
 - 被稱為 Mrs. Flopsy Bunny，孩子被困時和 Benjamin 一起絕望。[src: flopsy-bunnies ¶26] [src: flopsy-bunnies ¶29]
-- 會釀櫻草酒。[src: mr-tod ¶16]
+- old Mr. Bouncer 拿 Flopsy 的櫻草酒招待客人。[src: mr-tod ¶16]
 - 發現孩子被偷，打了公公 old Mr. Bouncer，還收走他的菸斗、大掃除發洩。[src: mr-tod ¶20] [src: mr-tod ¶149]
 
 ## 出現在

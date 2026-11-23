@@ -6,7 +6,7 @@ sources: [flopsy-bunnies]
 # Mr. McGregor's house（麥奎格家）
 
 ## 原文描述
-- Mr. McGregor 扛著麻袋走進家裡，兔子們爬到窗邊偷聽。[src: flopsy-bunnies ¶37-38]
+- Mr. McGregor 提著麻袋走進家裡，兔子們爬到窗邊偷聽。[src: flopsy-bunnies ¶37-38]
 - 地板是石頭的，Mr. McGregor 把麻袋摔在地上。[src: flopsy-bunnies ¶39]
 - 廚房窗戶：爛西葫蘆從這裡飛出來。[src: flopsy-bunnies ¶53]
 

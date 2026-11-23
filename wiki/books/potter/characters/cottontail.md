@@ -13,7 +13,7 @@ sources: [benjamin-bunny, mr-tod, peter-rabbit]
 - 晚餐吃麵包、牛奶和黑莓。[src: peter-rabbit ¶37]
 - 第二篇被列為 Benjamin 的表親之一。[src: benjamin-bunny ¶6]
 - 被媽媽叫去拿洋甘菊。[src: benjamin-bunny ¶15]
-- Peter 回家後和他一起摺手帕。[src: benjamin-bunny ¶58]
+- Peter 回家後和她一起摺手帕。[src: benjamin-bunny ¶58]
 
 ## 長大以後
 - 嫁給一隻黑兔子，搬到山上住："Cottontail had married a black rabbit, and gone to live on the hill" [src: mr-tod ¶36]

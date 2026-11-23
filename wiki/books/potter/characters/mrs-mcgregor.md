@@ -6,7 +6,8 @@ sources: [benjamin-bunny, flopsy-bunnies, peter-rabbit]
 # Mrs. McGregor（麥奎格太太）
 
 ## 基本資料
-- Mr. McGregor 的太太；第一篇提到她把兔爸爸做成派。[src: peter-rabbit ¶4]
+- （推論）Mr. McGregor 的太太：原文沒有 wife/husband 字樣，但兩人同乘馬車、同住一屋，她叫他 silly old man。[src: benjamin-bunny ¶4] [src: flopsy-bunnies ¶42-44]
+- 第一篇提到她把兔爸爸做成派。[src: peter-rabbit ¶4]
 
 ## 做了什麼
 - 戴著最好的帽子，和丈夫坐馬車出門。[src: benjamin-bunny ¶4]
@@ -19,3 +20,4 @@ sources: [benjamin-bunny, flopsy-bunnies, peter-rabbit]
 
 ## 相關角色
 - 丈夫：[[mr-mcgregor]]
+- 家：[[mr-mcgregors-house]]

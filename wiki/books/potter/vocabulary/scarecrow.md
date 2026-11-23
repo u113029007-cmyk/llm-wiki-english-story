@@ -1,7 +1,7 @@
 ---
 type: vocabulary
 book: potter
-sources: [benjamin-bunny]
+sources: [benjamin-bunny, peter-rabbit]
 ---
 # scarecrow
 

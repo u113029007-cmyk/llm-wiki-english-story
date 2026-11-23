@@ -1,7 +1,7 @@
 ---
 type: vocabulary
 book: potter
-sources: [peter-rabbit, benjamin-bunny]
+sources: [benjamin-bunny, peter-rabbit]
 ---
 # camomile tea
 

@@ -1,7 +1,7 @@
 ---
 type: vocabulary
 book: potter
-sources: [peter-rabbit]
+sources: [mr-tod, peter-rabbit]
 ---
 # frightened
 
@@ -10,6 +10,7 @@ sources: [peter-rabbit]
 
 ## 原文例句
 - "Peter was most dreadfully frightened" [src: peter-rabbit ¶14]
+- "But Benjamin was frightened" [src: mr-tod ¶139]
 
 ## 出現在
-- 篇章：[[peter-rabbit]]
+- 篇章：[[peter-rabbit]]、[[mr-tod]]

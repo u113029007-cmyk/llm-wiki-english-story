@@ -15,7 +15,7 @@ sources: [peter-rabbit]
 - 媽媽說可以去田野或小路，但不准去 Mr. McGregor 的花園："don't go into Mr. McGregor's garden." [src: peter-rabbit ¶3]
 - 原因是爸爸在那裡出了意外，被 Mrs. McGregor 做成派："he was put in a pie by Mrs. McGregor." [src: peter-rabbit ¶4]
 - 媽媽提著籃子和雨傘穿過樹林去麵包店。[src: peter-rabbit ¶6]
-- 三個姊妹乖乖去小路摘黑莓。[src: peter-rabbit ¶7]
+- Flopsy、Mopsy、Cottontail 三隻乖乖去小路摘黑莓。[src: peter-rabbit ¶7]
 
 ### 2. Peter 偷跑進花園
 - Peter 很調皮，直接跑去 Mr. McGregor 的花園："But Peter, who was very naughty, ran straight away to Mr. McGregor's garden." [src: peter-rabbit ¶8]
@@ -39,7 +39,7 @@ sources: [peter-rabbit]
 - Peter 喘不過氣、全身發抖、完全不知道該往哪走，而且全身濕答答。[src: peter-rabbit ¶23]
 - 找到牆上的門但鎖著。[src: peter-rabbit ¶25]
 - 問老鼠大門在哪，老鼠嘴裡含著豌豆不能回答，Peter 哭了。[src: peter-rabbit ¶26]
-- 在池塘邊看到一隻白貓，他想起表弟 Benjamin Bunny 講過貓的事，決定悄悄離開。[src: peter-rabbit ¶27]
+- 在池塘邊看到一隻白貓，他想起表哥/表弟（原文 cousin）Benjamin Bunny 講過貓的事，決定悄悄離開。[src: peter-rabbit ¶27]
 - 爬上手推車偷看，看到 Mr. McGregor 背對著他在鋤洋蔥，後面就是大門。[src: peter-rabbit ¶28]
 
 ### 5. 逃出花園
@@ -50,8 +50,8 @@ sources: [peter-rabbit]
 ### 6. 回家之後
 - 這已經是 Peter 兩週內弄丟的第二套外套和鞋子。[src: peter-rabbit ¶33]
 - 晚上 Peter 身體不舒服，媽媽讓他上床並餵他洋甘菊茶。[src: peter-rabbit ¶34-35]
-- 姊妹們晚餐吃麵包、牛奶和黑莓："But Flopsy, Mopsy, and Cottontail had bread and milk and blackberries for supper." [src: peter-rabbit ¶37]
-- （推論）結尾用「調皮的 Peter 只能喝藥茶」和「聽話的姊妹吃黑莓」做對比，根據是 ¶7 姊妹被稱為 good little bunnies、¶8 Peter 被稱為 very naughty，¶35 與 ¶37 兩種晚餐並列。[src: peter-rabbit ¶7-8] [src: peter-rabbit ¶35] [src: peter-rabbit ¶37]
+- Flopsy、Mopsy、Cottontail 晚餐吃麵包、牛奶和黑莓："But Flopsy, Mopsy, and Cottontail had bread and milk and blackberries for supper." [src: peter-rabbit ¶37]
+- （推論）結尾用「調皮的 Peter 只能喝藥茶」和「聽話的三隻吃黑莓」做對比，根據是 ¶7 這三隻被稱為 good little bunnies、¶8 Peter 被稱為 very naughty，¶35 與 ¶37 兩種晚餐並列。[src: peter-rabbit ¶7-8] [src: peter-rabbit ¶35] [src: peter-rabbit ¶37]
 
 ## 出場角色
 - 主要角色：[[peter]]、[[mrs-rabbit]]、[[mr-mcgregor]]、[[flopsy]]、[[mopsy]]、[[cottontail]]

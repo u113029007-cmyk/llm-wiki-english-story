@@ -8,7 +8,7 @@ sources: [benjamin-bunny, flopsy-bunnies, mr-tod, peter-rabbit]
 ## 基本資料
 - 四隻小兔子之一，兄弟姊妹是 Flopsy、Mopsy、Cottontail。[src: peter-rabbit ¶1]
 - 和媽媽住在大冷杉樹根下。[src: peter-rabbit ¶2]
-- 表弟是 little Benjamin Bunny："he had heard about cats from his cousin, little Benjamin Bunny." [src: peter-rabbit ¶27]
+- 表哥/表弟（原文 cousin）是 little Benjamin Bunny："he had heard about cats from his cousin, little Benjamin Bunny." [src: peter-rabbit ¶27]
 
 ## 個性與特徵
 - 很調皮："But Peter, who was very naughty" [src: peter-rabbit ¶8]
@@ -28,6 +28,7 @@ sources: [benjamin-bunny, flopsy-bunnies, mr-tod, peter-rabbit]
 
 ## 出現在
 - 篇章：[[peter-rabbit]]、[[benjamin-bunny]]、[[flopsy-bunnies]]、[[mr-tod]]
+- 朋友：[[thomasina-tittlemouse]]
 
 ## 相關角色
 - 家人：[[mrs-rabbit]]、[[flopsy]]、[[mopsy]]、[[cottontail]]、[[benjamin-bunny-character]]、[[old-mr-benjamin-bunny]]

@@ -1,7 +1,7 @@
 ---
 type: vocabulary
 book: potter
-sources: [benjamin-bunny]
+sources: [benjamin-bunny, peter-rabbit]
 ---
 # basket
 
@@ -10,6 +10,7 @@ sources: [benjamin-bunny]
 
 ## 原文例句
 - "he hid himself and Peter and the onions underneath a large basket." [src: benjamin-bunny ¶37]
+- "Then old Mrs. Rabbit took a basket and her umbrella" [src: peter-rabbit ¶6]
 
 ## 出現在
-- 篇章：[[benjamin-bunny]]
+- 篇章：[[benjamin-bunny]]、[[peter-rabbit]]
