@@ -22,6 +22,7 @@ sources: [flopsy-bunnies, mr-tod]
 
 ## 出現在
 - 篇章：[[flopsy-bunnies]]、[[mr-tod]]
+- 家：[[benjamin-family-rabbit-hole]]
 
 ## 相關角色
 - 父母：[[benjamin-bunny-character]]、[[flopsy]]

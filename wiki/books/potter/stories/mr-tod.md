@@ -59,9 +59,14 @@ sources: [benjamin-bunny, mr-tod]
 ## 配角（不另建頁）
 - John Stoat Ferret：Peter 以為出事時猜的對象之一，只被提到。[src: mr-tod ¶29]
 - old Vixen Tod：Mr. Tod 的祖母，只被提到。[src: mr-tod ¶71]
+- Cottontail 的丈夫：一隻黑兔子，沒有名字；在家，洞口露出黑耳朵。[src: mr-tod ¶36] [src: mr-tod ¶42]
 
 ## 地點
-- 出現地點：[[mr-tod-stick-house]]、[[bull-banks-house]]、[[the-wood]]
+- 出現地點：[[benjamin-family-rabbit-hole]]、[[mr-tod-stick-house]]、[[bull-banks-house]]、[[the-wood]]
+
+## 其他地點（不另建頁）
+- Cottontail 山上的家：在山坡半山腰，她坐在門口，旁邊有四五隻半大的小兔子。[src: mr-tod ¶36] [src: mr-tod ¶39]
+- Mr. Tod 的柳樹住處：湖邊一棵截頂柳樹，他住進去時嚇到野鴨和水鼠；第四篇他回去試住，但太潮濕，水獺還在旁邊留了死魚。[src: mr-tod ¶4] [src: mr-tod ¶72]
 
 ## 重要單字
 - 本篇單字：[[disagreeable]]、[[badger]]、[[snoring]]、[[oven]]、[[tunnel]]、[[furious]]、[[pail]]、[[grinning]]

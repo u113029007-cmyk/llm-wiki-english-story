@@ -21,7 +21,7 @@ sources: [benjamin-bunny, flopsy-bunnies, mr-tod, peter-rabbit]
 - Flopsy、Mopsy、Cottontail 從第一篇就出現，Flopsy 和 Cottontail 到第四篇還有戲份；Thomasina Tittlemouse 在第三篇救了小兔子。[src: peter-rabbit ¶1] [src: mr-tod ¶12] [src: mr-tod ¶36] [src: flopsy-bunnies ¶30]
 - 其他角色：[[flopsy]]、[[mopsy]]、[[cottontail]]、[[thomasina-tittlemouse]]
 - 地點從花園和兔子洞，擴展到垃圾堆、McGregor 家，以及 Mr. Tod 的兩個家。[src: peter-rabbit ¶8] [src: flopsy-bunnies ¶9] [src: flopsy-bunnies ¶37] [src: mr-tod ¶24] [src: mr-tod ¶43]
-- 出現地點：[[mr-mcgregors-garden]]、[[fir-tree-rabbit-hole]]、[[the-wood]]、[[mr-mcgregors-rubbish-heap]]、[[mr-mcgregors-house]]、[[mr-tod-stick-house]]、[[bull-banks-house]]
+- 出現地點：[[mr-mcgregors-garden]]、[[fir-tree-rabbit-hole]]、[[the-wood]]、[[mr-mcgregors-rubbish-heap]]、[[mr-mcgregors-house]]、[[benjamin-family-rabbit-hole]]、[[mr-tod-stick-house]]、[[bull-banks-house]]
 
 ## 綜合整理
 - 第一篇的核心衝突：兔媽媽禁止去 Mr. McGregor 的花園，Peter 不聽話跑進去。[src: peter-rabbit ¶3] [src: peter-rabbit ¶8]

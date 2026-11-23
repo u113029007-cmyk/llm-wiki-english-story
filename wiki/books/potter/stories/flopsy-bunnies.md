@@ -52,6 +52,9 @@ sources: [benjamin-bunny, flopsy-bunnies, peter-rabbit]
 - 主要角色：[[benjamin-bunny-character]]、[[flopsy]]、[[flopsy-bunnies-children]]、[[thomasina-tittlemouse]]、[[mr-mcgregor]]、[[mrs-mcgregor]]
 - 被提到的角色：[[peter]]
 
+## 其他地點（不另建頁）
+- Peter 的苗圃：Peter 開的苗圃，Benjamin 會來借高麗菜；有時 Peter 也沒有多的高麗菜可借。[src: flopsy-bunnies ¶7-8]
+
 ## 地點
 - 出現地點：[[mr-mcgregors-rubbish-heap]]、[[mr-mcgregors-garden]]、[[mr-mcgregors-house]]
 

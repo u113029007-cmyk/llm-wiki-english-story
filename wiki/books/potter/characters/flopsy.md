@@ -21,6 +21,7 @@ sources: [benjamin-bunny, flopsy-bunnies, mr-tod, peter-rabbit]
 
 ## 出現在
 - 篇章：[[peter-rabbit]]、[[benjamin-bunny]]、[[flopsy-bunnies]]、[[mr-tod]]
+- 家：[[benjamin-family-rabbit-hole]]
 
 ## 相關角色
 - 家人：[[peter]]、[[mrs-rabbit]]

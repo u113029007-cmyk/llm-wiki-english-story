@@ -28,6 +28,7 @@ sources: [benjamin-bunny, mr-tod]
 
 ## 出現在
 - 篇章：[[benjamin-bunny]]、[[mr-tod]]
+- 家：[[benjamin-family-rabbit-hole]]
 
 ## 相關角色
 - 兒子：[[benjamin-bunny-character]]

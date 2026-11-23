@@ -100,8 +100,13 @@ type: log
   1. 親屬稱謂直譯，需分輩分或父系母系時兩種都寫並附原文（brother → 哥哥/弟弟、cousin → 表哥/表弟、aunt → 阿姨/姑姑、nephew → 姪子/外甥）；白名單同步更新。
   2. radishes 頁「插圖描述是 carrot」一條刪除（出處格式指不到 images.md），教訓留在 log。
   3. mr-tod 故事頁「閱讀方式」一條是工作紀錄，移除（本 log 已有）。
-  4. #31、#32 新增地點頁：待 Joanna 決定。
+  4. #31、#32 新增地點頁：Joanna 決定配角的地點寫進故事頁、不另建頁。#31 Benjamin 一家的兔子洞是第四篇主角的家與開頭結尾場景，依先前建議建頁（若 Joanna 不同意可刪除）。
   5. AGENTS.md 新增規則：跨篇、跨段認定同一角色或地點，一律標（推論）。
 - 已修正：#1-#30、#33-#37（#31、#32 待決定）。另依 Joanna 決定 1 全域處理「阿姨」「表弟」等，並修正 index 與兩處把 foxey 直譯成狐狸的地方。
 - lint：修正後第 1 輪全過（60 頁、531 個出處、88 個英文引句）。
 - 已知限制：引句格式不能包含內層引號（例如 ¶2 的 “soporific.”），所以改引 ¶4 的完整句。
+
+## [2026-11-23] fix | 審查報告 1 剩餘 #31、#32
+- #31：新增 places/benjamin-family-rabbit-hole，並由 mr-tod 故事頁、old-mr-benjamin-bunny、flopsy、benjamin-bunny-character、flopsy-bunnies-children、potter-overview、index 連入。依新規則，未與冷杉樹下的洞合併，並標（推論）說明。
+- #32：Cottontail 山上的家、Mr. Tod 的柳樹住處寫進 mr-tod 故事頁「其他地點」；Cottontail 的黑兔丈夫寫進 mr-tod 配角；Peter 的苗圃寫進 flopsy-bunnies 故事頁「其他地點」。
+- lint：第 1 輪全過（61 頁、550 個出處）。審查報告 1 的 37 個問題全部處理完畢。
