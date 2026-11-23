@@ -6,7 +6,7 @@
 ## 你可以讀的檔案（只讀這些）
 - `.agents/workflows/topic-slides.md`：簡報規格（了解稿件格式與規則）
 - `slides/family-five-stories/sources.md`、`outline.md`、`drafts/` 全部
-- `slides/family-five-stories/screenshots/`：每頁截圖（看版面；第 5 頁左邊是家族樹）
+- `slides/family-five-stories/screenshots/`：每頁截圖（看版面；第 3 頁左邊是 Wiki 前後對照圖、第 4 頁是故事線、第 10 頁是家族樹，每頁底部有故事線點亮該頁講到的篇）
 - 整合答案：`wiki/books/potter/queries/family-five-stories.md`
 - 稿件標的 wiki 頁：`wiki/books/potter/` 與 `wiki/sources.md`
 - 需要時可讀原文 `raw/potter/` 裡這 5 篇：peter-rabbit、benjamin-bunny、flopsy-bunnies、mr-tod、mrs-tittlemouse
@@ -18,7 +18,7 @@
 每條都有 wiki 出處、英文引句逐字存在於該 wiki 頁、插圖屬於這 5 篇、文字沒超出頁面、畫面文字與稿件一致。
 
 ## 請檢查腳本做不到的
-1. **有沒有回答主題**：看完整份，初學者能不能說出「彼得兔故事集是什麼」：有哪幾篇、篇和篇怎麼連、可以學到哪些英文？哪一頁沒有幫上這個目的？
+1. **有沒有回答主題**：簡報先講五篇故事、再整合。看完整份，初學者能不能說出「彼得兔故事集是什麼」：有哪幾篇、篇和篇怎麼連、可以學到哪些英文？哪一頁沒有幫上這個目的？
 2. **跨篇關聯對不對**：家族樹、上一代/這一代/下一代、長大前後、危險地點，這些跨篇的說法有沒有被 query 頁和原文支持？原文沒直接寫的，有沒有標「推論」？有沒有把推論講成事實？
 3. **忠實度**：每一條中文是否真的被它的英文原句支持？中英意思對不對得上？有沒有說太滿、翻錯？
 4. **教學性**：順序、份量、單字選擇是否合理？有沒有跳太快、重複太多（同一句英文用在好幾頁）？
