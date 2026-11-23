@@ -10,6 +10,9 @@ type: index
 ## Beatrix Potter
 - [[potter-overview]]：故事集總覽
 
+### 跨篇整理（query）
+- [[family-five-stories]]：一個家族，五個故事（家族三代、長大前後、危險在哪裡）
+
 ### 故事
 - [[peter-rabbit]]：The Tale of Peter Rabbit，Peter 偷跑進 Mr. McGregor 的花園
 - [[benjamin-bunny]]：The Tale of Benjamin Bunny，Benjamin 帶 Peter 回花園拿衣服

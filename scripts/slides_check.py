@@ -11,7 +11,9 @@ SD = ROOT / "slides" / topic
 pages = {p.stem: p for p in (ROOT / "wiki").rglob("*.md")}
 ptext = {k: norm(p.read_text(encoding="utf-8")) for k, p in pages.items()}
 imgs = re.findall(r"^\| (illustration-\d+\.jpg) \| ([\w-]+) \|", (ROOT / "raw/assets/potter/images.md").read_text(encoding="utf-8"), re.M)
-ok_imgs = {f for f, sid in imgs if sid == topic}
+_st = re.search(r"^篇章: (.+)$", (SD / "sources.md").read_text(encoding="utf-8"), re.M) if (SD / "sources.md").exists() else None
+STORIES = {s.strip() for s in _st.group(1).split(",")} if _st else {topic}  # 跨篇主題在 sources.md 宣告「篇章:」
+ok_imgs = {f for f, sid in imgs if sid in STORIES}
 META_TYPES = {"cover", "agenda", "sources"}
 fails = []; nb = nq = 0
 files = sorted((SD / "drafts").glob("slide-*.md"))
@@ -20,8 +22,8 @@ for f in files:
     typ = (re.search(r"^type: (\w+)", t, re.M) or [None, "content"])[1]
     if not re.match(r"^# \S", t): fails.append(f"{name}: 沒有標題")
     bullets = [l for l in t.splitlines() if l.startswith("- ")]
-    content = typ in ("content", "map", "series")
-    limit = 4 if typ in ("content", "map") else 5
+    content = typ in ("content", "map", "series", "tree")
+    limit = 4 if typ in ("content", "map", "tree") else 5
     if len(bullets) > limit: fails.append(f"{name}: 條列 {len(bullets)} 條，超過 {limit} 條")
     if content:
         for b in bullets:
@@ -46,7 +48,7 @@ for f in files:
                 if seg not in ptext[pg]:
                     fails.append(f"{name}: 引句「{seg[:40]}」不在 wiki 頁 {pg}")
     for im in re.findall(r"^img: (\S+)", t, re.M):
-        if im not in ok_imgs: fails.append(f"{name}: 插圖 {im} 不屬於 {topic}")
+        if im not in ok_imgs: fails.append(f"{name}: 插圖 {im} 不屬於本主題的篇章 {sorted(STORIES)}")
     md = re.search(r"^mood: (\w+) \[wiki: ([\w-]+)\]", t, re.M)
     if not md: fails.append(f"{name}: 缺 mood 行"); continue
     if md.group(1) not in ("bright", "dark", "warm"): fails.append(f"{name}: mood 只能是 bright/dark/warm")

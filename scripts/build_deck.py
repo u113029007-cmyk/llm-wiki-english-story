@@ -7,7 +7,9 @@ import re, sys, html, shutil
 from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 topic = sys.argv[1]; SD = ROOT / "slides" / topic
-rows = {f: (int(a), int(b)) for f, s, a, b in re.findall(r"^\| (illustration-\d+\.jpg) \| ([\w-]+) \| ¶(\d+) \| ¶(\d+) \|", (ROOT / "raw/assets/potter/images.md").read_text(encoding="utf-8"), re.M) if s == topic}
+_st = re.search(r"^篇章: (.+)$", (SD / "sources.md").read_text(encoding="utf-8"), re.M) if (SD / "sources.md").exists() else None
+STORIES = [s.strip() for s in _st.group(1).split(",")] if _st else [topic]
+rows = {f: (int(a), int(b), s) for f, s, a, b in re.findall(r"^\| (illustration-\d+\.jpg) \| ([\w-]+) \| ¶(\d+) \| ¶(\d+) \|", (ROOT / "raw/assets/potter/images.md").read_text(encoding="utf-8"), re.M) if s in STORIES}
 (SD / "img").mkdir(exist_ok=True)
 E = html.escape
 QRE = re.compile(r"[\"“]([^\"“”]+)[\"”]")
@@ -33,7 +35,7 @@ def full_sentence(short, page):
 
 def render_bullet(txt, typ, i, page=None):
     m = re.match(r'^(.+?) ｜ [\"“](.+)[\"”]$', txt)
-    if m and typ in ("content", "map", "series"):
+    if m and typ in ("content", "map", "series", "tree"):
         zh, en = m.groups(); full = full_sentence(en, page) if "..." in en else None
         btn = (f'<button class="expand" data-full="{E(full)}" data-short="{E(en)}" onclick="toggleFull(this,event)">展開</button>' if full else "")
         return (f'<li class="pair" data-text="{E(txt)}"><span class="zh">{E(zh)}</span><span class="sep"> ｜ </span>'
@@ -68,6 +70,25 @@ MAP = ('<svg class="map" viewBox="0 0 300 340" aria-hidden="true">'
        + '<path d="M150 280 v-22 M140 264 h20" stroke="currentColor" stroke-width="2"/></svg>'
        + '<div class="maplabels"><span style="top:6%;left:58%">樹林</span><span style="top:21%;left:30%">兔子洞</span><span style="top:39%;left:70%">牆</span><span style="top:55%;left:18%">梨樹</span><span style="top:66%;left:40%">萵苣苗床</span><span style="top:84%;left:42%">稻草人</span><span style="top:91%;left:67%">溫室</span></div>')
 
+TREE = ('<svg class="tree" viewBox="0 0 300 372" role="img" aria-label="家族關係圖">'
+ '<defs><marker id="tr-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>'
+ '<g fill="none" stroke="currentColor" stroke-width="1.2">'
+ '<rect x="15" y="22" width="120" height="38" rx="6"/><rect x="150" y="22" width="146" height="38" rx="6"/>'
+ '<rect x="15" y="122" width="130" height="58" rx="6"/><rect x="175" y="130" width="110" height="40" rx="6"/>'
+ '<rect x="85" y="248" width="130" height="40" rx="6"/><rect x="65" y="318" width="170" height="42" rx="6" stroke-dasharray="5 4"/>'
+ '<path d="M75 60V122" marker-end="url(#tr-ar)"/><path d="M225 60V130" marker-end="url(#tr-ar)"/><path d="M145 150H175" />'
+ '<path d="M80 180V214H230V170"/><path d="M150 214V248" marker-end="url(#tr-ar)"/><path d="M150 318V288" marker-end="url(#tr-ar)"/></g>'
+ '<g fill="var(--ink)" text-anchor="middle" font-size="11">'
+ '<text x="75" y="38" font-weight="700">Mrs. Rabbit</text><text x="75" y="53" font-size="10">兔媽媽</text>'
+ '<text x="223" y="38" font-weight="700" font-size="10.5">old Mr. Benjamin Bunny</text><text x="225" y="53" font-size="10">Benjamin 的爸爸</text>'
+ '<text x="80" y="140" font-weight="700">Peter・Flopsy</text><text x="80" y="155" font-weight="700">Mopsy・Cottontail</text><text x="80" y="171" font-size="10">四個兄弟姊妹</text>'
+ '<text x="230" y="147" font-weight="700">Benjamin</text><text x="230" y="162" font-size="10">Peter 的 cousin</text>'
+ '<text x="160" y="143" font-size="9">cousin</text>'
+ '<text x="150" y="208" font-size="10">Benjamin 娶了 Flopsy</text>'
+ '<text x="150" y="265" font-weight="700">Flopsy Bunnies</text><text x="150" y="280" font-size="10">他們的孩子們</text>'
+ '<text x="150" y="335" font-weight="700">Thomasina Tittlemouse</text><text x="150" y="351" font-size="10">林鼠，第五篇主角（推論同一隻）</text>'
+ '<text x="158" y="306" text-anchor="start" font-size="9">第三篇咬破麻袋救了他們</text></g></svg>')
+
 slides = []; titles = []
 files = sorted((SD / "drafts").glob("slide-*.md"))
 for n, f in enumerate(files, 1):
@@ -83,11 +104,13 @@ for n, f in enumerate(files, 1):
     img = re.search(r"^img: (\S+)", t, re.M)
     if img:
         im = img.group(1); shutil.copy(ROOT / "raw/assets/potter" / im, SD / "img" / im)
-        a, b = rows[im]
+        a, b, sid = rows[im]
         left = (f'<figure><div class="mat"><img src="img/{im}" alt="Beatrix Potter 原書插圖"></div>'
-                f'<figcaption>插圖：Beatrix Potter　原文 ¶{a} 與 ¶{b} 之間</figcaption></figure>')
+                f'<figcaption>插圖：Beatrix Potter　{(sid + " ") if len(STORIES) > 1 else ""}原文 ¶{a} 與 ¶{b} 之間</figcaption></figure>')
     elif typ == "map":
         left = f'<figure class="mapfig"><div class="mapwrap">{MAP}</div><figcaption>地點名稱都來自 wiki；位置為示意，原文未描述相對位置</figcaption></figure>'
+    elif typ == "tree":
+        left = f'<figure class="mapfig"><div class="mapwrap">{TREE}</div><figcaption>關係依 wiki 角色頁的親屬連結；虛線框＝推論</figcaption></figure>'
     else:
         left = None
     kick, _, rest = title.partition("：")
@@ -124,6 +147,7 @@ figcaption{font-size:clamp(9px,1.25vh,14px);color:var(--muted);font-style:italic
 .vignette,.mapwrap{color:var(--sage);display:flex;align-items:center;justify-content:center;width:100%;height:100%;position:relative}
 .wreath{width:62%;opacity:.8}
 .mapwrap .map{height:88%;color:var(--sage)}
+.mapwrap .tree{height:96%;color:var(--sage)}
 .maplabels{position:absolute;inset:6% 18%}
 .maplabels span{position:absolute;font-size:clamp(10px,1.7vh,18px);color:var(--ink);background:var(--paper);padding:0 .4em}
 .sprig{position:absolute;width:15%;color:var(--sage);opacity:.65}
@@ -184,21 +208,21 @@ body.no-zh .pair .zh{visibility:hidden;height:0;overflow:hidden;display:block}
 @keyframes turn{from{transform:perspective(1600px) rotateY(-4deg) translateX(1.5%);filter:brightness(.97)}to{transform:none;filter:none}}
 @media (prefers-reduced-motion:reduce){.slide{transition:none}.slide.active .spread{animation:none}}
 """
-JS = r"""
+JS = "const KEY='" + topic + "';" + r"""
 const S=[...document.querySelectorAll('.slide')];let i=0;
 const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
 const TOC=document.querySelector('.toc'),TL=[...TOC.querySelectorAll('li')];
 function go(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,k)=>s.classList.toggle('active',k===i));TL.forEach((l,k)=>l.classList.toggle('cur',k===i));
- history.replaceState(null,'','#'+(i+1));document.querySelector('.progress').style.width=((i+1)/S.length*100)+'%';store.set('bb-page',i);}
+ history.replaceState(null,'','#'+(i+1));document.querySelector('.progress').style.width=((i+1)/S.length*100)+'%';store.set(KEY+'-page',i);}
 function toggleFull(b,e){e.stopPropagation();const t=b.parentElement.querySelector('.entext');const isFull=b.textContent==='收合';t.textContent=isFull?b.dataset.short:b.dataset.full;b.textContent=isFull?'展開':'收合';}
-let fs=parseFloat(store.get('bb-fs')||'1');document.documentElement.style.setProperty('--fs',fs);
-function font(d){fs=Math.max(.8,Math.min(1.3,fs+d));document.documentElement.style.setProperty('--fs',fs);store.set('bb-fs',fs);}
+let fs=parseFloat(store.get(KEY+'-fs')||'1');document.documentElement.style.setProperty('--fs',fs);
+function font(d){fs=Math.max(.8,Math.min(1.3,fs+d));document.documentElement.style.setProperty('--fs',fs);store.set(KEY+'-fs',fs);}
 function zh(btn){const on=document.body.classList.toggle('no-zh');btn.setAttribute('aria-pressed',String(!on));btn.textContent=on?'顯示中文':'隱藏中文';}
 TL.forEach((l,k)=>l.addEventListener('click',()=>{go(k);TOC.classList.remove('open');}));
 document.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key))go(i+1);if(['ArrowLeft','PageUp'].includes(e.key))go(i-1);});
 document.querySelector('.deck').addEventListener('click',e=>{if(e.target.closest('button'))return;if(TOC.classList.contains('open')){TOC.classList.remove('open');return;}go(e.clientX>innerWidth/2?i+1:i-1);});
 let x0=null;addEventListener('touchstart',e=>x0=e.touches[0].clientX);addEventListener('touchend',e=>{if(x0==null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)go(d<0?i+1:i-1);x0=null;});
-go(location.hash?parseInt(location.hash.slice(1))-1:parseInt(store.get('bb-page')||'0'));setTimeout(()=>document.querySelector('.hint').style.opacity=0,6000);
+go(location.hash?parseInt(location.hash.slice(1))-1:parseInt(store.get(KEY+'-page')||'0'));setTimeout(()=>document.querySelector('.hint').style.opacity=0,6000);
 """
 doc = f'''<!DOCTYPE html>
 <html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">

@@ -25,6 +25,7 @@ figcaption{font-size:clamp(9px,1.25vh,14px);color:var(--muted);font-style:italic
 .vignette,.mapwrap{color:var(--sage);display:flex;align-items:center;justify-content:center;width:100%;height:100%;position:relative}
 .wreath{width:62%;opacity:.8}
 .mapwrap .map{height:88%;color:var(--sage)}
+.mapwrap .tree{height:96%;color:var(--sage)}
 .maplabels{position:absolute;inset:6% 18%}
 .maplabels span{position:absolute;font-size:clamp(10px,1.7vh,18px);color:var(--ink);background:var(--paper);padding:0 .4em}
 .sprig{position:absolute;width:15%;color:var(--sage);opacity:.65}
@@ -129,19 +130,19 @@ body.no-zh .pair .zh{visibility:hidden;height:0;overflow:hidden;display:block}
 </main>
 <div class="toolbar" role="toolbar" aria-label="閱讀工具"><button onclick="TOC.classList.toggle('open')">目錄</button><button aria-pressed="true" onclick="zh(this)">隱藏中文</button><button onclick="font(-.1)" aria-label="字體縮小">A−</button><button onclick="font(.1)" aria-label="字體放大">A+</button></div>
 <nav class="toc" aria-label="目錄"><h3>目　錄</h3><ol><li>The Tale of Benjamin Bunny</li><li>這堂課你會學到</li><li>前情提要：Peter 的衣服去哪了？</li><li>角色①：兩隻小兔子</li><li>角色②：大人們</li><li>故事地圖</li><li>劇情①：Benjamin 出門</li><li>劇情②：裹著手帕的 Peter</li><li>劇情③：從梨樹爬進花園</li><li>劇情④：拿回衣服、裝洋蔥</li><li>劇情⑤：轉角、籃子、貓</li><li>劇情⑥：爸爸來救</li><li>結局：回家</li><li>單字複習（上）</li><li>單字複習（下）</li><li>小測驗</li><li>延伸①：Wiki 收錄的五篇故事</li><li>延伸②：角色長大了</li><li>延伸③：五篇的共同模式（推論）</li><li>延伸與出處</li></ol></nav>
-<div class="progress"></div><div class="hint">← → 或點擊左右翻頁　｜　右上角有目錄、中文開關、字體大小</div><script>
+<div class="progress"></div><div class="hint">← → 或點擊左右翻頁　｜　右上角有目錄、中文開關、字體大小</div><script>const KEY='benjamin-bunny';
 const S=[...document.querySelectorAll('.slide')];let i=0;
 const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
 const TOC=document.querySelector('.toc'),TL=[...TOC.querySelectorAll('li')];
 function go(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,k)=>s.classList.toggle('active',k===i));TL.forEach((l,k)=>l.classList.toggle('cur',k===i));
- history.replaceState(null,'','#'+(i+1));document.querySelector('.progress').style.width=((i+1)/S.length*100)+'%';store.set('bb-page',i);}
+ history.replaceState(null,'','#'+(i+1));document.querySelector('.progress').style.width=((i+1)/S.length*100)+'%';store.set(KEY+'-page',i);}
 function toggleFull(b,e){e.stopPropagation();const t=b.parentElement.querySelector('.entext');const isFull=b.textContent==='收合';t.textContent=isFull?b.dataset.short:b.dataset.full;b.textContent=isFull?'展開':'收合';}
-let fs=parseFloat(store.get('bb-fs')||'1');document.documentElement.style.setProperty('--fs',fs);
-function font(d){fs=Math.max(.8,Math.min(1.3,fs+d));document.documentElement.style.setProperty('--fs',fs);store.set('bb-fs',fs);}
+let fs=parseFloat(store.get(KEY+'-fs')||'1');document.documentElement.style.setProperty('--fs',fs);
+function font(d){fs=Math.max(.8,Math.min(1.3,fs+d));document.documentElement.style.setProperty('--fs',fs);store.set(KEY+'-fs',fs);}
 function zh(btn){const on=document.body.classList.toggle('no-zh');btn.setAttribute('aria-pressed',String(!on));btn.textContent=on?'顯示中文':'隱藏中文';}
 TL.forEach((l,k)=>l.addEventListener('click',()=>{go(k);TOC.classList.remove('open');}));
 document.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key))go(i+1);if(['ArrowLeft','PageUp'].includes(e.key))go(i-1);});
 document.querySelector('.deck').addEventListener('click',e=>{if(e.target.closest('button'))return;if(TOC.classList.contains('open')){TOC.classList.remove('open');return;}go(e.clientX>innerWidth/2?i+1:i-1);});
 let x0=null;addEventListener('touchstart',e=>x0=e.touches[0].clientX);addEventListener('touchend',e=>{if(x0==null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)go(d<0?i+1:i-1);x0=null;});
-go(location.hash?parseInt(location.hash.slice(1))-1:parseInt(store.get('bb-page')||'0'));setTimeout(()=>document.querySelector('.hint').style.opacity=0,6000);
+go(location.hash?parseInt(location.hash.slice(1))-1:parseInt(store.get(KEY+'-page')||'0'));setTimeout(()=>document.querySelector('.hint').style.opacity=0,6000);
 </script></body></html>

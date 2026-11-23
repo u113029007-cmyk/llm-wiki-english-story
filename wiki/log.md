@@ -135,3 +135,15 @@ type: log
 ## [2026-11-23] query | 簡報延伸段落與首頁
 - 簡報加入跨 5 篇的延伸段落（第 17-19 頁），old-mr-benjamin-bunny 補 mr-tod ¶12 原文。lint 全過。
 - 首頁 index.html 依 Joanna 的原則重新設計：清楚導覽、層次、依作業 6 項組織、每張卡片直連檔案、簡潔可讀。
+
+## [2026-11-23] query | 跨篇整理：一個家族，五個故事
+- Joanna 檢視後判斷：原簡報只講 benjamin-bunny 一篇，五篇沒有整合，不符合「以 wiki 為知識來源、整合重點與關聯」的目的 → 簡報主題退回「查詢 wiki」這一關重做。
+- 決定：主軸 A「一個家族，五個故事」，B「危險在哪裡」當一章；整合答案依 Karpathy 存回 wiki（AGENTS.md 7.5），舊簡報保留在倉庫。
+- 新增頁面：books/potter/queries/family-five-stories（家族三代、長大前後對照、危險在哪裡、第五篇怎麼接上）；potter-overview、index 加連結。答案只取自既有 wiki 頁，英文引句另對 raw/ 段落。
+- lint 第 1 輪全過。
+
+## [2026-11-23] query | 新簡報 family-five-stories（取代只講一篇的第一版）
+- 覆蓋率關卡通過（5 個目標、29 個 wiki 頁）→ 大綱 18 頁，Joanna 確認後寫稿。
+- 規格調整：跨篇主題在 slides/<主題>/sources.md 宣告「篇章:」，插圖可用這幾篇的（原規則是只能用同一篇）；新增 type: tree（家族樹，推論用虛線框）；localStorage 改用主題名稱當 key，兩份簡報不會互相覆蓋頁碼。
+- 出處檢查第 1 輪全過（18 頁、75 條、58 句英文引句）；渲染檢查第 1 輪程式通過但截圖看到家族樹排版問題，修正後第 2 輪通過。
+- 舊簡報 slides/benjamin-bunny 保留為第一版；首頁、README 改指向新簡報。
