@@ -31,7 +31,7 @@ with sync_playwright() as p:
         if info["h2"] != title: fails.append(f"第 {k+1} 頁標題與稿件不同")
         if [l["d"] for l in info["lis"]] != bl: fails.append(f"第 {k+1} 頁條列與稿件不同")
         for l in info["lis"]:
-            vis = re.sub(r"翻開答案|\s", "", l["t"]); want = re.sub(r"\s", "", l["d"])
+            vis = re.sub(r"翻開答案|展開|收合|\s", "", l["t"]); want = re.sub(r"\s", "", l["d"])
             if vis != want: fails.append(f"第 {k+1} 頁畫面文字被改動：{l['d'][:30]}")
     b.close()
 print(json.dumps({"pages": len(exp), "fails": fails}, ensure_ascii=False, indent=1))

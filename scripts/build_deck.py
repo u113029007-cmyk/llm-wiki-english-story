@@ -15,7 +15,22 @@ QRE = re.compile(r"[\"“]([^\"“”]+)[\"”]")
 def clean(b):
     return re.sub(r"\s*(\[wiki: [\w-]+\]|\[meta\])\s*$", "", b[2:]).strip()
 
-def render_bullet(txt, typ, i):
+sys.path.insert(0, str(ROOT / "scripts"))
+from lint import norm
+WQ = {pg.stem: re.findall(r"[\"“]([^\"“”]+)[\"”]\s*\[src:", pg.read_text(encoding="utf-8")) for pg in (ROOT / "wiki").rglob("*.md")}
+
+def full_sentence(short, page):
+    segs = [x.strip() for x in norm(short).split("...") if x.strip()]
+    cands = [q for q in WQ.get(page, []) if all(sg in norm(q) for sg in segs) and "..." not in q]
+    return min(cands, key=len) if cands else None
+
+def render_bullet(txt, typ, i, page=None):
+    m = re.match(r'^(.+?) ｜ [\"“](.+)[\"”]$', txt)
+    if m and typ in ("content", "map"):
+        zh, en = m.groups(); full = full_sentence(en, page) if "..." in en else None
+        btn = (f'<button class="expand" data-full="{E(full)}" data-short="{E(en)}" onclick="toggleFull(this,event)">展開</button>' if full else "")
+        return (f'<li class="pair" data-text="{E(txt)}"><span class="zh">{E(zh)}</span><span class="sep"> ｜ </span>'
+                f'<span class="en">"<span class="entext">{E(en)}</span>"</span>{btn}</li>')
     m = re.match(r"^(Q\d+)：(.+?) → (.+)$", txt)
     if typ == "quiz" and m:
         return (f'<li class="quiz" data-text="{E(txt)}"><span class="q">{E(m.group(1))}：{E(m.group(2))}</span>'
@@ -46,7 +61,7 @@ MAP = ('<svg class="map" viewBox="0 0 300 340" aria-hidden="true">'
        + '<path d="M150 280 v-22 M140 264 h20" stroke="currentColor" stroke-width="2"/></svg>'
        + '<div class="maplabels"><span style="top:6%;left:58%">樹林</span><span style="top:21%;left:30%">兔子洞</span><span style="top:39%;left:70%">牆</span><span style="top:55%;left:18%">梨樹</span><span style="top:66%;left:40%">萵苣苗床</span><span style="top:84%;left:42%">稻草人</span><span style="top:91%;left:67%">溫室</span></div>')
 
-slides = []
+slides = []; titles = []
 files = sorted((SD / "drafts").glob("slide-*.md"))
 for n, f in enumerate(files, 1):
     t = f.read_text(encoding="utf-8")
@@ -67,17 +82,18 @@ for n, f in enumerate(files, 1):
     elif typ == "map":
         left = f'<div class="mapwrap">{MAP}</div>'
     else:
-        left = f'<div class="vignette">{WREATH}</div>'
+        left = None
     kick, _, rest = title.partition("：")
     h = (f'<h2 data-text="{E(title)}"><span class="kicker">{E(kick)}</span>{E(rest)}</h2>' if rest and typ == "content"
          else f'<h2 data-text="{E(title)}">{E(title)}</h2>')
-    lis = "".join(render_bullet(clean(b), typ, i) for i, b in enumerate(bl))
+    lis = "".join(render_bullet(clean(b), typ, i, (re.search(r"\[wiki: ([\w-]+)\]", b) or [None, None])[1]) for i, b in enumerate(bl))
     src = "Wiki 出處：" + "、".join(wikis) if wikis else ""
     src += ("　｜　" if src else "") + f"氛圍依據：{mood_pg}"
-    cls = "cover" if typ == "cover" else ""
+    cls = ("cover " if typ == "cover" else "") + ("full " if left is None else "") + f"t-{typ}"
+    titles.append(title)
     slides.append(f'''<section class="slide mood-{mood} {cls}" data-n="{n}" aria-label="第 {n} 頁">
-<div class="spread"><div class="page left">{SPRIG.replace('class="sprig"','class="sprig tl"')}{left}</div><div class="gutter"></div>
-<div class="page right">{h}{DIVIDER}<ul>{lis}</ul><div class="src">{E(src)}</div><div class="folio">· {n} ·</div>{SPRIG.replace('class="sprig"','class="sprig br"')}</div></div></section>''')
+<div class="spread">{'' if left is None else '<div class="page left">' + SPRIG.replace('class="sprig"','class="sprig tl"') + left + '</div><div class="gutter"></div>'}
+<div class="page right">{SPRIG.replace('class="sprig"','class="sprig tl"') if left is None else ''}{h}{DIVIDER}<ul>{lis}</ul><div class="src">{E(src)}</div><div class="folio">· {n} ·</div>{SPRIG.replace('class="sprig"','class="sprig br"')}</div></div></section>''')
 
 CSS = r"""
 :root{--paper:#F6EFDD;--paper2:#EFE5CC;--ink:#3E3527;--muted:#7D6E55;--sage:#6E8B5E;--blue:#4A6F96;--rule:#CDBF9F;--accent:#9C4A2F}
@@ -109,7 +125,7 @@ figcaption{font-size:clamp(9px,1.25vh,14px);color:var(--muted);font-style:italic
 h2{font-weight:600;font-size:clamp(16px,4.1vh,46px);line-height:1.3;margin-top:4%;color:var(--ink)}
 .kicker{display:block;font-size:.52em;font-weight:400;color:var(--accent);letter-spacing:.2em;margin-bottom:.4em}
 .divider{width:42%;height:2.2vh;color:var(--sage);margin:1.6vh 0 2.2vh}
-ul{list-style:none;display:flex;flex-direction:column;gap:2vh;font-size:clamp(12px,2.75vh,30px);line-height:1.6}
+ul{list-style:none;display:flex;flex-direction:column;gap:2.2vh;font-size:calc(clamp(12px,2.75vh,30px)*var(--fs,1));line-height:1.6}
 li{padding-left:1.3em;position:relative}
 li::before{content:"";position:absolute;left:.15em;top:.62em;width:.42em;height:.42em;border-radius:50% 0;background:var(--sage);transform:rotate(-20deg)}
 li em,.quote,.eg{font-family:"EB Garamond",Georgia,serif;font-style:italic;color:var(--blue)}
@@ -127,15 +143,51 @@ li em,.quote,.eg{font-family:"EB Garamond",Georgia,serif;font-style:italic;color
 .cover ul{font-size:clamp(11px,2.5vh,28px)}
 .cover li::before{display:none}.cover li{padding-left:0}
 .hint{position:fixed;bottom:1.2vh;left:50%;transform:translateX(-50%);color:#9C8E73;font-size:12px;letter-spacing:.1em;font-family:"Noto Serif TC",serif;transition:opacity 1.5s}
-@media (prefers-reduced-motion:reduce){.slide{transition:none}}
+.full .spread{grid-template-columns:1fr}
+.full .page.right{padding:5% 12% 5% 12%}
+.full .page.right::after{content:"";position:absolute;top:8%;bottom:8%;left:50%;width:1px;background:linear-gradient(transparent,var(--rule),transparent);opacity:.35}
+.full ul{display:grid;grid-template-columns:1fr 1fr;column-gap:7%;row-gap:2.2vh;position:relative;z-index:1}
+.full.t-agenda ul,.full.t-sources ul,.full.t-content ul{grid-template-columns:1fr 1fr}
+.t-vocab li{background:color-mix(in srgb,var(--paper2) 70%,transparent);border:1px solid var(--rule);border-radius:4px;padding:1.4vh 1.4vh 1.4vh 2.6vh}
+.t-vocab li::before{left:.9vh;top:2.1vh}
+.t-vocab .eg{display:block;margin-top:.4vh}
+.t-quiz ul{grid-template-columns:1fr;font-size:calc(clamp(14px,3.3vh,36px)*var(--fs,1));row-gap:5vh;margin:4vh auto 0;width:70%}.t-quiz h2,.t-quiz .divider{margin-left:15%}
+.pair .zh{display:block}
+.pair .sep{display:none}
+.pair .en{display:block;font-family:"EB Garamond",Georgia,serif;font-style:italic;color:var(--blue);font-size:.92em;line-height:1.45;margin-top:.3vh}
+.expand{font:inherit;font-size:.62em;font-style:normal;color:var(--accent);background:transparent;border:1px solid var(--rule);border-radius:99px;padding:0 .7em;margin-left:.5em;cursor:pointer;vertical-align:.15em}
+body.no-zh .pair .zh{visibility:hidden;height:0;overflow:hidden;display:block}
+.toolbar{position:fixed;top:1.4vh;right:1.4vw;display:flex;gap:.5vw;z-index:20;opacity:.35;transition:opacity .4s}
+.toolbar:hover,.toolbar:focus-within{opacity:1}
+.toolbar button{font:13px "Noto Serif TC",serif;color:#E9DEC6;background:rgba(40,32,22,.7);border:1px solid #6B5C45;border-radius:99px;padding:.35em 1em;cursor:pointer}
+.toolbar button[aria-pressed="true"]{background:#6E8B5E;border-color:#6E8B5E}
+.progress{position:fixed;left:0;bottom:0;height:3px;background:#B8A06A;transition:width .9s ease;z-index:20}
+.toc{position:fixed;top:0;right:0;height:100vh;width:min(360px,80vw);background:#2B241A;color:#EFE4CC;padding:6vh 2vw;transform:translateX(105%);transition:transform .6s ease;z-index:30;overflow:auto;font-family:"Noto Serif TC",serif}
+.toc.open{transform:none}
+.toc h3{font-weight:500;font-size:18px;color:#D9C48F;margin-bottom:2vh;letter-spacing:.2em}
+.toc ol{list-style:none;counter-reset:t}
+.toc li{counter-increment:t;padding:.7em 0;border-bottom:1px solid #4A3E2C;cursor:pointer;font-size:14px;line-height:1.4}
+.toc li::before{content:counter(t) "　";color:#B8A06A;font-family:"EB Garamond",serif;font-style:italic}
+.toc li.cur{color:#E0B65E}
+.slide.active .spread{animation:turn .9s ease}
+@keyframes turn{from{transform:perspective(1600px) rotateY(-4deg) translateX(1.5%);filter:brightness(.97)}to{transform:none;filter:none}}
+@media (prefers-reduced-motion:reduce){.slide{transition:none}.slide.active .spread{animation:none}}
 """
 JS = r"""
 const S=[...document.querySelectorAll('.slide')];let i=0;
-function go(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,k)=>s.classList.toggle('active',k===i));history.replaceState(null,'','#'+(i+1));}
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const TOC=document.querySelector('.toc'),TL=[...TOC.querySelectorAll('li')];
+function go(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,k)=>s.classList.toggle('active',k===i));TL.forEach((l,k)=>l.classList.toggle('cur',k===i));
+ history.replaceState(null,'','#'+(i+1));document.querySelector('.progress').style.width=((i+1)/S.length*100)+'%';store.set('bb-page',i);}
+function toggleFull(b,e){e.stopPropagation();const t=b.parentElement.querySelector('.entext');const isFull=b.textContent==='收合';t.textContent=isFull?b.dataset.short:b.dataset.full;b.textContent=isFull?'展開':'收合';}
+let fs=parseFloat(store.get('bb-fs')||'1');document.documentElement.style.setProperty('--fs',fs);
+function font(d){fs=Math.max(.8,Math.min(1.3,fs+d));document.documentElement.style.setProperty('--fs',fs);store.set('bb-fs',fs);}
+function zh(btn){const on=document.body.classList.toggle('no-zh');btn.setAttribute('aria-pressed',String(!on));btn.textContent=on?'顯示中文':'隱藏中文';}
+TL.forEach((l,k)=>l.addEventListener('click',()=>{go(k);TOC.classList.remove('open');}));
 document.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key))go(i+1);if(['ArrowLeft','PageUp'].includes(e.key))go(i-1);});
-document.querySelector('.deck').addEventListener('click',e=>{if(e.target.closest('button'))return;go(e.clientX>innerWidth/2?i+1:i-1);});
+document.querySelector('.deck').addEventListener('click',e=>{if(e.target.closest('button'))return;if(TOC.classList.contains('open')){TOC.classList.remove('open');return;}go(e.clientX>innerWidth/2?i+1:i-1);});
 let x0=null;addEventListener('touchstart',e=>x0=e.touches[0].clientX);addEventListener('touchend',e=>{if(x0==null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)go(d<0?i+1:i-1);x0=null;});
-go((parseInt(location.hash.slice(1))||1)-1);setTimeout(()=>document.querySelector('.hint').style.opacity=0,6000);
+go(location.hash?parseInt(location.hash.slice(1))-1:parseInt(store.get('bb-page')||'0'));setTimeout(()=>document.querySelector('.hint').style.opacity=0,6000);
 """
 doc = f'''<!DOCTYPE html>
 <html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -144,6 +196,9 @@ doc = f'''<!DOCTYPE html>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,400&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
 <style>{CSS}</style></head><body><main class="deck">
 {"".join(slides)}
-</main><div class="hint">← → 或點擊左右翻頁</div><script>{JS}</script></body></html>'''
+</main>
+<div class="toolbar" role="toolbar" aria-label="閱讀工具"><button onclick="TOC.classList.toggle('open')">目錄</button><button aria-pressed="true" onclick="zh(this)">隱藏中文</button><button onclick="font(-.1)" aria-label="字體縮小">A−</button><button onclick="font(.1)" aria-label="字體放大">A+</button></div>
+<nav class="toc" aria-label="目錄"><h3>目　錄</h3><ol>{"".join(f"<li>{E(t)}</li>" for t in titles)}</ol></nav>
+<div class="progress"></div><div class="hint">← → 或點擊左右翻頁　｜　右上角有目錄、中文開關、字體大小</div><script>{JS}</script></body></html>'''
 (SD / "deck.html").write_text(doc, encoding="utf-8")
 print(f"deck.html：{len(slides)} 頁")

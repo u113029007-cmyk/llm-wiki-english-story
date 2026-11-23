@@ -20,7 +20,13 @@ for f in files:
     typ = (re.search(r"^type: (\w+)", t, re.M) or [None, "content"])[1]
     if not re.match(r"^# \S", t): fails.append(f"{name}: 沒有標題")
     bullets = [l for l in t.splitlines() if l.startswith("- ")]
-    if len(bullets) > 5: fails.append(f"{name}: 條列 {len(bullets)} 條，超過 5 條")
+    content = typ in ("content", "map")
+    limit = 4 if content else 5
+    if len(bullets) > limit: fails.append(f"{name}: 條列 {len(bullets)} 條，超過 {limit} 條")
+    if content:
+        for b in bullets:
+            if not re.match(r"^- [^｜]+ ｜ [\"“][^\"“”]+[\"”] \[wiki: [\w-]+\]$", b):
+                fails.append(f"{name}: 內容頁條列必須是「中文 ｜ \"英文原文\" [wiki: 頁面]」→ {b[:50]}")
     for b in bullets:
         nb += 1
         m = re.search(r"\[wiki: ([\w-]+)\]\s*$", b)
