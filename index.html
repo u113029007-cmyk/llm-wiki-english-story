@@ -47,6 +47,20 @@ h2{font-size:1.5em;font-weight:600;margin:0 0 .3em}
 table{width:100%;border-collapse:collapse;font-size:.95em;background:var(--card);border:1px solid var(--rule)}
 th,td{text-align:left;padding:.7em 1em;border-bottom:1px solid var(--rule);vertical-align:top}
 th{color:var(--muted);font-weight:400;font-size:.85em;letter-spacing:.1em}
+.roles{display:flex;flex-wrap:wrap;gap:.6em;margin:0 0 1em}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:.7em}
+.step{display:flex;gap:1em;background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:.9em 1.2em}
+.step.check{border-left:4px solid var(--rust)}
+.step .no{font-family:"EB Garamond",serif;font-size:1.5em;color:var(--sage);line-height:1.2;min-width:1.2em}
+.step h4{margin:0 0 .2em;font-size:1.05em;display:flex;flex-wrap:wrap;gap:.6em;align-items:center}
+.step p{margin:0;color:var(--muted);font-size:.93em}
+.step p.fail{color:var(--rust);margin-top:.3em}
+.step a{color:var(--blue)}
+.role{font-size:.72em;font-weight:400;border-radius:99px;padding:.1em .8em;border:1px solid;white-space:nowrap}
+.role-u{color:#4E6A40;border-color:var(--sage)}
+.role-l{color:var(--blue);border-color:var(--blue)}
+.role-s{color:var(--rust);border-color:var(--rust)}
+.role-r{color:#6B4E8A;border-color:#6B4E8A}
 footer{max-width:1040px;margin:4em auto 0;padding:2em 5vw 3em;border-top:1px solid var(--rule);color:var(--muted);font-size:.85em}
 </style></head><body>
 <nav><div class="in"><b>English Classics Wiki</b><a href="#result">成果</a><a href="#flow">流程</a><a href="#submit">繳交重點</a><a href="#record">檢查紀錄</a></div></nav>
@@ -56,24 +70,16 @@ footer{max-width:1040px;margin:4em auto 0;padding:2em 5vw 3em;border-top:1px sol
 <h1>英文經典讀本 Wiki</h1>
 <p class="goal">用 5 篇 Beatrix Potter 的公版故事建立 LLM Wiki，再只用 Wiki 的內容，做出一份給英文初學者的教學簡報。</p>
 <div class="btns"><a class="btn primary" href="slides/family-five-stories/deck.html">開啟教學簡報</a><a class="btn ghost gh" data-path="tree/main/wiki">瀏覽 Wiki</a></div>
-<div class="stats">
-<div class="stat"><b>5</b><span>篇故事 ingest</span></div>
-<div class="stat"><b>73</b><span>頁 Wiki</span></div>
-<div class="stat"><b>780</b><span>條原文出處</span></div>
-<div class="stat"><b>168</b><span>句英文原句逐字核對</span></div>
-<div class="stat"><b>2</b><span>次新對話 AI 審查</span></div>
-<div class="stat"><b>18</b><span>頁跨五篇整合簡報</span></div>
-</div>
 </section>
 
 <section id="flow">
-<h2>資訊怎麼被取得、整理、檢查，再變成簡報</h2>
-<p class="lead">兩個階段都是 graph：流程事先畫好，錯在哪一關就退回哪一關。</p>
-<div class="phase">階段一　建立 Wiki（每篇跑一次）</div>
-<div class="flow"><div class="node check">版權檢查<small>不過就換書</small></div><span class="arrow">→</span><div class="node">切篇編號<small>腳本，不經 AI</small></div><span class="arrow">→</span><div class="node">AI ingest<small>長篇分段讀</small></div><span class="arrow">→</span><div class="node check">腳本 lint<small>最多 3 輪</small></div><span class="arrow">→</span><div class="node">git commit</div><span class="arrow">→</span><div class="node check">新對話審查<small>4 篇後</small></div></div>
-<div class="phase">階段二　產生簡報</div>
-<div class="flow"><div class="node">檢索 Wiki</div><span class="arrow">→</span><div class="node check">覆蓋率關卡</div><span class="arrow">→</span><div class="node">大綱</div><span class="arrow">→</span><div class="node human">你確認</div><span class="arrow">→</span><div class="node">逐頁稿</div><span class="arrow">→</span><div class="node check">出處檢查</div><span class="arrow">→</span><div class="node">腳本渲染</div><span class="arrow">→</span><div class="node check">渲染檢查</div><span class="arrow">→</span><div class="node check">新對話審查</div></div>
-<p class="legend"><i style="border-color:#9C4A2F;color:#9C4A2F">檢查關卡</i>　<i style="border-color:#6E8B5E;color:#4E6A40">人工確認</i>　簡報發現 Wiki 缺內容時，退回階段一補 Wiki（實際發生 2 次）</p>
+<h2>資料怎麼被取得、整理、檢查，再變成簡報</h2>
+<p class="lead">每一步標出由誰負責。有紅框的是檢查關卡，不通過就退回寫明的那一步。</p>
+<div class="roles"><span class="role role-u">使用者</span><span class="role role-l">LLM：寫內容</span><span class="role role-s">腳本：機械檢查、產生檔案</span><span class="role role-r">另一個 LLM 對話：審查意思</span></div>
+<div class="phase">階段一　建立 Wiki（每篇故事跑一次）</div>
+<ol class="steps"><li class="step check"><span class="no">1</span><div><h4>查版權、選書<span class="role role-u">LLM 查、使用者決定</span></h4><p>LLM 依台灣著作權法第 30 條（作者死後 50 年）確認作者已過保護期，使用者決定用哪本。</p><p class="fail">不通過：換一本書</p></div></li><li class="step"><span class="no">2</span><div><h4>下載電子書<span class="role role-u">使用者</span></h4><p>使用者到 <a href="https://standardebooks.org/ebooks/beatrix-potter/short-fiction">Standard Ebooks</a> 下載 Beatrix Potter《Short Fiction》epub（公版、免費）。規則：AI 不自己爬網站。</p></div></li><li class="step check"><span class="no">3</span><div><h4>放進 raw/、切篇編號<span class="role role-u">使用者＋腳本</span></h4><p>使用者把 epub 放進 raw/，腳本 split_potter.py 切成 20 篇並替每段編號 ¶，之後每句話都能標出處。raw/ 從此唯讀，AI 不能改。</p><p class="fail">不通過：比對段落數，漏段就修腳本重切</p></div></li><li class="step"><span class="no">4</span><div><h4>ingest<span class="role role-l">LLM</span></h4><p>依 Karpathy 的定義：讀一個來源，寫成故事、角色、地點、單字頁，並更新舊頁之間的連結。長篇先分段讀。</p></div></li><li class="step check"><span class="no">5</span><div><h4>lint<span class="role role-s">腳本（Python）</span></h4><p>lint.py 做 6 項機械檢查：英文引句真的在原文那一段、出處存在、連結不斷、沒有孤兒頁、目錄完整、原文有版權紀錄。Karpathy 的 lint 原本是請 LLM 做健康檢查；能用程式判斷的部分，我們交給腳本，結果每次都一樣。</p><p class="fail">不通過：退回第 4 步修，最多 3 輪</p></div></li><li class="step"><span class="no">6</span><div><h4>commit<span class="role role-s">git</span></h4><p>通過才存一版，任何時候都能回到前一版。</p></div></li><li class="step check"><span class="no">7</span><div><h4>新對話審查<span class="role role-r">另一個 LLM 對話</span></h4><p>lint 只能檢查「有沒有」，看不懂「意思對不對」，例如推論沒標、說得比原文滿。寫 Wiki 的同一個對話容易認同自己的寫法，所以另開一個沒看過過程的新對話，只給規則和 Wiki 去挑錯。審查 1 找到 37 個問題。</p><p class="fail">不通過：退回第 4 步修正</p></div></li></ol>
+<div class="phase">階段二　用 Wiki 產生簡報</div>
+<ol class="steps"><li class="step"><span class="no">1</span><div><h4>查詢 Wiki、整理重點<span class="role role-l">LLM</span></h4><p>從目錄找到相關頁，把五篇合起來的答案寫成 query 頁存回 Wiki。Karpathy：好的答案要存回 Wiki，之後可以重複用。</p></div></li><li class="step check"><span class="no">2</span><div><h4>覆蓋率<span class="role role-s">腳本（Python）</span></h4><p>目的：開工前先確認 Wiki 有足夠資料，而且真的有整合。slides_coverage.py 檢查：至少 3 頁、每個簡報目標都有頁、有「角色之間的關聯」、用到 query 頁。</p><p class="fail">不通過：退回第 1 步；Wiki 本身缺資料就退回階段一</p></div></li><li class="step"><span class="no">3</span><div><h4>大綱<span class="role role-l">LLM</span></h4><p>目的：先決定頁數、每頁回答什麼問題、用哪些 Wiki 頁，還不寫內容。</p></div></li><li class="step check"><span class="no">4</span><div><h4>使用者確認是否有問題<span class="role role-u">使用者</span></h4><p>目的：方向錯了在這裡改最便宜。第一版簡報只講一篇，就是寫完才發現要整份重做。</p><p class="fail">不通過：退回第 3 步</p></div></li><li class="step"><span class="no">5</span><div><h4>逐頁稿<span class="role role-l">LLM</span></h4><p>每一條寫成「中文 ｜ 英文原句 [wiki: 頁面]」，只能用大綱列出的頁。</p></div></li><li class="step check"><span class="no">6</span><div><h4>出處檢查<span class="role role-s">腳本（Python）</span></h4><p>slides_check.py：每條都有 Wiki 出處、英文原句真的在那一頁、中英對照、每頁條數上限、插圖屬於這幾篇。</p><p class="fail">不通過：退回第 5 步；Wiki 缺英文就退回階段一補</p></div></li><li class="step"><span class="no">7</span><div><h4>渲染<span class="role role-s">腳本（Python）</span></h4><p>build_deck.py 產生 HTML，AI 不手寫，排版時文字不會被改。</p></div></li><li class="step check"><span class="no">8</span><div><h4>渲染檢查<span class="role role-s">腳本＋人看截圖</span></h4><p>render_check.py 檢查文字有沒有超出版面、圖有沒有載入、畫面上的字是否等於稿件；程式抓不到的版面問題，再由人看截圖。</p><p class="fail">不通過：退回第 7 或第 5 步</p></div></li><li class="step check"><span class="no">9</span><div><h4>新對話審查<span class="role role-r">另一個 LLM 對話</span></h4><p>用初學者的角度看讀不讀得懂，有沒有把推論講成事實。第一版做過（審查 2，25 個問題）。</p><p class="fail">不通過：退回對應的步驟</p></div></li></ol>
 </section>
 
 <section id="submit">
@@ -99,6 +105,7 @@ footer{max-width:1040px;margin:4em auto 0;padding:2em 5vw 3em;border-top:1px sol
 <tr><td>新對話審查 1（Wiki）</td><td>37 個問題，lint 一個都抓不到：推論沒標、說太滿</td><td>新規則：跨篇認定一律標推論</td></tr>
 <tr><td>使用者看簡報</td><td>很多頁只有中文沒有英文</td><td>退回 Wiki 補原句；出處檢查加「每條要中英對照」</td></tr>
 <tr><td>新對話審查 2（簡報）</td><td>25 個問題：劇情銜接、角色判斷寫成事實</td><td>再退回 Wiki 補原句；地圖標示意</td></tr>
+<tr><td>使用者看簡報</td><td>第一版只講一篇，五篇沒有整合；所有腳本都通過</td><td>退回「查詢 Wiki」重做，整合答案存成 query 頁；覆蓋率關卡加「要有跨篇關聯、要用 query 頁」</td></tr>
 </table>
 </section>
 
