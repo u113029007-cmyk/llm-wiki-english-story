@@ -1,9 +1,8 @@
-# 出處
-- 整合答案存在 Wiki 的 query 頁：family-five-stories [wiki: family-five-stories]
-- 原文：Standard Ebooks 版 Beatrix Potter《Short Fiction》 [wiki: sources]
-- 作者兼插畫家 Beatrix Potter，1943 年過世，台灣著作權保護期已屆滿 [wiki: sources]
-- 標（推論）的是 Wiki 依原文推出來的，原文沒有直接寫 [meta]
-- 本簡報每一條文字都來自「英文經典讀本 Wiki」，並可追溯到原文段落 [meta]
+# 小測驗①：故事
+- Q1：哪兩篇的劇情是接著發生的？ → ① 和 ②（推論）：② 回花園拿 ① 被掛在稻草人上的衣服 [wiki: family-five-stories]
+- Q2：Benjamin 長大後娶了誰？ → 表姊/表妹 Flopsy [wiki: family-five-stories]
+- Q3：誰咬破麻袋救了 Flopsy Bunnies？ → 林鼠 Thomasina Tittlemouse [wiki: family-five-stories]
+- Q4：（推論題）第五篇靠誰接上家族故事？ → Thomasina Tittlemouse，推論兩篇是同一隻 [wiki: family-five-stories]
 mood: warm [wiki: fir-tree-rabbit-hole]
-type: sources
+type: quiz
 story: all
