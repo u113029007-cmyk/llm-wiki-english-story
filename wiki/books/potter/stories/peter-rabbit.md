@@ -28,6 +28,7 @@ sources: [peter-rabbit]
 - Mr. McGregor 揮著耙子邊追邊喊："Stop thief!" [src: peter-rabbit ¶13]
 - Peter 嚇壞了，忘了回大門的路。[src: peter-rabbit ¶14]
 - 一隻鞋掉在高麗菜堆，另一隻掉在馬鈴薯堆。[src: peter-rabbit ¶15]
+  - 原文："He lost one of his shoes among the cabbages, and the other shoe amongst the potatoes." [src: peter-rabbit ¶15]
 - 外套的大鈕扣被醋栗網纏住；那是一件全新的、有黃銅鈕扣的藍外套。[src: peter-rabbit ¶16]
 - 友善的麻雀飛來鼓勵他。[src: peter-rabbit ¶17]
 - Mr. McGregor 拿篩子要罩住他，Peter 扭身逃出，外套留在網上。[src: peter-rabbit ¶18]
@@ -45,6 +46,7 @@ sources: [peter-rabbit]
 ### 5. 逃出花園
 - Peter 全速奔跑，鑽出大門，終於安全回到花園外的樹林。[src: peter-rabbit ¶29-30]
 - Mr. McGregor 把外套和鞋子掛起來當稻草人嚇黑鳥。[src: peter-rabbit ¶31]
+  - 原文："Mr. McGregor hung up the little jacket and the shoes for a scarecrow to frighten the blackbirds." [src: peter-rabbit ¶31]
 - Peter 一路沒停，跑回大冷杉樹的家。[src: peter-rabbit ¶32]
 
 ### 6. 回家之後
