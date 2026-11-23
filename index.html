@@ -1,44 +1,110 @@
 <!DOCTYPE html>
 <html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>英文經典讀本 Wiki｜LLM Wiki 作業</title>
+<title>英文經典讀本 LLM Wiki｜作業成果</title>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;1,400&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
 <style>
-body{margin:0;background:#F6EFDD;color:#3E3527;font-family:"Noto Serif TC",serif;line-height:1.8}
-main{max-width:760px;margin:0 auto;padding:8vh 6vw}
-h1{font-family:"EB Garamond",serif;font-weight:500;font-size:2.4em;margin:0}
-.sub{color:#7D6E55;margin:.2em 0 2.5em}
-h2{font-size:1.15em;font-weight:600;border-bottom:1px solid #CDBF9F;padding-bottom:.3em;margin-top:2.2em}
-a{color:#4A6F96}
-.card{display:block;background:#FFFDF6;border:1px solid #CDBF9F;padding:1.2em 1.4em;margin:1em 0;text-decoration:none;color:inherit;border-radius:4px}
-.card b{color:#9C4A2F;font-size:1.1em}
-.card span{display:block;color:#7D6E55;font-size:.92em}
-li{margin:.3em 0}
-</style></head><body><main>
-<h1>English Classics Wiki</h1>
-<p class="sub">英文經典讀本 Wiki｜用 LLM Wiki 做一份教學 HTML 簡報</p>
+:root{--paper:#F6EFDD;--card:#FFFDF6;--ink:#3E3527;--muted:#7D6E55;--rule:#D9CDB4;--sage:#6E8B5E;--rust:#9C4A2F;--blue:#4A6F96}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Serif TC",serif;line-height:1.7;font-size:16px}
+a{color:inherit}
+nav{position:sticky;top:0;z-index:5;background:rgba(246,239,221,.94);backdrop-filter:blur(4px);border-bottom:1px solid var(--rule)}
+nav .in{max-width:1040px;margin:0 auto;padding:.7em 5vw;display:flex;gap:1.6em;align-items:center;flex-wrap:wrap}
+nav b{font-family:"EB Garamond",serif;font-size:1.15em;margin-right:auto}
+nav a{text-decoration:none;color:var(--muted);font-size:.95em}
+nav a:hover{color:var(--rust)}
+section{max-width:1040px;margin:0 auto;padding:4.5em 5vw 1em}
+.hero{padding-top:5em;text-align:center}
+.eyebrow{color:var(--sage);letter-spacing:.25em;font-size:.85em}
+h1{font-family:"EB Garamond","Noto Serif TC",serif;font-weight:500;font-size:clamp(2em,5vw,3.2em);margin:.2em 0}
+.goal{font-size:1.15em;max-width:36em;margin:0 auto 2em;color:var(--ink)}
+.btns{display:flex;gap:1em;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:.75em 1.8em;border-radius:99px;text-decoration:none;font-weight:600;border:1.5px solid var(--rust)}
+.btn.primary{background:var(--rust);color:#FFF8EC}
+.btn.ghost{color:var(--rust)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1em;margin-top:3.5em}
+.stat{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:1em;text-align:center}
+.stat b{display:block;font-family:"EB Garamond",serif;font-size:2em;font-weight:500;color:var(--rust);line-height:1.2}
+.stat span{color:var(--muted);font-size:.85em}
+h2{font-size:1.5em;font-weight:600;margin:0 0 .3em}
+.lead{color:var(--muted);margin:0 0 1.6em}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:.5em}
+.node{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:.6em .9em;text-align:center;min-width:7.5em}
+.node small{display:block;color:var(--muted);font-size:.78em}
+.node.check{border-color:var(--rust);color:var(--rust)}
+.node.human{border-color:var(--sage);color:#4E6A40}
+.arrow{color:var(--muted)}
+.phase{font-size:.85em;color:var(--sage);letter-spacing:.15em;margin:1.4em 0 .6em}
+.legend{font-size:.85em;color:var(--muted);margin-top:1em}
+.legend i{font-style:normal;padding:0 .5em;border-radius:3px;border:1px solid}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.2em}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:1.3em 1.4em;display:flex;flex-direction:column}
+.num{font-family:"EB Garamond",serif;font-size:1.6em;color:var(--sage);line-height:1}
+.card h3{margin:.3em 0 .2em;font-size:1.1em}
+.card p{margin:0 0 .9em;color:var(--muted);font-size:.95em}
+.card .links{margin-top:auto;display:flex;flex-wrap:wrap;gap:.5em}
+.card .links a{font-size:.88em;text-decoration:none;color:var(--blue);border:1px solid var(--rule);border-radius:99px;padding:.2em .9em}
+.card .links a:hover{border-color:var(--blue)}
+table{width:100%;border-collapse:collapse;font-size:.95em;background:var(--card);border:1px solid var(--rule)}
+th,td{text-align:left;padding:.7em 1em;border-bottom:1px solid var(--rule);vertical-align:top}
+th{color:var(--muted);font-weight:400;font-size:.85em;letter-spacing:.1em}
+footer{max-width:1040px;margin:4em auto 0;padding:2em 5vw 3em;border-top:1px solid var(--rule);color:var(--muted);font-size:.85em}
+</style></head><body>
+<nav><div class="in"><b>English Classics Wiki</b><a href="#result">成果</a><a href="#flow">流程</a><a href="#submit">繳交重點</a><a href="#record">檢查紀錄</a></div></nav>
 
-<a class="card" href="slides/benjamin-bunny/deck.html"><b>教學簡報：The Tale of Benjamin Bunny</b><span>給英文初學者的故事導讀，17 頁，中英對照，電子書式閱讀（目錄、隱藏中文、展開完整句、字體大小）</span></a>
+<section class="hero" id="result">
+<div class="eyebrow">LLM WIKI × 教學 HTML 簡報</div>
+<h1>英文經典讀本 Wiki</h1>
+<p class="goal">用 5 篇 Beatrix Potter 的公版故事建立 LLM Wiki，再只用 Wiki 的內容，做出一份給英文初學者的教學簡報。</p>
+<div class="btns"><a class="btn primary" href="slides/benjamin-bunny/deck.html">開啟教學簡報</a><a class="btn ghost gh" data-path="tree/main/wiki">瀏覽 Wiki</a></div>
+<div class="stats">
+<div class="stat"><b>5</b><span>篇故事 ingest</span></div>
+<div class="stat"><b>72</b><span>頁 Wiki</span></div>
+<div class="stat"><b>683</b><span>條原文出處</span></div>
+<div class="stat"><b>147</b><span>句英文原句逐字核對</span></div>
+<div class="stat"><b>2</b><span>次新對話 AI 審查</span></div>
+<div class="stat"><b>20</b><span>頁中英對照簡報</span></div>
+</div>
+</section>
 
-<h2>LLM Wiki</h2>
-<ul>
-<li><a class="gh" data-path="tree/main/wiki">wiki/</a>：Wiki 本體（72 頁，依 Karpathy LLM Wiki 架構，可用 Obsidian 開啟 wiki 資料夾）</li>
-<li><a class="gh" data-path="blob/main/wiki/index.md">wiki/index.md</a>：目錄　｜　<a class="gh" data-path="blob/main/wiki/sources.md">wiki/sources.md</a>：來源與版權檢查</li>
-<li><a class="gh" data-path="blob/main/AGENTS.md">AGENTS.md</a>：Wiki 規則（schema）；CLAUDE.md 只有一行 @AGENTS.md</li>
-</ul>
+<section id="flow">
+<h2>資訊怎麼被取得、整理、檢查，再變成簡報</h2>
+<p class="lead">兩個階段都是 graph：流程事先畫好，錯在哪一關就退回哪一關。</p>
+<div class="phase">階段一　建立 Wiki（每篇跑一次）</div>
+<div class="flow"><div class="node check">版權檢查<small>不過就換書</small></div><span class="arrow">→</span><div class="node">切篇編號<small>腳本，不經 AI</small></div><span class="arrow">→</span><div class="node">AI ingest<small>長篇分段讀</small></div><span class="arrow">→</span><div class="node check">腳本 lint<small>最多 3 輪</small></div><span class="arrow">→</span><div class="node">git commit</div><span class="arrow">→</span><div class="node check">新對話審查<small>4 篇後</small></div></div>
+<div class="phase">階段二　產生簡報</div>
+<div class="flow"><div class="node">檢索 Wiki</div><span class="arrow">→</span><div class="node check">覆蓋率關卡</div><span class="arrow">→</span><div class="node">大綱</div><span class="arrow">→</span><div class="node human">你確認</div><span class="arrow">→</span><div class="node">逐頁稿</div><span class="arrow">→</span><div class="node check">出處檢查</div><span class="arrow">→</span><div class="node">腳本渲染</div><span class="arrow">→</span><div class="node check">渲染檢查</div><span class="arrow">→</span><div class="node check">新對話審查</div></div>
+<p class="legend"><i style="border-color:#9C4A2F;color:#9C4A2F">檢查關卡</i>　<i style="border-color:#6E8B5E;color:#4E6A40">人工確認</i>　簡報發現 Wiki 缺內容時，退回階段一補 Wiki（實際發生 2 次）</p>
+</section>
 
-<h2>流程與檢查紀錄</h2>
-<ul>
-<li><a class="gh" data-path="blob/main/wiki/log.md">wiki/log.md</a>：每次 ingest、lint、審查、修正的時間紀錄</li>
-<li><a class="gh" data-path="blob/main/.agents/workflows/topic-slides.md">.agents/workflows/topic-slides.md</a>：簡報 graph 規格</li>
-<li><a class="gh" data-path="blob/main/slides/benjamin-bunny/report.md">slides/benjamin-bunny/report.md</a>：簡報各關卡檢查紀錄</li>
-<li><a class="gh" data-path="tree/main/reviews">reviews/</a>：兩次新對話 AI 審查的指令與報告</li>
-<li><a class="gh" data-path="tree/main/scripts">scripts/</a>：lint、切篇、分段閱讀、覆蓋率、出處檢查、渲染與渲染檢查腳本</li>
-<li><a class="gh" data-path="commits/main">commit 紀錄</a></li>
-</ul>
-<p class="sub">原文：Beatrix Potter《Short Fiction》，Standard Ebooks 版。作者兼插畫家 Beatrix Potter 卒於 1943 年，台灣著作權保護期已屆滿。</p>
-</main>
+<section id="submit">
+<h2>繳交重點</h2>
+<p class="lead">依作業要求的 6 項排列，每張卡片都連到對應的檔案。</p>
+<div class="cards">
+<div class="card"><div class="num">1</div><h3>Wiki 主題與介紹</h3><p>英文經典讀本 Wiki：Potter 的兔子系列 4 篇 + Mrs. Tittlemouse，人物、地點、單字互相連結。</p><div class="links"><a class="gh" data-path="blob/main/README.md">README</a><a class="gh" data-path="blob/main/wiki/index.md">Wiki 目錄</a></div></div>
+<div class="card"><div class="num">2</div><h3>Wiki 成果</h3><p>依 Karpathy LLM Wiki 架構：raw 唯讀、wiki 由 LLM 維護、AGENTS.md 是規則。</p><div class="links"><a class="gh" data-path="tree/main/wiki">wiki/</a><a class="gh" data-path="blob/main/AGENTS.md">AGENTS.md</a><a class="gh" data-path="blob/main/wiki/sources.md">版權紀錄</a></div></div>
+<div class="card"><div class="num">3</div><h3>教學 HTML 簡報</h3><p>20 頁，中英對照，每一條都能追回 Wiki 和原文段落；電子書式閱讀。</p><div class="links"><a href="slides/benjamin-bunny/deck.html">開啟簡報</a><a class="gh" data-path="tree/main/slides/benjamin-bunny/drafts">逐頁稿</a></div></div>
+<div class="card"><div class="num">4</div><h3>loop / graph 設計</h3><p>上方流程圖的完整規格：每一關只能看什麼、不能做什麼、錯了退回哪裡。</p><div class="links"><a class="gh" data-path="blob/main/.agents/workflows/topic-slides.md">簡報 graph 規格</a><a class="gh" data-path="blob/main/AGENTS.md">Wiki 流程規則</a></div></div>
+<div class="card"><div class="num">5</div><h3>實際執行與檢查紀錄</h3><p>每次 ingest、lint、審查、修正都有時間紀錄、腳本報告和 commit。</p><div class="links"><a class="gh" data-path="blob/main/wiki/log.md">log.md</a><a class="gh" data-path="tree/main/reports">lint 報告</a><a class="gh" data-path="blob/main/slides/benjamin-bunny/report.md">簡報檢查</a><a class="gh" data-path="commits/main">commit</a></div></div>
+<div class="card"><div class="num">6</div><h3>反思</h3><p>最常出錯的節點、檢查怎麼往前移、graph 為什麼改版，附兩次審查報告。</p><div class="links"><a class="gh" data-path="tree/main/reviews">審查報告</a><a class="gh" data-path="blob/main/wiki/log.md">修正過程</a></div></div>
+</div>
+</section>
+
+<section id="record">
+<h2>檢查紀錄摘要</h2>
+<p class="lead">腳本負責「有或沒有」，新對話 AI 審查負責「意思對不對」。</p>
+<table>
+<tr><th>關卡</th><th>抓到什麼</th><th>怎麼調整</th></tr>
+<tr><td>切篇腳本自我驗證</td><td>漏掉 2 段題詞、1 張插圖、1 個副標題</td><td>修正腳本，逐篇核對段落數</td></tr>
+<tr><td>腳本 lint</td><td>引句出處順序寫錯（重複 2 次）、標籤夾帶說法</td><td>加標籤白名單，lint 直接擋</td></tr>
+<tr><td>新對話審查 1（Wiki）</td><td>37 個問題，lint 一個都抓不到：推論沒標、說太滿</td><td>新規則：跨篇認定一律標推論</td></tr>
+<tr><td>使用者看簡報</td><td>很多頁只有中文沒有英文</td><td>退回 Wiki 補原句；出處檢查加「每條要中英對照」</td></tr>
+<tr><td>新對話審查 2（簡報）</td><td>25 個問題：劇情銜接、角色判斷寫成事實</td><td>再退回 Wiki 補原句；地圖標示意</td></tr>
+</table>
+</section>
+
+<footer>原文：Beatrix Potter《Short Fiction》，Standard Ebooks 版。作者兼插畫家 Beatrix Potter 卒於 1943 年，依台灣著作權法第 30 條，保護期已於 1993 年底屆滿。</footer>
 <script>
 const seg=location.hostname.endsWith('github.io')?location.pathname.split('/').filter(Boolean)[0]:null;
 const user=location.hostname.split('.')[0];
-document.querySelectorAll('a.gh').forEach(a=>{a.href=seg?`https://github.com/${user}/${seg}/${a.dataset.path}`:a.dataset.path.replace(/^(tree|blob)\/main\//,'').replace('commits/main','#');});
+document.querySelectorAll('.gh').forEach(a=>{a.href=seg?`https://github.com/${user}/${seg}/${a.dataset.path}`:a.dataset.path.replace(/^(tree|blob)\/main\//,'');});
 </script></body></html>

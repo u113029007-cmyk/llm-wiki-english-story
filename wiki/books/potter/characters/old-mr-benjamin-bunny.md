@@ -9,6 +9,7 @@ sources: [benjamin-bunny, mr-tod]
 - Benjamin 的爸爸，名字也叫 Benjamin Bunny："The name of little Benjamin's papa was old Mr. Benjamin Bunny." [src: benjamin-bunny ¶28]
 - Peter 是他的姪子/外甥（原文 nephew）。[src: benjamin-bunny ¶53]
 - （推論）mr-tod 篇的 old Mr. Benjamin Bouncer／old Mr. Bouncer 和本篇是同一角色：原文說他的兒子是 Benjamin Bunny、媳婦是 Flopsy，Peter 也叫他 Uncle Bouncer。[src: mr-tod ¶4] [src: mr-tod ¶12] [src: mr-tod ¶36] [src: benjamin-bunny ¶53]
+  - 原文："He lived with his son Benjamin Bunny and his daughter-in-law Flopsy" [src: mr-tod ¶12]
 - 兩篇名字不同，照原文記錄，不修正。[src: benjamin-bunny ¶28] [src: mr-tod ¶11]
 
 ## 個性與特徵

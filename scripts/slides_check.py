@@ -20,8 +20,8 @@ for f in files:
     typ = (re.search(r"^type: (\w+)", t, re.M) or [None, "content"])[1]
     if not re.match(r"^# \S", t): fails.append(f"{name}: 沒有標題")
     bullets = [l for l in t.splitlines() if l.startswith("- ")]
-    content = typ in ("content", "map")
-    limit = 4 if content else 5
+    content = typ in ("content", "map", "series")
+    limit = 4 if typ in ("content", "map") else 5
     if len(bullets) > limit: fails.append(f"{name}: 條列 {len(bullets)} 條，超過 {limit} 條")
     if content:
         for b in bullets:

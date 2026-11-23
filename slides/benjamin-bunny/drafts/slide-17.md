@@ -1,8 +1,8 @@
-# 延伸與出處
-- 這篇接著第一篇：衣服被掛成稻草人，這篇才去拿回來 [wiki: benjamin-bunny]
-- 第一篇 Peter 從表哥/表弟 Benjamin 那裡聽說過貓，這篇兩人真的遇到 [wiki: benjamin-bunny]
-- 原文：Standard Ebooks 版 Beatrix Potter《Short Fiction》 [wiki: sources]
-- 作者兼插畫家 Beatrix Potter，1943 年過世，台灣著作權保護期已屆滿 [wiki: sources]
-- 本簡報每一條文字都來自「英文經典讀本 Wiki」，並可追溯到原文段落；地圖的位置為示意 [meta]
+# 延伸①：Wiki 收錄的五篇故事
+- ① Peter Rabbit：Peter 不聽話，跑進 McGregor 的花園 ｜ "But Peter, who was very naughty, ran straight away to Mr. McGregor's garden." [wiki: peter-rabbit]
+- ② Benjamin Bunny：兩隻小兔子回花園拿衣服（本簡報主角） ｜ "the proper way to get in is to climb down a pear-tree." [wiki: benjamin-bunny]
+- ③ Flopsy Bunnies：小兔子吃太多萵苣睡著，被裝進麻袋 ｜ "They certainly had a very soporific effect upon the Flopsy Bunnies!" [wiki: flopsy-bunnies]
+- ④ Mr. Tod：兩個討人厭的角色，小兔子被偷走 ｜ "a story about two disagreeable people, called Tommy Brock and Mr. Tod." [wiki: mr-tod]
+- ⑤ Mrs. Tittlemouse：愛乾淨的林鼠和不請自來的客人 ｜ "Once upon a time there was a wood mouse, and her name was Mrs. Tittlemouse." [wiki: mrs-tittlemouse]
 mood: warm [wiki: fir-tree-rabbit-hole]
-type: sources
+type: series

@@ -33,7 +33,7 @@ def full_sentence(short, page):
 
 def render_bullet(txt, typ, i, page=None):
     m = re.match(r'^(.+?) ｜ [\"“](.+)[\"”]$', txt)
-    if m and typ in ("content", "map"):
+    if m and typ in ("content", "map", "series"):
         zh, en = m.groups(); full = full_sentence(en, page) if "..." in en else None
         btn = (f'<button class="expand" data-full="{E(full)}" data-short="{E(en)}" onclick="toggleFull(this,event)">展開</button>' if full else "")
         return (f'<li class="pair" data-text="{E(txt)}"><span class="zh">{E(zh)}</span><span class="sep"> ｜ </span>'
@@ -154,7 +154,7 @@ li em,.quote,.eg{font-family:"EB Garamond",Georgia,serif;font-style:italic;color
 .full .page.right{padding:5% 12% 5% 12%}
 .full .page.right::after{content:"";position:absolute;top:8%;bottom:8%;left:50%;width:1px;background:linear-gradient(transparent,var(--rule),transparent);opacity:.35}
 .full ul{display:grid;grid-template-columns:1fr 1fr;column-gap:7%;row-gap:2.2vh;position:relative;z-index:1}
-.full.t-content ul{grid-template-columns:1fr 1fr}
+.full.t-content ul,.full.t-series ul{grid-template-columns:1fr 1fr}
 .full.t-agenda ul,.full.t-sources ul{grid-template-columns:1fr;width:72%;margin:0 auto}
 .full.t-agenda h2,.full.t-sources h2,.full.t-agenda .divider,.full.t-sources .divider{margin-left:14%}
 .pair .en strong{font-weight:600;color:var(--accent);font-style:italic}

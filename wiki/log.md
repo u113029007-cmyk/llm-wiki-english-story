@@ -131,3 +131,7 @@ type: log
 ## [2026-11-23] review | 簡報審查報告 2 → 退回 wiki 補原文
 - 新對話審查簡報 25 個問題中，劇情銜接缺口需要的英文原句 wiki 沒有 → 第二次「大圈退回」到 wiki：benjamin-bunny 補 8 句原文；角色頁「不怕貓」與故事頁「不放在眼裡」不一致 → 統一。lint 全過。
 - 詳見 slides/benjamin-bunny/report.md。
+
+## [2026-11-23] query | 簡報延伸段落與首頁
+- 簡報加入跨 5 篇的延伸段落（第 17-19 頁），old-mr-benjamin-bunny 補 mr-tod ¶12 原文。lint 全過。
+- 首頁 index.html 依 Joanna 的原則重新設計：清楚導覽、層次、依作業 6 項組織、每張卡片直連檔案、簡潔可讀。
