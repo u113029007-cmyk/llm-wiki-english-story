@@ -18,6 +18,12 @@ for goal, lst in rows:
         if n not in pages: fails.append(f"目標「{goal}」列的 {n} 不存在於 wiki/")
 for need in ("故事大綱", "主要角色", "關鍵單字或句子"):
     if need not in [g for g, _ in rows]: fails.append(f"缺少目標「{need}」")
+# 檢查往前移（2026-11-23）：第一版簡報只講一篇，五篇沒有整合，到成品才被發現。
+# 現在覆蓋率關卡就要求：有「角色之間的關聯」目標，而且要用到一頁存回 wiki 的整合答案（type: query）。
+if "角色之間的關聯" not in [g for g, _ in rows]: fails.append("缺少目標「角色之間的關聯」（簡報要整合多篇，不能只講一篇）")
+wp = {p.stem: p for p in (ROOT / "wiki").rglob("*.md")}
+if not any(n in wp and "type: query" in wp[n].read_text(encoding="utf-8") for n in total):
+    fails.append("沒有用到任何 query 頁：先把跨篇整合的答案存回 wiki（AGENTS.md 7.5），再做簡報")
 if len(total) < 3: fails.append(f"相關 wiki 頁只有 {len(total)} 頁，少於 3 頁")
 print(f"覆蓋率關卡：{len(rows)} 個目標、{len(total)} 個 wiki 頁")
 print("✅ 通過" if not fails else "❌ 不足，停下：\n- " + "\n- ".join(fails))

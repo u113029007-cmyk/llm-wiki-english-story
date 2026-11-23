@@ -59,7 +59,7 @@ slides/<主題>/
 ```
 
 ## 檢查腳本
-- scripts/slides_coverage.py <主題>：覆蓋率關卡
+- scripts/slides_coverage.py <主題>：覆蓋率關卡（2026-11-23 起：必須有「角色之間的關聯」目標，且至少用到一頁 type: query 的整合頁）
 - scripts/slides_check.py <主題>：出處檢查
 - scripts/build_deck.py <主題>：渲染 HTML（不是檢查，是讓渲染不經 AI 手寫）
 - scripts/render_check.py <主題>：渲染檢查（截圖、溢出、圖片載入、文字與稿一致）
