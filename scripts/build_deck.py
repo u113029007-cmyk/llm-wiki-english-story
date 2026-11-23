@@ -35,7 +35,7 @@ def full_sentence(short, page):
 
 def render_bullet(txt, typ, i, page=None):
     m = re.match(r'^(.+?) ｜ [\"“](.+)[\"”]$', txt)
-    if m and typ in ("content", "map", "series", "tree"):
+    if m and typ in ("content", "map", "series", "tree", "storyline"):
         zh, en = m.groups(); full = full_sentence(en, page) if "..." in en else None
         btn = (f'<button class="expand" data-full="{E(full)}" data-short="{E(en)}" onclick="toggleFull(this,event)">展開</button>' if full else "")
         return (f'<li class="pair" data-text="{E(txt)}"><span class="zh">{E(zh)}</span><span class="sep"> ｜ </span>'
@@ -89,6 +89,49 @@ TREE = ('<svg class="tree" viewBox="0 0 300 372" role="img" aria-label="家族�
  '<text x="150" y="335" font-weight="700">Thomasina Tittlemouse</text><text x="150" y="351" font-size="10">林鼠，第五篇主角（推論同一隻）</text>'
  '<text x="158" y="306" text-anchor="start" font-size="9">第三篇咬破麻袋救了他們</text></g></svg>')
 
+STORY = ('<svg class="tree" viewBox="0 0 320 390" role="img" aria-label="五篇故事線">'
+ '<defs><marker id="st-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>'
+ '<g fill="none" stroke="currentColor" stroke-width="1.4">'
+ '<rect x="15" y="24" width="170" height="52" rx="7"/><rect x="15" y="104" width="170" height="52" rx="7"/>'
+ '<rect x="15" y="209" width="170" height="52" rx="7"/><rect x="15" y="294" width="170" height="52" rx="7"/>'
+ '<rect x="205" y="209" width="110" height="52" rx="7" stroke-dasharray="5 4"/>'
+ '<path d="M100 76V104" marker-end="url(#st-ar)"/><path d="M100 156V209" marker-end="url(#st-ar)"/><path d="M100 261V294" marker-end="url(#st-ar)"/>'
+ '<path d="M185 235H205" stroke-dasharray="4 3"/><path d="M10 180H310" stroke-width=".8" stroke-dasharray="2 4"/></g>'
+ '<g fill="var(--ink)" text-anchor="middle">'
+ '<text x="22" y="15" text-anchor="start" font-size="11" font-weight="700" fill="var(--accent)">小時候</text>'
+ '<text x="22" y="198" text-anchor="start" font-size="11" font-weight="700" fill="var(--accent)">長大以後</text>'
+ '<text x="100" y="46" font-size="12.5" font-weight="700">① Peter Rabbit</text><text x="100" y="64" font-size="11">Peter 闖進花園</text>'
+ '<text x="100" y="126" font-size="12.5" font-weight="700">② Benjamin Bunny</text><text x="100" y="144" font-size="11">回花園拿衣服</text>'
+ '<text x="100" y="231" font-size="12.5" font-weight="700">③ Flopsy Bunnies</text><text x="100" y="249" font-size="11">小兔子被裝進麻袋</text>'
+ '<text x="100" y="316" font-size="12.5" font-weight="700">④ Mr. Tod</text><text x="100" y="334" font-size="11">救回被偷的孩子</text>'
+ '<text x="260" y="231" font-size="11" font-weight="700">⑤ Mrs. Tittlemouse</text><text x="260" y="249" font-size="10.5">林鼠的家</text>'
+ '<text x="260" y="203" font-size="9.5" fill="var(--muted)">和前面沒有劇情先後</text>'
+ '<text x="260" y="280" font-size="10">③ 裡救小兔子的林鼠</text><text x="260" y="295" font-size="10">當了 ⑤ 的主角</text><text x="260" y="310" font-size="10" fill="var(--muted)">（推論同一隻）</text>'
+ '</g></svg>')
+WIKIMAP = ('<svg class="tree" viewBox="0 0 300 380" role="img" aria-label="有沒有 Wiki 的差別">'
+ '<defs><marker id="wm-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>'
+ '<g fill="var(--ink)" font-size="11.5" font-weight="700"><text x="9" y="18">沒有 Wiki</text><text x="9" y="148">有了 Wiki</text></g>'
+ + "".join(f'<rect x="{x}" y="28" width="50" height="34" rx="5" fill="none" stroke="var(--muted)" stroke-width="1.2"/><text x="{x+25}" y="44" text-anchor="middle" font-size="11" font-weight="700" fill="var(--muted)">{n}</text><text x="{x+25}" y="57" text-anchor="middle" font-size="9" fill="var(--muted)">原文</text>' for x, n in zip((9,67,125,183,241), "①②③④⑤"))
+ + '<text x="150" y="80" text-anchor="middle" font-size="10.5" fill="var(--muted)">五篇各讀各的，看不出關聯</text>'
+ '<path d="M150 88V126" stroke="currentColor" stroke-width="2" marker-end="url(#wm-ar)"/><text x="160" y="112" font-size="10" fill="var(--accent)" font-weight="700">ingest＋整合</text>'
+ '<g stroke="currentColor" stroke-width="1" opacity=".75">'
+ + "".join(f'<path d="M{hx} 228L{sx} 312"/>' for hx, sx in [(60,34),(60,92),(60,150),(60,208),(150,34),(150,92),(150,150),(150,208),(250,150),(250,266)])
+ + '<path d="M150 184L60 204M150 184V204M150 184L250 204"/></g>'
+ '<rect x="70" y="158" width="160" height="26" rx="13" fill="var(--paper2)" stroke="var(--accent)" stroke-width="1.6"/><text x="150" y="175" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--accent)">整合答案（query 頁）</text>'
+ + "".join(f'<rect x="{x-40}" y="204" width="80" height="24" rx="12" fill="var(--paper)" stroke="currentColor" stroke-width="1.4"/><text x="{x}" y="220" text-anchor="middle" font-size="10" font-weight="700" fill="var(--ink)">{lab}</text>' for x, lab in [(60,"Peter 角色頁"),(150,"cousin 單字頁"),(250,"Thomasina 頁")])
+ + "".join(f'<rect x="{x}" y="312" width="50" height="34" rx="5" fill="var(--paper)" stroke="currentColor" stroke-width="1.4"/><text x="{x+25}" y="333" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">{n}</text>' for x, n in zip((9,67,125,183,241), "①②③④⑤"))
+ + '<text x="150" y="368" text-anchor="middle" font-size="10" fill="var(--muted)">每條線＝Wiki 頁之間的連結（舉 3 頁為例）</text></svg>')
+STORIES_ORDER = [("peter-rabbit","① Peter Rabbit"),("benjamin-bunny","② Benjamin Bunny"),("flopsy-bunnies","③ Flopsy Bunnies"),("mr-tod","④ Mr. Tod"),("mrs-tittlemouse","⑤ Mrs. Tittlemouse")]
+def storybar(lit, n, total):
+    if lit is None: return ""
+    on = {s for s, _ in STORIES_ORDER} if "all" in lit else set(lit)
+    items = []
+    for k, (sid, lab) in enumerate(STORIES_ORDER):
+        if k == 4: items.append('<span class="sb-gap"></span>')
+        elif k: items.append('<span class="sb-line"></span>')
+        items.append(f'<span class="sb{" on" if sid in on else ""}">{lab}</span>')
+    return f'<div class="storybar"><span class="sb-lab">故事線</span>{"".join(items)}<span class="sb-no">{n} / {total}</span></div>'
+
 slides = []; titles = []
 files = sorted((SD / "drafts").glob("slide-*.md"))
 for n, f in enumerate(files, 1):
@@ -109,6 +152,10 @@ for n, f in enumerate(files, 1):
                 f'<figcaption>插圖：Beatrix Potter　{(sid + " ") if len(STORIES) > 1 else ""}原文 ¶{a} 與 ¶{b} 之間</figcaption></figure>')
     elif typ == "map":
         left = f'<figure class="mapfig"><div class="mapwrap">{MAP}</div><figcaption>地點名稱都來自 wiki；位置為示意，原文未描述相對位置</figcaption></figure>'
+    elif typ == "storyline":
+        left = f'<figure class="mapfig"><div class="mapwrap">{STORY}</div><figcaption>前四篇依劇情先後排列；⑤ 和前面沒有劇情先後</figcaption></figure>'
+    elif typ == "wikimap":
+        left = f'<figure class="mapfig"><div class="mapwrap">{WIKIMAP}</div><figcaption>上：原始的 5 篇原文　下：Wiki 把它們連起來</figcaption></figure>'
     elif typ == "tree":
         left = f'<figure class="mapfig"><div class="mapwrap">{TREE}</div><figcaption>關係依 wiki 角色頁的親屬連結；虛線框＝推論</figcaption></figure>'
     else:
@@ -120,17 +167,19 @@ for n, f in enumerate(files, 1):
     src = "Wiki 出處：" + "、".join(wikis) if wikis else ""
     src += ("　｜　" if src else "") + f"氛圍依據：{mood_pg}"
     cls = ("cover " if typ == "cover" else "") + ("full " if left is None else "") + f"t-{typ}"
+    stl = re.search(r"^story: (.+)$", t, re.M)
+    lit = [x.strip() for x in stl.group(1).split(',')] if stl else None
     titles.append(title)
     slides.append(f'''<section class="slide mood-{mood} {cls}" data-n="{n}" aria-label="第 {n} 頁">
 <div class="spread">{'' if left is None else '<div class="page left">' + SPRIG.replace('class="sprig"','class="sprig tl"') + left + '</div><div class="gutter"></div>'}
-<div class="page right">{SPRIG.replace('class="sprig"','class="sprig tl"') if left is None else ''}{h}{DIVIDER}<ul>{lis}</ul><div class="src">{E(src)}</div><div class="folio">· {n} ·</div>{SPRIG.replace('class="sprig"','class="sprig br"')}</div></div></section>''')
+<div class="page right">{SPRIG.replace('class="sprig"','class="sprig tl"') if left is None else ''}{h}{DIVIDER}<ul>{lis}</ul><div class="src">{E(src)}</div>{'' if lit else '<div class="folio">· ' + str(n) + ' ·</div>'}{SPRIG.replace('class="sprig"','class="sprig br"')}</div>{storybar(lit, n, len(files))}</div></section>''')
 
 CSS = r"""
 :root{--paper:#F6EFDD;--paper2:#EFE5CC;--ink:#3E3527;--muted:#7D6E55;--sage:#6E8B5E;--blue:#4A6F96;--rule:#CDBF9F;--accent:#9C4A2F}
 .mood-warm{--paper:#F3E3C3;--paper2:#EAD5AE;--ink:#43321F;--muted:#86684A;--sage:#8A6B3E;--blue:#8A4F2A;--rule:#CFB283;--accent:#A5552C}
 .mood-dark{--paper:#2F271C;--paper2:#261F16;--ink:#EFE4CC;--muted:#C2AF89;--sage:#B8A06A;--blue:#E0B65E;--rule:#5E4F38;--accent:#E0B65E}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;background:#1E1A14;overflow:hidden;font-family:"Noto Serif TC",serif}
+html,body{height:100%;background:#1E1A14;overflow:hidden;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;font-weight:500}
 .deck{position:relative;width:100vw;height:100vh;display:flex;align-items:center;justify-content:center}
 .slide{position:absolute;width:min(96vw,calc(96vh*16/9));aspect-ratio:16/9;opacity:0;visibility:hidden;transition:opacity .9s ease,visibility .9s}
 .slide.active{opacity:1;visibility:visible}
@@ -153,8 +202,8 @@ figcaption{font-size:clamp(9px,1.25vh,14px);color:var(--muted);font-style:italic
 .sprig{position:absolute;width:15%;color:var(--sage);opacity:.65}
 .sprig.tl{top:2.5%;left:2.5%;transform:scaleY(-1)}
 .sprig.br{bottom:2.5%;right:2.5%;transform:scaleX(-1)}
-h2{font-weight:600;font-size:clamp(16px,4.1vh,46px);line-height:1.3;margin-top:4%;color:var(--ink)}
-.kicker{display:block;font-size:.52em;font-weight:400;color:var(--accent);letter-spacing:.2em;margin-bottom:.4em}
+h2{font-weight:700;font-size:clamp(16px,4.1vh,46px);line-height:1.3;margin-top:4%;color:var(--ink)}
+.kicker{display:block;font-size:.52em;font-weight:700;color:var(--accent);letter-spacing:.2em;margin-bottom:.4em}
 .divider{width:42%;height:2.2vh;color:var(--sage);margin:1.6vh 0 2.2vh}
 ul{list-style:none;display:flex;flex-direction:column;gap:2.2vh;font-size:calc(clamp(12px,2.75vh,30px)*var(--fs,1));line-height:1.6}
 li{padding-left:1.3em;position:relative}
@@ -170,10 +219,10 @@ li em,.quote,.eg{font-family:"EB Garamond",Georgia,serif;font-style:italic;color
 .reveal{margin-left:.8em;font:inherit;font-size:.75em;color:var(--accent);background:transparent;border:1px solid var(--rule);border-radius:99px;padding:.1em .9em;cursor:pointer}
 .src{margin-top:auto;font-size:clamp(8px,1.15vh,13px);color:var(--muted);letter-spacing:.03em;padding-top:1.5vh;padding-right:16%}
 .folio{position:absolute;bottom:3.2%;left:0;right:0;text-align:center;font-family:"EB Garamond",serif;font-style:italic;color:var(--muted);font-size:clamp(10px,1.6vh,18px)}
-.cover h2{font-family:"EB Garamond",serif;font-size:clamp(22px,6.4vh,72px);font-weight:500;margin-top:14%}
+.cover h2{font-size:clamp(22px,5.6vh,64px);font-weight:700;margin-top:14%}
 .cover ul{font-size:clamp(11px,2.5vh,28px)}
 .cover li::before{display:none}.cover li{padding-left:0}
-.hint{position:fixed;bottom:1.2vh;left:50%;transform:translateX(-50%);color:#9C8E73;font-size:12px;letter-spacing:.1em;font-family:"Noto Serif TC",serif;transition:opacity 1.5s}
+.hint{position:fixed;bottom:1.2vh;left:50%;transform:translateX(-50%);color:#9C8E73;font-size:12px;letter-spacing:.1em;font-family:"Noto Sans TC",sans-serif;transition:opacity 1.5s}
 .full .spread{grid-template-columns:1fr}
 .full .page.right{padding:5% 12% 5% 12%}
 .full .page.right::after{content:"";position:absolute;top:8%;bottom:8%;left:50%;width:1px;background:linear-gradient(transparent,var(--rule),transparent);opacity:.35}
@@ -194,16 +243,30 @@ li em,.quote,.eg{font-family:"EB Garamond",Georgia,serif;font-style:italic;color
 body.no-zh .pair .zh{visibility:hidden;height:0;overflow:hidden;display:block}
 .toolbar{position:fixed;top:1.4vh;right:1.4vw;display:flex;gap:.5vw;z-index:20;opacity:.35;transition:opacity .4s}
 .toolbar:hover,.toolbar:focus-within{opacity:1}
-.toolbar button{font:13px "Noto Serif TC",serif;color:#E9DEC6;background:rgba(40,32,22,.7);border:1px solid #6B5C45;border-radius:99px;padding:.35em 1em;cursor:pointer}
+.toolbar button{font:13px "Noto Sans TC",sans-serif;color:#E9DEC6;background:rgba(40,32,22,.7);border:1px solid #6B5C45;border-radius:99px;padding:.35em 1em;cursor:pointer}
 .toolbar button[aria-pressed="true"]{background:#6E8B5E;border-color:#6E8B5E}
 .progress{position:fixed;left:0;bottom:0;height:3px;background:#B8A06A;transition:width .9s ease;z-index:20}
-.toc{position:fixed;top:0;right:0;height:100vh;width:min(360px,80vw);background:#2B241A;color:#EFE4CC;padding:6vh 2vw;transform:translateX(105%);transition:transform .6s ease;z-index:30;overflow:auto;font-family:"Noto Serif TC",serif}
+.toc{position:fixed;top:0;right:0;height:100vh;width:min(360px,80vw);background:#2B241A;color:#EFE4CC;padding:6vh 2vw;transform:translateX(105%);transition:transform .6s ease;z-index:30;overflow:auto;font-family:"Noto Sans TC",sans-serif}
 .toc.open{transform:none}
 .toc h3{font-weight:500;font-size:18px;color:#D9C48F;margin-bottom:2vh;letter-spacing:.2em}
 .toc ol{list-style:none;counter-reset:t}
 .toc li{counter-increment:t;padding:.7em 0;border-bottom:1px solid #4A3E2C;cursor:pointer;font-size:14px;line-height:1.4}
 .toc li::before{content:counter(t) "　";color:#B8A06A;font-family:"EB Garamond",serif;font-style:italic}
 .toc li.cur{color:#E0B65E}
+.spread{position:relative}
+.storybar ~ *{}
+.slide .page{padding-bottom:9%}
+.storybar{position:absolute;left:3%;right:3%;bottom:1.6%;height:5.2%;display:flex;align-items:center;justify-content:center;gap:.6vw;font-size:clamp(8px,1.35vh,15px);font-weight:700;z-index:3}
+.sb{padding:.25em .9em;border-radius:99px;border:1.5px solid var(--rule);color:var(--muted);opacity:.55;white-space:nowrap}
+.sb.on{background:var(--accent);border-color:var(--accent);color:var(--paper);opacity:1}
+.sb-line{width:2.2vw;height:2px;background:var(--rule)}
+.sb-gap{width:2.2vw;border-top:2px dashed var(--rule)}
+.sb-lab{color:var(--accent);margin-right:.4vw;letter-spacing:.1em}
+.sb-no{margin-left:1vw;color:var(--muted);font-weight:500}
+.navbtn{position:fixed;top:50%;transform:translateY(-50%);width:clamp(36px,4.2vw,56px);height:clamp(36px,4.2vw,56px);border-radius:50%;border:2px solid #CDBF9F;background:rgba(40,32,22,.65);color:#F3E9D2;font-size:clamp(20px,2.4vw,32px);line-height:1;cursor:pointer;z-index:25;display:flex;align-items:center;justify-content:center;transition:background .3s,opacity .3s}
+.navbtn:hover{background:#9C4A2F;border-color:#9C4A2F}
+.navbtn.prev{left:.6vw}.navbtn.next{right:.6vw}
+.navbtn[hidden]{display:none}
 .slide.active .spread{animation:turn .9s ease}
 @keyframes turn{from{transform:perspective(1600px) rotateY(-4deg) translateX(1.5%);filter:brightness(.97)}to{transform:none;filter:none}}
 @media (prefers-reduced-motion:reduce){.slide{transition:none}.slide.active .spread{animation:none}}
@@ -211,9 +274,9 @@ body.no-zh .pair .zh{visibility:hidden;height:0;overflow:hidden;display:block}
 JS = "const KEY='" + topic + "';" + r"""
 const S=[...document.querySelectorAll('.slide')];let i=0;
 const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
-const TOC=document.querySelector('.toc'),TL=[...TOC.querySelectorAll('li')];
+const TOC=document.querySelector('.toc'),TL=[...TOC.querySelectorAll('li')],PV=document.querySelector('.navbtn.prev'),NX=document.querySelector('.navbtn.next');
 function go(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,k)=>s.classList.toggle('active',k===i));TL.forEach((l,k)=>l.classList.toggle('cur',k===i));
- history.replaceState(null,'','#'+(i+1));document.querySelector('.progress').style.width=((i+1)/S.length*100)+'%';store.set(KEY+'-page',i);}
+ history.replaceState(null,'','#'+(i+1));document.querySelector('.progress').style.width=((i+1)/S.length*100)+'%';store.set(KEY+'-page',i);PV.hidden=i===0;NX.hidden=i===S.length-1;}
 function toggleFull(b,e){e.stopPropagation();const t=b.parentElement.querySelector('.entext');const isFull=b.textContent==='收合';t.textContent=isFull?b.dataset.short:b.dataset.full;b.textContent=isFull?'展開':'收合';}
 let fs=parseFloat(store.get(KEY+'-fs')||'1');document.documentElement.style.setProperty('--fs',fs);
 function font(d){fs=Math.max(.8,Math.min(1.3,fs+d));document.documentElement.style.setProperty('--fs',fs);store.set(KEY+'-fs',fs);}
@@ -226,14 +289,14 @@ go(location.hash?parseInt(location.hash.slice(1))-1:parseInt(store.get(KEY+'-pag
 """
 doc = f'''<!DOCTYPE html>
 <html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Tale of Benjamin Bunny｜英文初學者故事導讀</title>
+<title>{E(titles[0])}｜英文初學者故事導讀</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,400&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,400&family=Noto+Sans+TC:wght@500;700&display=swap" rel="stylesheet">
 <style>{CSS}</style></head><body><main class="deck">
 {"".join(slides)}
 </main>
 <div class="toolbar" role="toolbar" aria-label="閱讀工具"><button onclick="TOC.classList.toggle('open')">目錄</button><button aria-pressed="true" onclick="zh(this)">隱藏中文</button><button onclick="font(-.1)" aria-label="字體縮小">A−</button><button onclick="font(.1)" aria-label="字體放大">A+</button></div>
 <nav class="toc" aria-label="目錄"><h3>目　錄</h3><ol>{"".join(f"<li>{E(t)}</li>" for t in titles)}</ol></nav>
-<div class="progress"></div><div class="hint">← → 或點擊左右翻頁　｜　右上角有目錄、中文開關、字體大小</div><script>{JS}</script></body></html>'''
+<button class="navbtn prev" aria-label="上一頁" onclick="go(i-1)">‹</button><button class="navbtn next" aria-label="下一頁" onclick="go(i+1)">›</button><div class="progress"></div><div class="hint">← → 或點擊左右翻頁　｜　右上角有目錄、中文開關、字體大小</div><script>{JS}</script></body></html>'''
 (SD / "deck.html").write_text(doc, encoding="utf-8")
 print(f"deck.html：{len(slides)} 頁")

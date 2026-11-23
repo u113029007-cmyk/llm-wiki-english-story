@@ -2,13 +2,13 @@
 <html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>The Tale of Benjamin Bunny｜英文初學者故事導讀</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,400&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,400&family=Noto+Sans+TC:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{--paper:#F6EFDD;--paper2:#EFE5CC;--ink:#3E3527;--muted:#7D6E55;--sage:#6E8B5E;--blue:#4A6F96;--rule:#CDBF9F;--accent:#9C4A2F}
 .mood-warm{--paper:#F3E3C3;--paper2:#EAD5AE;--ink:#43321F;--muted:#86684A;--sage:#8A6B3E;--blue:#8A4F2A;--rule:#CFB283;--accent:#A5552C}
 .mood-dark{--paper:#2F271C;--paper2:#261F16;--ink:#EFE4CC;--muted:#C2AF89;--sage:#B8A06A;--blue:#E0B65E;--rule:#5E4F38;--accent:#E0B65E}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;background:#1E1A14;overflow:hidden;font-family:"Noto Serif TC",serif}
+html,body{height:100%;background:#1E1A14;overflow:hidden;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;font-weight:500}
 .deck{position:relative;width:100vw;height:100vh;display:flex;align-items:center;justify-content:center}
 .slide{position:absolute;width:min(96vw,calc(96vh*16/9));aspect-ratio:16/9;opacity:0;visibility:hidden;transition:opacity .9s ease,visibility .9s}
 .slide.active{opacity:1;visibility:visible}
@@ -31,8 +31,8 @@ figcaption{font-size:clamp(9px,1.25vh,14px);color:var(--muted);font-style:italic
 .sprig{position:absolute;width:15%;color:var(--sage);opacity:.65}
 .sprig.tl{top:2.5%;left:2.5%;transform:scaleY(-1)}
 .sprig.br{bottom:2.5%;right:2.5%;transform:scaleX(-1)}
-h2{font-weight:600;font-size:clamp(16px,4.1vh,46px);line-height:1.3;margin-top:4%;color:var(--ink)}
-.kicker{display:block;font-size:.52em;font-weight:400;color:var(--accent);letter-spacing:.2em;margin-bottom:.4em}
+h2{font-weight:700;font-size:clamp(16px,4.1vh,46px);line-height:1.3;margin-top:4%;color:var(--ink)}
+.kicker{display:block;font-size:.52em;font-weight:700;color:var(--accent);letter-spacing:.2em;margin-bottom:.4em}
 .divider{width:42%;height:2.2vh;color:var(--sage);margin:1.6vh 0 2.2vh}
 ul{list-style:none;display:flex;flex-direction:column;gap:2.2vh;font-size:calc(clamp(12px,2.75vh,30px)*var(--fs,1));line-height:1.6}
 li{padding-left:1.3em;position:relative}
@@ -48,10 +48,10 @@ li em,.quote,.eg{font-family:"EB Garamond",Georgia,serif;font-style:italic;color
 .reveal{margin-left:.8em;font:inherit;font-size:.75em;color:var(--accent);background:transparent;border:1px solid var(--rule);border-radius:99px;padding:.1em .9em;cursor:pointer}
 .src{margin-top:auto;font-size:clamp(8px,1.15vh,13px);color:var(--muted);letter-spacing:.03em;padding-top:1.5vh;padding-right:16%}
 .folio{position:absolute;bottom:3.2%;left:0;right:0;text-align:center;font-family:"EB Garamond",serif;font-style:italic;color:var(--muted);font-size:clamp(10px,1.6vh,18px)}
-.cover h2{font-family:"EB Garamond",serif;font-size:clamp(22px,6.4vh,72px);font-weight:500;margin-top:14%}
+.cover h2{font-size:clamp(22px,5.6vh,64px);font-weight:700;margin-top:14%}
 .cover ul{font-size:clamp(11px,2.5vh,28px)}
 .cover li::before{display:none}.cover li{padding-left:0}
-.hint{position:fixed;bottom:1.2vh;left:50%;transform:translateX(-50%);color:#9C8E73;font-size:12px;letter-spacing:.1em;font-family:"Noto Serif TC",serif;transition:opacity 1.5s}
+.hint{position:fixed;bottom:1.2vh;left:50%;transform:translateX(-50%);color:#9C8E73;font-size:12px;letter-spacing:.1em;font-family:"Noto Sans TC",sans-serif;transition:opacity 1.5s}
 .full .spread{grid-template-columns:1fr}
 .full .page.right{padding:5% 12% 5% 12%}
 .full .page.right::after{content:"";position:absolute;top:8%;bottom:8%;left:50%;width:1px;background:linear-gradient(transparent,var(--rule),transparent);opacity:.35}
@@ -72,16 +72,30 @@ li em,.quote,.eg{font-family:"EB Garamond",Georgia,serif;font-style:italic;color
 body.no-zh .pair .zh{visibility:hidden;height:0;overflow:hidden;display:block}
 .toolbar{position:fixed;top:1.4vh;right:1.4vw;display:flex;gap:.5vw;z-index:20;opacity:.35;transition:opacity .4s}
 .toolbar:hover,.toolbar:focus-within{opacity:1}
-.toolbar button{font:13px "Noto Serif TC",serif;color:#E9DEC6;background:rgba(40,32,22,.7);border:1px solid #6B5C45;border-radius:99px;padding:.35em 1em;cursor:pointer}
+.toolbar button{font:13px "Noto Sans TC",sans-serif;color:#E9DEC6;background:rgba(40,32,22,.7);border:1px solid #6B5C45;border-radius:99px;padding:.35em 1em;cursor:pointer}
 .toolbar button[aria-pressed="true"]{background:#6E8B5E;border-color:#6E8B5E}
 .progress{position:fixed;left:0;bottom:0;height:3px;background:#B8A06A;transition:width .9s ease;z-index:20}
-.toc{position:fixed;top:0;right:0;height:100vh;width:min(360px,80vw);background:#2B241A;color:#EFE4CC;padding:6vh 2vw;transform:translateX(105%);transition:transform .6s ease;z-index:30;overflow:auto;font-family:"Noto Serif TC",serif}
+.toc{position:fixed;top:0;right:0;height:100vh;width:min(360px,80vw);background:#2B241A;color:#EFE4CC;padding:6vh 2vw;transform:translateX(105%);transition:transform .6s ease;z-index:30;overflow:auto;font-family:"Noto Sans TC",sans-serif}
 .toc.open{transform:none}
 .toc h3{font-weight:500;font-size:18px;color:#D9C48F;margin-bottom:2vh;letter-spacing:.2em}
 .toc ol{list-style:none;counter-reset:t}
 .toc li{counter-increment:t;padding:.7em 0;border-bottom:1px solid #4A3E2C;cursor:pointer;font-size:14px;line-height:1.4}
 .toc li::before{content:counter(t) "　";color:#B8A06A;font-family:"EB Garamond",serif;font-style:italic}
 .toc li.cur{color:#E0B65E}
+.spread{position:relative}
+.storybar ~ *{}
+.slide .page{padding-bottom:9%}
+.storybar{position:absolute;left:3%;right:3%;bottom:1.6%;height:5.2%;display:flex;align-items:center;justify-content:center;gap:.6vw;font-size:clamp(8px,1.35vh,15px);font-weight:700;z-index:3}
+.sb{padding:.25em .9em;border-radius:99px;border:1.5px solid var(--rule);color:var(--muted);opacity:.55;white-space:nowrap}
+.sb.on{background:var(--accent);border-color:var(--accent);color:var(--paper);opacity:1}
+.sb-line{width:2.2vw;height:2px;background:var(--rule)}
+.sb-gap{width:2.2vw;border-top:2px dashed var(--rule)}
+.sb-lab{color:var(--accent);margin-right:.4vw;letter-spacing:.1em}
+.sb-no{margin-left:1vw;color:var(--muted);font-weight:500}
+.navbtn{position:fixed;top:50%;transform:translateY(-50%);width:clamp(36px,4.2vw,56px);height:clamp(36px,4.2vw,56px);border-radius:50%;border:2px solid #CDBF9F;background:rgba(40,32,22,.65);color:#F3E9D2;font-size:clamp(20px,2.4vw,32px);line-height:1;cursor:pointer;z-index:25;display:flex;align-items:center;justify-content:center;transition:background .3s,opacity .3s}
+.navbtn:hover{background:#9C4A2F;border-color:#9C4A2F}
+.navbtn.prev{left:.6vw}.navbtn.next{right:.6vw}
+.navbtn[hidden]{display:none}
 .slide.active .spread{animation:turn .9s ease}
 @keyframes turn{from{transform:perspective(1600px) rotateY(-4deg) translateX(1.5%);filter:brightness(.97)}to{transform:none;filter:none}}
 @media (prefers-reduced-motion:reduce){.slide{transition:none}.slide.active .spread{animation:none}}
@@ -130,12 +144,12 @@ body.no-zh .pair .zh{visibility:hidden;height:0;overflow:hidden;display:block}
 </main>
 <div class="toolbar" role="toolbar" aria-label="閱讀工具"><button onclick="TOC.classList.toggle('open')">目錄</button><button aria-pressed="true" onclick="zh(this)">隱藏中文</button><button onclick="font(-.1)" aria-label="字體縮小">A−</button><button onclick="font(.1)" aria-label="字體放大">A+</button></div>
 <nav class="toc" aria-label="目錄"><h3>目　錄</h3><ol><li>The Tale of Benjamin Bunny</li><li>這堂課你會學到</li><li>前情提要：Peter 的衣服去哪了？</li><li>角色①：兩隻小兔子</li><li>角色②：大人們</li><li>故事地圖</li><li>劇情①：Benjamin 出門</li><li>劇情②：裹著手帕的 Peter</li><li>劇情③：從梨樹爬進花園</li><li>劇情④：拿回衣服、裝洋蔥</li><li>劇情⑤：轉角、籃子、貓</li><li>劇情⑥：爸爸來救</li><li>結局：回家</li><li>單字複習（上）</li><li>單字複習（下）</li><li>小測驗</li><li>延伸①：Wiki 收錄的五篇故事</li><li>延伸②：角色長大了</li><li>延伸③：五篇的共同模式（推論）</li><li>延伸與出處</li></ol></nav>
-<div class="progress"></div><div class="hint">← → 或點擊左右翻頁　｜　右上角有目錄、中文開關、字體大小</div><script>const KEY='benjamin-bunny';
+<button class="navbtn prev" aria-label="上一頁" onclick="go(i-1)">‹</button><button class="navbtn next" aria-label="下一頁" onclick="go(i+1)">›</button><div class="progress"></div><div class="hint">← → 或點擊左右翻頁　｜　右上角有目錄、中文開關、字體大小</div><script>const KEY='benjamin-bunny';
 const S=[...document.querySelectorAll('.slide')];let i=0;
 const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
-const TOC=document.querySelector('.toc'),TL=[...TOC.querySelectorAll('li')];
+const TOC=document.querySelector('.toc'),TL=[...TOC.querySelectorAll('li')],PV=document.querySelector('.navbtn.prev'),NX=document.querySelector('.navbtn.next');
 function go(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,k)=>s.classList.toggle('active',k===i));TL.forEach((l,k)=>l.classList.toggle('cur',k===i));
- history.replaceState(null,'','#'+(i+1));document.querySelector('.progress').style.width=((i+1)/S.length*100)+'%';store.set(KEY+'-page',i);}
+ history.replaceState(null,'','#'+(i+1));document.querySelector('.progress').style.width=((i+1)/S.length*100)+'%';store.set(KEY+'-page',i);PV.hidden=i===0;NX.hidden=i===S.length-1;}
 function toggleFull(b,e){e.stopPropagation();const t=b.parentElement.querySelector('.entext');const isFull=b.textContent==='收合';t.textContent=isFull?b.dataset.short:b.dataset.full;b.textContent=isFull?'展開':'收合';}
 let fs=parseFloat(store.get(KEY+'-fs')||'1');document.documentElement.style.setProperty('--fs',fs);
 function font(d){fs=Math.max(.8,Math.min(1.3,fs+d));document.documentElement.style.setProperty('--fs',fs);store.set(KEY+'-fs',fs);}

@@ -1,7 +1,8 @@
-# 第一章：家族樹
-- Peter 和 Benjamin 是表哥/表弟（cousin） ｜ "he had heard about cats from his cousin, little Benjamin Bunny." [wiki: family-five-stories]
-- Benjamin 長大後娶了 Flopsy ｜ "When Benjamin Bunny grew up, he married his Cousin Flopsy." [wiki: family-five-stories]
-- 他們的孩子統稱 Flopsy Bunnies ｜ "six leetle rabbits!" [wiki: family-five-stories]
-- （推論）救了孩子的林鼠，就是第五篇的主角 ｜ "she was called Thomasina Tittlemouse, a wood mouse with a long tail." [wiki: family-five-stories]
-mood: warm [wiki: benjamin-family-rabbit-hole]
-type: tree
+# ① The Tale of Peter Rabbit：Peter 闖進花園
+- 媽媽警告孩子：不准去 McGregor 的花園 ｜ "don't go into Mr. McGregor's garden." [wiki: peter-rabbit]
+- Peter 不聽話，直接跑進花園 ｜ "But Peter, who was very naughty, ran straight away to Mr. McGregor's garden." [wiki: peter-rabbit]
+- 被 Mr. McGregor 追，他自己扭身逃出，留下外套 ｜ "but Peter wriggled out just in time, leaving his jacket behind him." [wiki: family-five-stories]
+- 外套和鞋子被拿去掛在稻草人身上 ｜ "Mr. McGregor hung up the little jacket and the shoes for a scarecrow to frighten the blackbirds." [wiki: peter-rabbit]
+img: illustration-16.jpg
+mood: warm [wiki: mr-mcgregors-garden]
+story: peter-rabbit

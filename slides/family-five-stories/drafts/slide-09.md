@@ -1,7 +1,8 @@
-# 第五篇怎麼接上？
-- 第三篇裡出現一隻長尾巴的林鼠 ｜ "she was called Thomasina Tittlemouse, a wood mouse with a long tail." [wiki: family-five-stories]
-- 第五篇的主角也是林鼠 ｜ "Once upon a time there was a wood mouse, and her name was Mrs. Tittlemouse." [wiki: family-five-stories]
-- 第五篇出現她的全名 Mrs. Thomasina Tittlemouse ｜ "And without any invitation!" [wiki: mrs-tittlemouse]
-- （推論）兩篇是同一隻老鼠，原文沒有直接說；第五篇只靠她接上家族故事 ｜ "she was called Thomasina Tittlemouse" [wiki: thomasina-tittlemouse]
-img: illustration-364.jpg
+# ⑤ The Tale of Mrs. Tittlemouse：林鼠的家
+- 主角換成一隻林鼠 ｜ "Once upon a time there was a wood mouse, and her name was Mrs. Tittlemouse." [wiki: mrs-tittlemouse]
+- 她非常愛乾淨 ｜ "Mrs. Tittlemouse was a most terribly tidy particular little mouse" [wiki: mrs-tittlemouse]
+- 不請自來的客人把她的家弄亂 ｜ "I am not in the habit of letting lodgings; this is an intrusion!" [wiki: mrs-tittlemouse]
+- 客人走後，她大掃除了兩週 ｜ "began a spring cleaning which lasted a fortnight." [wiki: mrs-tittlemouse]
+img: illustration-415.jpg
 mood: bright [wiki: mrs-tittlemouse-house]
+story: mrs-tittlemouse

@@ -22,7 +22,7 @@ for f in files:
     typ = (re.search(r"^type: (\w+)", t, re.M) or [None, "content"])[1]
     if not re.match(r"^# \S", t): fails.append(f"{name}: 沒有標題")
     bullets = [l for l in t.splitlines() if l.startswith("- ")]
-    content = typ in ("content", "map", "series", "tree")
+    content = typ in ("content", "map", "series", "tree", "storyline")
     limit = 4 if typ in ("content", "map", "tree") else 5
     if len(bullets) > limit: fails.append(f"{name}: 條列 {len(bullets)} 條，超過 {limit} 條")
     if content:
@@ -47,6 +47,9 @@ for f in files:
             for seg in [s.strip() for s in norm(q).split("...") if s.strip()]:
                 if seg not in ptext[pg]:
                     fails.append(f"{name}: 引句「{seg[:40]}」不在 wiki 頁 {pg}")
+    for st in re.findall(r"^story: (.+)$", t, re.M):
+        for s in [x.strip() for x in st.split(",")]:
+            if s != "all" and s not in STORIES: fails.append(f"{name}: story: {s} 不是本主題的篇章")
     for im in re.findall(r"^img: (\S+)", t, re.M):
         if im not in ok_imgs: fails.append(f"{name}: 插圖 {im} 不屬於本主題的篇章 {sorted(STORIES)}")
     md = re.search(r"^mood: (\w+) \[wiki: ([\w-]+)\]", t, re.M)

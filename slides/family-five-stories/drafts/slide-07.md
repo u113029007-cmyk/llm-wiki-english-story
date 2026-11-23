@@ -1,6 +1,8 @@
-# 這一代：四個兄弟姊妹和一個表親
-- Peter 有三個乖巧的手足 ｜ "But Flopsy, Mopsy, and Cottontail had bread and milk and blackberries for supper." [wiki: peter-rabbit]
-- 她們被稱為乖小兔子 ｜ "who were good little bunnies" [wiki: flopsy]
-- 第二篇寫到 Benjamin 的阿姨和表親住在最整齊的兔子洞 ｜ "in the neatest, sandiest hole of all lived Benjamin's aunt and his cousins" [wiki: benjamin-bunny]
-- 第一篇 Benjamin 只被提到一次 ｜ "he had heard about cats from his cousin, little Benjamin Bunny." [wiki: cousin]
-mood: warm [wiki: fir-tree-rabbit-hole]
+# ③ The Tale of the Flopsy Bunnies：小兔子進了麻袋
+- 長大的 Benjamin 娶了表姊/表妹 Flopsy ｜ "When Benjamin Bunny grew up, he married his Cousin Flopsy." [wiki: flopsy-bunnies]
+- 他們的孩子吃了萵苣，在垃圾堆睡著 ｜ "they were overcome with slumber" [wiki: flopsy-bunnies]
+- Mr. McGregor 把他們數著裝進麻袋 ｜ "One, two, three, four! five! six leetle rabbits!" [wiki: flopsy-bunnies]
+- 林鼠 Thomasina 咬破麻袋救了他們 ｜ "But Mrs. Tittlemouse was a resourceful person." [wiki: resourceful]
+img: illustration-368.jpg
+mood: warm [wiki: mr-mcgregors-rubbish-heap]
+story: flopsy-bunnies

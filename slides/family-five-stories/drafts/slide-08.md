@@ -1,7 +1,8 @@
-# 下一代：Benjamin 娶了 Flopsy
-- Benjamin 長大後娶了表姊/表妹 Flopsy ｜ "When Benjamin Bunny grew up, he married his Cousin Flopsy." [wiki: family-five-stories]
-- 他們孩子很多，不太會存糧但很快樂 ｜ "they were very improvident and cheerful." [wiki: improvident]
-- 第四篇他們和 Benjamin 的爸爸住在一起 ｜ "He lived with his son Benjamin Bunny and his daughter-in-law Flopsy" [wiki: family-five-stories]
-- Cottontail 嫁給一隻黑兔子，搬到山上 ｜ "Cottontail had married a black rabbit, and gone to live on the hill" [wiki: family-five-stories]
-img: illustration-358.jpg
-mood: warm [wiki: benjamin-family-rabbit-hole]
+# ④ The Tale of Mr. Tod：救回被偷的孩子
+- 這篇的兩個壞角色：Tommy Brock 和 Mr. Tod ｜ "a story about two disagreeable people, called Tommy Brock and Mr. Tod." [wiki: mr-tod]
+- 孩子被 Tommy Brock 偷走，Benjamin 跑去找 Peter 幫忙 ｜ "Cousin Peter! Peter Rabbit, Peter Rabbit!" [wiki: cousin]
+- 孩子被關在 Mr. Tod 家的烤爐裡 ｜ "The young family were alive; shut up in the oven!" [wiki: mr-tod]
+- Peter 守門，Benjamin 進屋把孩子救出來 ｜ "Run in, Cousin Benjamin! Run in and get them! while I watch at the door." [wiki: family-five-stories]
+img: illustration-485.jpg
+mood: dark [wiki: bull-banks-house]
+story: mr-tod

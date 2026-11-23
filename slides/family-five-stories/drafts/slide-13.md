@@ -1,7 +1,9 @@
-# 第三章：垃圾堆與麻袋
-- 花園外的垃圾堆什麼都有 ｜ "Mr. McGregor's rubbish heap was a mixture." [wiki: mr-mcgregors-rubbish-heap]
-- 小兔子睡著了，被 Mr. McGregor 數著裝進麻袋 ｜ "six leetle rabbits!" [wiki: family-five-stories]
-- 麻袋被綁起來放在牆上 ｜ "Mr. McGregor tied up the sack and left it on the wall." [wiki: sack]
-- 林鼠咬破麻袋救了他們 ｜ "But Mrs. Tittlemouse was a resourceful person." [wiki: family-five-stories]
-img: illustration-368.jpg
-mood: warm [wiki: mr-mcgregors-rubbish-heap]
+# 單字複習
+- cousin 表（堂）兄弟姊妹："he married his Cousin Flopsy." [wiki: cousin]
+- naughty 調皮的："But Peter, who was very naughty" [wiki: naughty]
+- sack 麻袋："Mr. McGregor tied up the sack and left it on the wall." [wiki: sack]
+- resourceful 足智多謀的："But Mrs. Tittlemouse was a resourceful person." [wiki: resourceful]
+- oven 烤爐："The young family were alive; shut up in the oven!" [wiki: oven]
+mood: bright [wiki: fir-tree-rabbit-hole]
+type: vocab
+story: all
