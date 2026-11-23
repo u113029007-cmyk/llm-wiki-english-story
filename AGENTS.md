@@ -124,7 +124,7 @@ sources: [peter-rabbit, benjamin-bunny]
 
 ## 7.5 Query（例如產生簡報）
 - 依 Karpathy：好的答案要存回 Wiki。簡報完成後，把簡報大綱存成 wiki 頁面（放 books/potter/，連到它用到的頁面），並在 log.md 記一筆 `query`。
-- 簡報階段的詳細流程另寫規格檔，到時再與使用者討論。
+- 簡報階段的詳細流程見規格檔 `.agents/workflows/topic-slides.md`。
 
 ## 8. 矛盾處理
 - Wiki 頁面之間不一致：是 AI 寫錯，以 raw/ 原文為準修正，記進 log.md。
