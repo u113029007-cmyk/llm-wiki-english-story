@@ -96,7 +96,7 @@ STORY = ('<svg class="tree" viewBox="0 0 320 390" role="img" aria-label="五篇�
  '<rect x="15" y="209" width="170" height="52" rx="7"/><rect x="15" y="294" width="170" height="52" rx="7"/>'
  '<rect x="205" y="209" width="110" height="52" rx="7" stroke-dasharray="5 4"/>'
  '<path d="M100 76V104" marker-end="url(#st-ar)"/><path d="M100 156V209" stroke-dasharray="4 3"/><path d="M100 261V294" stroke-dasharray="4 3"/>'
- '<path d="M185 235H205" stroke-dasharray="4 3"/><path d="M10 180H310" stroke-width=".8" stroke-dasharray="2 4"/></g>'
+ '<path d="M185 235H205" stroke-dasharray="4 3"/><path d="M10 180H192" stroke-width=".8" stroke-dasharray="2 4"/></g>'
  '<g fill="var(--ink)" text-anchor="middle">'
  '<text x="22" y="15" text-anchor="start" font-size="11" font-weight="700" fill="var(--accent)">小時候</text>'
  '<text x="22" y="198" text-anchor="start" font-size="11" font-weight="700" fill="var(--accent)">長大以後</text>'
@@ -129,8 +129,8 @@ def storybar(lit, n, total):
     on = {s for s, _ in STORIES_ORDER} if "all" in lit else set(lit)
     items = []
     for k, (sid, lab) in enumerate(STORIES_ORDER):
-        if k == 4: items.append('<span class="sb-gap"></span>')
-        elif k: items.append('<span class="sb-line"></span>')
+        if k == 1: items.append('<span class="sb-line"></span>')
+        elif k: items.append('<span class="sb-gap"></span>')
         items.append(f'<span class="sb{" on" if sid in on else ""}">{lab}</span>')
     return f'<div class="storybar"><span class="sb-lab">故事線</span>{"".join(items)}<span class="sb-no">{n} / {total}</span></div>'
 
@@ -155,7 +155,7 @@ for n, f in enumerate(files, 1):
     elif typ == "map":
         left = f'<figure class="mapfig"><div class="mapwrap">{MAP}</div><figcaption>地點名稱都來自 wiki；位置為示意，原文未描述相對位置</figcaption></figure>'
     elif typ == "storyline":
-        left = f'<figure class="mapfig"><div class="mapwrap">{STORY}</div><figcaption>實線：① → ② 劇情相接（推論）；虛線：先後原文沒說</figcaption></figure>'
+        left = f'<figure class="mapfig"><div class="mapwrap">{STORY}</div><figcaption>實線：① → ② 劇情相接（推論）；虛線：先後原文沒說；⑤ 不在時間線上</figcaption></figure>'
     elif typ == "wikimap":
         left = f'<figure class="mapfig"><div class="mapwrap">{WIKIMAP}</div><figcaption>上：原始的 5 篇原文　下：Wiki 把它們連起來</figcaption></figure>'
     elif typ == "tree":
