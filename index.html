@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>英文經典讀本 LLM Wiki｜作業成果</title>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;1,400&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#F6EFDD;--card:#FFFDF6;--ink:#3E3527;--muted:#7D6E55;--rule:#D9CDB4;--sage:#6E8B5E;--rust:#9C4A2F;--blue:#4A6F96}
+:root{--paper:#F6EFDD;--card:#FFFDF6;--ink:#3E3527;--muted:#5E5240;--rule:#D9CDB4;--sage:#6E8B5E;--rust:#9C4A2F;--blue:#4A6F96}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Serif TC",serif;line-height:1.7;font-size:16px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;font-weight:500;line-height:1.75;font-size:16.5px}
 a{color:inherit}
 nav{position:sticky;top:0;z-index:5;background:rgba(246,239,221,.94);backdrop-filter:blur(4px);border-bottom:1px solid var(--rule)}
 nav .in{max-width:1040px;margin:0 auto;padding:.7em 5vw;display:flex;gap:1.6em;align-items:center;flex-wrap:wrap}
-nav b{font-family:"EB Garamond",serif;font-size:1.15em;margin-right:auto}
+nav b{font-size:1.15em;margin-right:auto}
 nav a{text-decoration:none;color:var(--muted);font-size:.95em}
 nav a:hover{color:var(--rust)}
 section{max-width:1040px;margin:0 auto;padding:4.5em 5vw 1em}
 .hero{padding-top:5em;text-align:center}
 .eyebrow{color:var(--sage);letter-spacing:.25em;font-size:.85em}
-h1{font-family:"EB Garamond","Noto Serif TC",serif;font-weight:500;font-size:clamp(2em,5vw,3.2em);margin:.2em 0}
+h1{font-weight:700;font-size:clamp(2em,5vw,3.2em);margin:.2em 0}
 .goal{font-size:1.15em;max-width:36em;margin:0 auto 2em;color:var(--ink)}
 .btns{display:flex;gap:1em;justify-content:center;flex-wrap:wrap}
 .btn{display:inline-block;padding:.75em 1.8em;border-radius:99px;text-decoration:none;font-weight:600;border:1.5px solid var(--rust)}
@@ -23,7 +23,7 @@ h1{font-family:"EB Garamond","Noto Serif TC",serif;font-weight:500;font-size:cla
 .btn.ghost{color:var(--rust)}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1em;margin-top:3.5em}
 .stat{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:1em;text-align:center}
-.stat b{display:block;font-family:"EB Garamond",serif;font-size:2em;font-weight:500;color:var(--rust);line-height:1.2}
+.stat b{display:block;font-size:2em;font-weight:500;color:var(--rust);line-height:1.2}
 .stat span{color:var(--muted);font-size:.85em}
 h2{font-size:1.5em;font-weight:600;margin:0 0 .3em}
 .lead{color:var(--muted);margin:0 0 1.6em}
@@ -33,12 +33,12 @@ h2{font-size:1.5em;font-weight:600;margin:0 0 .3em}
 .node.check{border-color:var(--rust);color:var(--rust)}
 .node.human{border-color:var(--sage);color:#4E6A40}
 .arrow{color:var(--muted)}
-.phase{font-size:.85em;color:var(--sage);letter-spacing:.15em;margin:1.4em 0 .6em}
+.phase{font-size:1.05em;font-weight:700;color:#4E6A40;letter-spacing:.08em;margin:2em 0 .6em}
 .legend{font-size:.85em;color:var(--muted);margin-top:1em}
 .legend i{font-style:normal;padding:0 .5em;border-radius:3px;border:1px solid}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.2em}
 .card{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:1.3em 1.4em;display:flex;flex-direction:column}
-.num{font-family:"EB Garamond",serif;font-size:1.6em;color:var(--sage);line-height:1}
+.num{font-weight:700;font-size:1.6em;color:var(--sage);line-height:1}
 .card h3{margin:.3em 0 .2em;font-size:1.1em}
 .card p{margin:0 0 .9em;color:var(--muted);font-size:.95em}
 .card .links{margin-top:auto;display:flex;flex-wrap:wrap;gap:.5em}
@@ -46,21 +46,34 @@ h2{font-size:1.5em;font-weight:600;margin:0 0 .3em}
 .card .links a:hover{border-color:var(--blue)}
 table{width:100%;border-collapse:collapse;font-size:.95em;background:var(--card);border:1px solid var(--rule)}
 th,td{text-align:left;padding:.7em 1em;border-bottom:1px solid var(--rule);vertical-align:top}
-th{color:var(--muted);font-weight:400;font-size:.85em;letter-spacing:.1em}
+th{color:var(--muted);font-weight:700;font-size:.85em;letter-spacing:.1em}
 .roles{display:flex;flex-wrap:wrap;gap:.6em;margin:0 0 1em}
 .steps{list-style:none;margin:0;padding:0;display:grid;gap:.7em}
 .step{display:flex;gap:1em;background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:.9em 1.2em}
 .step.check{border-left:4px solid var(--rust)}
-.step .no{font-family:"EB Garamond",serif;font-size:1.5em;color:var(--sage);line-height:1.2;min-width:1.2em}
-.step h4{margin:0 0 .2em;font-size:1.05em;display:flex;flex-wrap:wrap;gap:.6em;align-items:center}
+.step .no{font-weight:700;font-size:1.5em;color:var(--sage);line-height:1.2;min-width:1.2em}
+.step h4{font-weight:700;margin:0 0 .2em;font-size:1.05em;display:flex;flex-wrap:wrap;gap:.6em;align-items:center}
 .step p{margin:0;color:var(--muted);font-size:.93em}
 .step p.fail{color:var(--rust);margin-top:.3em}
 .step a{color:var(--blue)}
-.role{font-size:.72em;font-weight:400;border-radius:99px;padding:.1em .8em;border:1px solid;white-space:nowrap}
+.role{font-size:.72em;font-weight:700;border-radius:99px;padding:.1em .8em;border:1px solid;white-space:nowrap}
 .role-u{color:#4E6A40;border-color:var(--sage)}
 .role-l{color:var(--blue);border-color:var(--blue)}
 .role-s{color:var(--rust);border-color:var(--rust)}
 .role-r{color:#6B4E8A;border-color:#6B4E8A}
+.graphbox{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:1em;margin:0 0 1em;overflow-x:auto}
+.graph{width:100%;min-width:760px;height:auto;display:block}
+.sub{font-weight:700;color:var(--muted);margin:.2em 0 .6em}
+table.map{margin:0 0 1.2em}
+.timeline{list-style:none;padding:0;margin:0}
+.timeline li{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:.9em 1.2em}
+.timeline li h4{margin:0 0 .3em;font-weight:700;display:flex;flex-wrap:wrap;gap:.6em;align-items:center}
+.timeline li p{margin:.15em 0;color:var(--muted)}
+.timeline li p b{color:var(--ink)}
+.timeline .down{text-align:center;color:var(--rust);font-size:1.4em;font-weight:700;background:none;border:none;padding:.1em}
+.where{font-size:.75em;font-weight:700;color:#FFF8EC;background:var(--sage);border-radius:99px;padding:.1em .8em}
+.explain{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--rust);border-radius:8px;padding:1em 1.3em;margin:0 0 1.2em}
+.explain p{margin:.3em 0}
 footer{max-width:1040px;margin:4em auto 0;padding:2em 5vw 3em;border-top:1px solid var(--rule);color:var(--muted);font-size:.85em}
 </style></head><body>
 <nav><div class="in"><b>English Classics Wiki</b><a href="#result">成果</a><a href="#flow">流程</a><a href="#submit">繳交重點</a><a href="#record">檢查紀錄</a></div></nav>
@@ -74,11 +87,16 @@ footer{max-width:1040px;margin:4em auto 0;padding:2em 5vw 3em;border-top:1px sol
 
 <section id="flow">
 <h2>資料怎麼被取得、整理、檢查，再變成簡報</h2>
-<p class="lead">每一步標出由誰負責。有紅框的是檢查關卡，不通過就退回寫明的那一步。</p>
-<div class="roles"><span class="role role-u">使用者</span><span class="role role-l">LLM：寫內容</span><span class="role role-s">腳本：機械檢查、產生檔案</span><span class="role role-r">另一個 LLM 對話：審查意思</span></div>
+<p class="lead">先看圖，再看每一步的說明。實線箭頭是正常往下走；紅色虛線是檢查不通過、退回去重做。顏色代表由誰負責。</p>
+<table class="map"><tr><th>資訊的處理</th><th>在 graph 的哪裡</th></tr><tr><td>取得</td><td>階段一 1–3：選書、下載、切篇編號，原文放進 raw/ 不再改動</td></tr><tr><td>整理</td><td>階段一 4（ingest 寫成 Wiki 頁）；階段二 1（把五篇整合成 query 頁）</td></tr><tr><td>檢查</td><td>腳本：lint、覆蓋率、出處檢查、渲染檢查；人：使用者確認；另一個 LLM：新對話審查</td></tr><tr><td>產生簡報</td><td>階段二 3–8：大綱 → 逐頁稿 → 程式產生 HTML</td></tr></table>
+<div class="roles"><span class="role role-u">使用者</span><span class="role role-l">LLM：寫內容</span><span class="role role-s">腳本（Python）：機械檢查、產生檔案</span><span class="role role-r">另一個 LLM 對話：審查意思</span></div>
 <div class="phase">階段一　建立 Wiki（每篇故事跑一次）</div>
+<div class="graphbox"><svg class="graph" viewBox="0 0 1000 200" role="img" aria-label="階段一流程圖" font-family="Noto Sans TC, sans-serif"><defs><marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#5A4E3C"/></marker><marker id="b1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9C4A2F"/></marker></defs><path d="M142.0 60H158.0" fill="none" stroke="#5A4E3C" stroke-width="2" marker-end="url(#a1)"/><path d="M282.0 60H298.0" fill="none" stroke="#5A4E3C" stroke-width="2" marker-end="url(#a1)"/><path d="M422.0 60H438.0" fill="none" stroke="#5A4E3C" stroke-width="2" marker-end="url(#a1)"/><path d="M562.0 60H578.0" fill="none" stroke="#5A4E3C" stroke-width="2" marker-end="url(#a1)"/><path d="M702.0 60H718.0" fill="none" stroke="#5A4E3C" stroke-width="2" marker-end="url(#a1)"/><path d="M842.0 60H858.0" fill="none" stroke="#5A4E3C" stroke-width="2" marker-end="url(#a1)"/><g><rect x="18.0" y="30.0" width="124" height="60" rx="8" fill="#E6EEDD" stroke="#4E6A40" stroke-width="2"/><text x="26.0" y="45.0" font-size="12" font-weight="700" fill="#4E6A40">1</text><text x="80" y="56" text-anchor="middle" font-size="15" font-weight="700" fill="#2E271C">查版權</text><text x="80" y="74" text-anchor="middle" font-size="12" font-weight="500" fill="#2E271C">選書</text></g><g><rect x="158.0" y="30.0" width="124" height="60" rx="8" fill="#E6EEDD" stroke="#4E6A40" stroke-width="2"/><text x="166.0" y="45.0" font-size="12" font-weight="700" fill="#4E6A40">2</text><text x="220" y="56" text-anchor="middle" font-size="15" font-weight="700" fill="#2E271C">下載電子書</text><text x="220" y="74" text-anchor="middle" font-size="12" font-weight="500" fill="#2E271C">Standard Ebooks</text></g><g><rect x="298.0" y="30.0" width="124" height="60" rx="8" fill="#F6E3DA" stroke="#9C4A2F" stroke-width="2"/><text x="306.0" y="45.0" font-size="12" font-weight="700" fill="#9C4A2F">3</text><text x="360" y="56" text-anchor="middle" font-size="15" font-weight="700" fill="#2E271C">放進 raw/</text><text x="360" y="74" text-anchor="middle" font-size="12" font-weight="500" fill="#2E271C">切篇編號</text></g><g><rect x="438.0" y="30.0" width="124" height="60" rx="8" fill="#E1EAF4" stroke="#3F6590" stroke-width="2"/><text x="446.0" y="45.0" font-size="12" font-weight="700" fill="#3F6590">4</text><text x="500" y="56" text-anchor="middle" font-size="15" font-weight="700" fill="#2E271C">ingest</text><text x="500" y="74" text-anchor="middle" font-size="12" font-weight="500" fill="#2E271C">寫 Wiki 頁</text></g><g><rect x="578.0" y="30.0" width="124" height="60" rx="8" fill="#F6E3DA" stroke="#9C4A2F" stroke-width="2"/><text x="586.0" y="45.0" font-size="12" font-weight="700" fill="#9C4A2F">5</text><text x="640" y="56" text-anchor="middle" font-size="15" font-weight="700" fill="#2E271C">lint</text><text x="640" y="74" text-anchor="middle" font-size="12" font-weight="500" fill="#2E271C">機械檢查</text></g><g><rect x="718.0" y="30.0" width="124" height="60" rx="8" fill="#F6E3DA" stroke="#9C4A2F" stroke-width="2"/><text x="726.0" y="45.0" font-size="12" font-weight="700" fill="#9C4A2F">6</text><text x="780" y="56" text-anchor="middle" font-size="15" font-weight="700" fill="#2E271C">commit</text><text x="780" y="74" text-anchor="middle" font-size="12" font-weight="500" fill="#2E271C">存一版</text></g><g><rect x="858.0" y="30.0" width="124" height="60" rx="8" fill="#ECE4F3" stroke="#6B4E8A" stroke-width="2"/><text x="866.0" y="45.0" font-size="12" font-weight="700" fill="#6B4E8A">7</text><text x="920" y="56" text-anchor="middle" font-size="15" font-weight="700" fill="#2E271C">新對話審查</text><text x="920" y="74" text-anchor="middle" font-size="12" font-weight="500" fill="#2E271C">檢查意思</text></g><path d="M100 90.0v22h-40v-22" fill="none" stroke="#9C4A2F" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#b1)"/><text x="80" y="130.0" text-anchor="middle" font-size="12.5" font-weight="700" fill="#9C4A2F">換一本書</text><path d="M380 90.0v22h-40v-22" fill="none" stroke="#9C4A2F" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#b1)"/><text x="360" y="130.0" text-anchor="middle" font-size="12.5" font-weight="700" fill="#9C4A2F">漏段：修腳本重切</text><path d="M640 90.0v30H510v-30" fill="none" stroke="#9C4A2F" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#b1)"/><text x="570.0" y="138.0" text-anchor="middle" font-size="12.5" font-weight="700" fill="#9C4A2F">不過：退回修，最多 3 輪</text><path d="M920 90.0v62H490v-62" fill="none" stroke="#9C4A2F" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#b1)"/><text x="870.0" y="170.0" text-anchor="middle" font-size="12.5" font-weight="700" fill="#9C4A2F">找到問題：退回 ingest 修正</text></svg></div>
+<p class="sub">每一步的詳細說明</p>
 <ol class="steps"><li class="step check"><span class="no">1</span><div><h4>查版權、選書<span class="role role-u">LLM 查、使用者決定</span></h4><p>LLM 依台灣著作權法第 30 條（作者死後 50 年）確認作者已過保護期，使用者決定用哪本。</p><p class="fail">不通過：換一本書</p></div></li><li class="step"><span class="no">2</span><div><h4>下載電子書<span class="role role-u">使用者</span></h4><p>使用者到 <a href="https://standardebooks.org/ebooks/beatrix-potter/short-fiction">Standard Ebooks</a> 下載 Beatrix Potter《Short Fiction》epub（公版、免費）。規則：AI 不自己爬網站。</p></div></li><li class="step check"><span class="no">3</span><div><h4>放進 raw/、切篇編號<span class="role role-u">使用者＋腳本</span></h4><p>使用者把 epub 放進 raw/，腳本 split_potter.py 切成 20 篇並替每段編號 ¶，之後每句話都能標出處。raw/ 從此唯讀，AI 不能改。</p><p class="fail">不通過：比對段落數，漏段就修腳本重切</p></div></li><li class="step"><span class="no">4</span><div><h4>ingest<span class="role role-l">LLM</span></h4><p>依 Karpathy 的定義：讀一個來源，寫成故事、角色、地點、單字頁，並更新舊頁之間的連結。長篇先分段讀。</p></div></li><li class="step check"><span class="no">5</span><div><h4>lint<span class="role role-s">腳本（Python）</span></h4><p>lint.py 做 6 項機械檢查：英文引句真的在原文那一段、出處存在、連結不斷、沒有孤兒頁、目錄完整、原文有版權紀錄。Karpathy 的 lint 原本是請 LLM 做健康檢查；能用程式判斷的部分，我們交給腳本，結果每次都一樣。</p><p class="fail">不通過：退回第 4 步修，最多 3 輪</p></div></li><li class="step"><span class="no">6</span><div><h4>commit<span class="role role-s">git</span></h4><p>通過才存一版，任何時候都能回到前一版。</p></div></li><li class="step check"><span class="no">7</span><div><h4>新對話審查<span class="role role-r">另一個 LLM 對話</span></h4><p>lint 只能檢查「有沒有」，看不懂「意思對不對」，例如推論沒標、說得比原文滿。寫 Wiki 的同一個對話容易認同自己的寫法，所以另開一個沒看過過程的新對話，只給規則和 Wiki 去挑錯。審查 1 找到 37 個問題。</p><p class="fail">不通過：退回第 4 步修正</p></div></li></ol>
 <div class="phase">階段二　用 Wiki 產生簡報</div>
+<div class="graphbox"><svg class="graph" viewBox="0 0 1000 420" role="img" aria-label="階段二流程圖" font-family="Noto Sans TC, sans-serif"><defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#5A4E3C"/></marker><marker id="b2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9C4A2F"/></marker></defs><path d="M184.0 110H216.0" fill="none" stroke="#5A4E3C" stroke-width="2" marker-end="url(#a2)"/><path d="M384.0 110H416.0" fill="none" stroke="#5A4E3C" stroke-width="2" marker-end="url(#a2)"/><path d="M584.0 110H616.0" fill="none" stroke="#5A4E3C" stroke-width="2" marker-end="url(#a2)"/><path d="M784.0 110H816.0" fill="none" stroke="#5A4E3C" stroke-width="2" marker-end="url(#a2)"/><path d="M984.0 110h16V290h-16" fill="none" stroke="#5A4E3C" stroke-width="2" marker-end="url(#a2)"/><path d="M816.0 290H784.0" fill="none" stroke="#5A4E3C" stroke-width="2" marker-end="url(#a2)"/><path d="M616.0 290H584.0" fill="none" stroke="#5A4E3C" stroke-width="2" marker-end="url(#a2)"/><path d="M416.0 290H384.0" fill="none" stroke="#5A4E3C" stroke-width="2" marker-end="url(#a2)"/><path d="M216.0 290H184.0" fill="none" stroke="#5A4E3C" stroke-width="2" marker-end="url(#a2)"/><g><rect x="16.0" y="80.0" width="168" height="60" rx="8" fill="#E1EAF4" stroke="#3F6590" stroke-width="2"/><text x="24.0" y="95.0" font-size="12" font-weight="700" fill="#3F6590">1</text><text x="100" y="106" text-anchor="middle" font-size="15" font-weight="700" fill="#2E271C">查詢 Wiki</text><text x="100" y="124" text-anchor="middle" font-size="12" font-weight="500" fill="#2E271C">整理成 query 頁</text></g><g><rect x="216.0" y="80.0" width="168" height="60" rx="8" fill="#F6E3DA" stroke="#9C4A2F" stroke-width="2"/><text x="224.0" y="95.0" font-size="12" font-weight="700" fill="#9C4A2F">2</text><text x="300" y="106" text-anchor="middle" font-size="15" font-weight="700" fill="#2E271C">覆蓋率</text><text x="300" y="124" text-anchor="middle" font-size="12" font-weight="500" fill="#2E271C">資料夠不夠、有沒有整合</text></g><g><rect x="416.0" y="80.0" width="168" height="60" rx="8" fill="#E1EAF4" stroke="#3F6590" stroke-width="2"/><text x="424.0" y="95.0" font-size="12" font-weight="700" fill="#3F6590">3</text><text x="500" y="106" text-anchor="middle" font-size="15" font-weight="700" fill="#2E271C">大綱</text><text x="500" y="124" text-anchor="middle" font-size="12" font-weight="500" fill="#2E271C">每頁回答什麼</text></g><g><rect x="616.0" y="80.0" width="168" height="60" rx="8" fill="#E6EEDD" stroke="#4E6A40" stroke-width="2"/><text x="624.0" y="95.0" font-size="12" font-weight="700" fill="#4E6A40">4</text><text x="700" y="106" text-anchor="middle" font-size="15" font-weight="700" fill="#2E271C">使用者確認</text><text x="700" y="124" text-anchor="middle" font-size="12" font-weight="500" fill="#2E271C">方向有沒有問題</text></g><g><rect x="816.0" y="80.0" width="168" height="60" rx="8" fill="#E1EAF4" stroke="#3F6590" stroke-width="2"/><text x="824.0" y="95.0" font-size="12" font-weight="700" fill="#3F6590">5</text><text x="900" y="106" text-anchor="middle" font-size="15" font-weight="700" fill="#2E271C">逐頁稿</text><text x="900" y="124" text-anchor="middle" font-size="12" font-weight="500" fill="#2E271C">中文｜英文原句</text></g><g><rect x="816.0" y="260.0" width="168" height="60" rx="8" fill="#F6E3DA" stroke="#9C4A2F" stroke-width="2"/><text x="824.0" y="275.0" font-size="12" font-weight="700" fill="#9C4A2F">6</text><text x="900" y="286" text-anchor="middle" font-size="15" font-weight="700" fill="#2E271C">出處檢查</text><text x="900" y="304" text-anchor="middle" font-size="12" font-weight="500" fill="#2E271C">每條都追得到 Wiki</text></g><g><rect x="616.0" y="260.0" width="168" height="60" rx="8" fill="#F6E3DA" stroke="#9C4A2F" stroke-width="2"/><text x="624.0" y="275.0" font-size="12" font-weight="700" fill="#9C4A2F">7</text><text x="700" y="286" text-anchor="middle" font-size="15" font-weight="700" fill="#2E271C">渲染</text><text x="700" y="304" text-anchor="middle" font-size="12" font-weight="500" fill="#2E271C">程式產生 HTML</text></g><g><rect x="416.0" y="260.0" width="168" height="60" rx="8" fill="#F6E3DA" stroke="#9C4A2F" stroke-width="2"/><text x="424.0" y="275.0" font-size="12" font-weight="700" fill="#9C4A2F">8</text><text x="500" y="286" text-anchor="middle" font-size="15" font-weight="700" fill="#2E271C">渲染檢查</text><text x="500" y="304" text-anchor="middle" font-size="12" font-weight="500" fill="#2E271C">版面、圖、文字</text></g><g><rect x="216.0" y="260.0" width="168" height="60" rx="8" fill="#ECE4F3" stroke="#6B4E8A" stroke-width="2"/><text x="224.0" y="275.0" font-size="12" font-weight="700" fill="#6B4E8A">9</text><text x="300" y="286" text-anchor="middle" font-size="15" font-weight="700" fill="#2E271C">新對話審查</text><text x="300" y="304" text-anchor="middle" font-size="12" font-weight="500" fill="#2E271C">初學者讀得懂嗎</text></g><g><rect x="16.0" y="260.0" width="168" height="60" rx="30" fill="#2E271C"/><text x="100" y="296" text-anchor="middle" font-size="16" font-weight="700" fill="#FFF8EC">簡報完成</text></g><path d="M300 80.0v-24H100v24" fill="none" stroke="#9C4A2F" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#b2)"/><text x="200.0" y="50.0" text-anchor="middle" font-size="12.5" font-weight="700" fill="#9C4A2F">不夠：退回 1；Wiki 缺就回階段一</text><path d="M700 80.0v-24H500v24" fill="none" stroke="#9C4A2F" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#b2)"/><text x="600.0" y="50.0" text-anchor="middle" font-size="12.5" font-weight="700" fill="#9C4A2F">有問題：退回大綱</text><path d="M870 260.0V140.0" fill="none" stroke="#9C4A2F" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#b2)"/><text x="862" y="205.0" text-anchor="end" font-size="12.5" font-weight="700" fill="#9C4A2F">出處不對：重寫該頁</text><path d="M500 320.0v26H700v-26" fill="none" stroke="#9C4A2F" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#b2)"/><text x="600.0" y="364.0" text-anchor="middle" font-size="12.5" font-weight="700" fill="#9C4A2F">版面有問題：退回渲染</text><path d="M300 320.0v56H930v-56" fill="none" stroke="#9C4A2F" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#b2)"/><text x="660.0" y="394.0" text-anchor="middle" font-size="12.5" font-weight="700" fill="#9C4A2F">找到問題：退回對應的步驟（缺英文原句就回階段一補 Wiki）</text></svg></div>
+<p class="sub">每一步的詳細說明</p>
 <ol class="steps"><li class="step"><span class="no">1</span><div><h4>查詢 Wiki、整理重點<span class="role role-l">LLM</span></h4><p>從目錄找到相關頁，把五篇合起來的答案寫成 query 頁存回 Wiki。Karpathy：好的答案要存回 Wiki，之後可以重複用。</p></div></li><li class="step check"><span class="no">2</span><div><h4>覆蓋率<span class="role role-s">腳本（Python）</span></h4><p>目的：開工前先確認 Wiki 有足夠資料，而且真的有整合。slides_coverage.py 檢查：至少 3 頁、每個簡報目標都有頁、有「角色之間的關聯」、用到 query 頁。</p><p class="fail">不通過：退回第 1 步；Wiki 本身缺資料就退回階段一</p></div></li><li class="step"><span class="no">3</span><div><h4>大綱<span class="role role-l">LLM</span></h4><p>目的：先決定頁數、每頁回答什麼問題、用哪些 Wiki 頁，還不寫內容。</p></div></li><li class="step check"><span class="no">4</span><div><h4>使用者確認是否有問題<span class="role role-u">使用者</span></h4><p>目的：方向錯了在這裡改最便宜。第一版簡報只講一篇，就是寫完才發現要整份重做。</p><p class="fail">不通過：退回第 3 步</p></div></li><li class="step"><span class="no">5</span><div><h4>逐頁稿<span class="role role-l">LLM</span></h4><p>每一條寫成「中文 ｜ 英文原句 [wiki: 頁面]」，只能用大綱列出的頁。</p></div></li><li class="step check"><span class="no">6</span><div><h4>出處檢查<span class="role role-s">腳本（Python）</span></h4><p>slides_check.py：每條都有 Wiki 出處、英文原句真的在那一頁、中英對照、每頁條數上限、插圖屬於這幾篇。</p><p class="fail">不通過：退回第 5 步；Wiki 缺英文就退回階段一補</p></div></li><li class="step"><span class="no">7</span><div><h4>渲染<span class="role role-s">腳本（Python）</span></h4><p>build_deck.py 產生 HTML，AI 不手寫，排版時文字不會被改。</p></div></li><li class="step check"><span class="no">8</span><div><h4>渲染檢查<span class="role role-s">腳本＋人看截圖</span></h4><p>render_check.py 檢查文字有沒有超出版面、圖有沒有載入、畫面上的字是否等於稿件；程式抓不到的版面問題，再由人看截圖。</p><p class="fail">不通過：退回第 7 或第 5 步</p></div></li><li class="step check"><span class="no">9</span><div><h4>新對話審查<span class="role role-r">另一個 LLM 對話</span></h4><p>用初學者的角度看讀不讀得懂，有沒有把推論講成事實。第一版做過（審查 2，25 個問題）。</p><p class="fail">不通過：退回對應的步驟</p></div></li></ol>
 </section>
 
@@ -89,7 +107,7 @@ footer{max-width:1040px;margin:4em auto 0;padding:2em 5vw 3em;border-top:1px sol
 <div class="card"><div class="num">1</div><h3>Wiki 主題與介紹</h3><p>英文經典讀本 Wiki：Potter 的兔子系列 4 篇 + Mrs. Tittlemouse，人物、地點、單字互相連結。</p><div class="links"><a class="gh" data-path="blob/main/README.md">README</a><a class="gh" data-path="blob/main/wiki/index.md">Wiki 目錄</a></div></div>
 <div class="card"><div class="num">2</div><h3>Wiki 成果</h3><p>依 Karpathy LLM Wiki 架構：raw 唯讀、wiki 由 LLM 維護、AGENTS.md 是規則。</p><div class="links"><a class="gh" data-path="tree/main/wiki">wiki/</a><a class="gh" data-path="blob/main/AGENTS.md">AGENTS.md</a><a class="gh" data-path="blob/main/wiki/sources.md">版權紀錄</a></div></div>
 <div class="card"><div class="num">3</div><h3>教學 HTML 簡報</h3><p>「一個家族，五個故事」18 頁：把五篇整合成家族關係、長大前後、危險在哪裡。中英對照，每一條都能追回 Wiki 和原文段落。</p><div class="links"><a href="slides/family-five-stories/deck.html">開啟簡報</a><a class="gh" data-path="blob/main/wiki/books/potter/queries/family-five-stories.md">整合答案（query 頁）</a><a class="gh" data-path="tree/main/slides/family-five-stories/drafts">逐頁稿</a><a href="slides/benjamin-bunny/deck.html">第一版（只講一篇）</a></div></div>
-<div class="card"><div class="num">4</div><h3>loop / graph 設計</h3><p>上方流程圖的完整規格：每一關只能看什麼、不能做什麼、錯了退回哪裡。</p><div class="links"><a class="gh" data-path="blob/main/.agents/workflows/topic-slides.md">簡報 graph 規格</a><a class="gh" data-path="blob/main/AGENTS.md">Wiki 流程規則</a></div></div>
+<div class="card"><div class="num">4</div><h3>graph 設計</h3><p>上方流程圖的完整規格：每一關只能看什麼、不能做什麼、錯了退回哪裡。</p><div class="links"><a class="gh" data-path="blob/main/.agents/workflows/topic-slides.md">簡報 graph 規格</a><a class="gh" data-path="blob/main/AGENTS.md">Wiki 流程規則</a></div></div>
 <div class="card"><div class="num">5</div><h3>實際執行與檢查紀錄</h3><p>每次 ingest、lint、審查、修正都有時間紀錄、腳本報告和 commit。</p><div class="links"><a class="gh" data-path="blob/main/wiki/log.md">log.md</a><a class="gh" data-path="tree/main/reports">lint 報告</a><a class="gh" data-path="blob/main/slides/family-five-stories/report.md">簡報檢查</a><a class="gh" data-path="commits/main">commit</a></div></div>
 <div class="card"><div class="num">6</div><h3>反思</h3><p>最常出錯的節點、檢查怎麼往前移、graph 為什麼改版，附兩次審查報告。</p><div class="links"><a class="gh" data-path="tree/main/reviews">審查報告</a><a class="gh" data-path="blob/main/wiki/log.md">修正過程</a></div></div>
 </div>
@@ -97,16 +115,22 @@ footer{max-width:1040px;margin:4em auto 0;padding:2em 5vw 3em;border-top:1px sol
 
 <section id="record">
 <h2>檢查紀錄摘要</h2>
-<p class="lead">腳本負責「有或沒有」，新對話 AI 審查負責「意思對不對」。</p>
-<table>
-<tr><th>關卡</th><th>抓到什麼</th><th>怎麼調整</th></tr>
-<tr><td>切篇腳本自我驗證</td><td>漏掉 2 段題詞、1 張插圖、1 個副標題</td><td>修正腳本，逐篇核對段落數</td></tr>
-<tr><td>腳本 lint</td><td>引句出處順序寫錯（重複 2 次）、標籤夾帶說法</td><td>加標籤白名單，lint 直接擋</td></tr>
-<tr><td>新對話審查 1（Wiki）</td><td>37 個問題，lint 一個都抓不到：推論沒標、說太滿</td><td>新規則：跨篇認定一律標推論</td></tr>
-<tr><td>使用者看簡報</td><td>很多頁只有中文沒有英文</td><td>退回 Wiki 補原句；出處檢查加「每條要中英對照」</td></tr>
-<tr><td>新對話審查 2（簡報）</td><td>25 個問題：劇情銜接、角色判斷寫成事實</td><td>再退回 Wiki 補原句；地圖標示意</td></tr>
-<tr><td>使用者看簡報</td><td>第一版只講一篇，五篇沒有整合；所有腳本都通過</td><td>退回「查詢 Wiki」重做，整合答案存成 query 頁；覆蓋率關卡加「要有跨篇關聯、要用 query 頁」</td></tr>
-</table>
+<div class="explain"><p><b>lint 是什麼？</b>lint 原本是程式設計的用語，意思是「用程式自動挑出明顯的錯」。這裡的 lint 是一支 Python 腳本 lint.py，每次 AI 寫完 Wiki 就跑一次，檢查 6 件事：英文原句真的出現在原文那一段、標的段落號碼存在、連結沒有斷、沒有沒人連到的頁、目錄有列出所有頁、原文有版權紀錄。</p>
+<p>它只能判斷「有或沒有」，看不懂「意思對不對」，所以 graph 裡另外安排「新對話審查」，由另一個 LLM 對話檢查意思。</p></div>
+<p class="lead">下面是我實際遇到的問題，依發生的先後排列。順序大致跟 graph 往下走的順序一樣：越後面才被發現的問題，越是「意思」或「方向」的問題，程式本來不會檢查；每抓到一次，就把對應的檢查往前加到程式關卡。</p>
+<ol class="timeline">
+<li><h4>1. 切篇腳本漏東西<span class="where">階段一 第 3 步</span></h4><p><b>抓到什麼：</b>漏了 2 段題詞、1 張插圖、1 個副標題。</p><p><b>誰抓到：</b>腳本（Python）比對每篇的段落數。</p><p><b>怎麼調整：</b>修腳本重切，以後每篇都核對段落數。</p></li>
+<li class="down">↓</li>
+<li><h4>2. lint 抓到的錯<span class="where">階段一 第 5 步</span></h4><p><b>抓到什麼：</b>英文原句後面標的段落號碼標錯了（同樣的錯出現 2 次）。另外 AI 在連結前面自己編了帶判斷的說法，例如「後來害了他」，原文沒這樣說。</p><p><b>誰抓到：</b>腳本 lint.py（Python）。</p><p><b>怎麼調整：</b>訂一份「白名單」：連到別的頁時，前面只能用事先列好的關係名稱（像「爸爸」「朋友」「出現地點」），AI 不能自己編說法，lint 會直接擋下。</p></li>
+<li class="down">↓</li>
+<li><h4>3. 新對話審查 1：37 個問題<span class="where">階段一 第 7 步</span></h4><p><b>抓到什麼：</b>推論沒有標出來、說得比原文滿，這些 lint 一個都抓不到。</p><p><b>誰抓到：</b>另一個 LLM 對話。</p><p><b>怎麼調整：</b>新規則：跨篇的認定（例如兩篇是不是同一個角色）一律標「推論」。</p></li>
+<li class="down">↓</li>
+<li><h4>4. 簡報只有中文沒有英文<span class="where">階段二 完成後，使用者看成品</span></h4><p><b>抓到什麼：</b>很多頁只有中文。</p><p><b>誰抓到：</b>使用者。</p><p><b>怎麼調整：</b>退回階段一補 Wiki 的英文原句；出處檢查（Python）加「每條都要中英對照」，以後在第 6 步就擋下。</p></li>
+<li class="down">↓</li>
+<li><h4>5. 新對話審查 2：25 個問題<span class="where">階段二 第 9 步</span></h4><p><b>抓到什麼：</b>劇情銜接有缺口、把角色判斷寫成事實。</p><p><b>誰抓到：</b>另一個 LLM 對話。</p><p><b>怎麼調整：</b>再退回 Wiki 補原句；地圖標註「位置為示意」。</p></li>
+<li class="down">↓</li>
+<li><h4>6. 簡報沒有整合五篇<span class="where">階段二 完成後，使用者看成品</span></h4><p><b>抓到什麼：</b>第一版只講一篇，五篇沒有連起來；所有腳本都通過。</p><p><b>誰抓到：</b>使用者。</p><p><b>怎麼調整：</b>退回階段二第 1 步，把五篇的整合答案存成 query 頁；覆蓋率（Python）加規則「要有跨篇關聯、要用到 query 頁」，以後在第 2 步就擋下。</p></li>
+</ol>
 </section>
 
 <footer>原文：Beatrix Potter《Short Fiction》，Standard Ebooks 版。作者兼插畫家 Beatrix Potter 卒於 1943 年，依台灣著作權法第 30 條，保護期已於 1993 年底屆滿。</footer>
