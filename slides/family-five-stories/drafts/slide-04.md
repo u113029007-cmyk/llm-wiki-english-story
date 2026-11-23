@@ -1,9 +1,8 @@
-# 故事線：五篇的順序
-- ① Peter 不聽話，跑進 McGregor 的花園 ｜ "But Peter, who was very naughty, ran straight away to Mr. McGregor's garden." [wiki: peter-rabbit]
-- ② 表哥 Benjamin 帶 Peter 回花園拿衣服 ｜ "the proper way to get in is to climb down a pear-tree." [wiki: benjamin-bunny]
-- ③ 長大的 Benjamin 有了孩子，孩子在垃圾堆睡著 ｜ "They certainly had a very soporific effect upon the Flopsy Bunnies!" [wiki: flopsy-bunnies]
-- ④ 孩子被偷走，Peter 和 Benjamin 去救 ｜ "a story about two disagreeable people, called Tommy Brock and Mr. Tod." [wiki: mr-tod]
-- ⑤ 主角換成一隻林鼠 ｜ "Once upon a time there was a wood mouse, and her name was Mrs. Tittlemouse." [wiki: mrs-tittlemouse]
-mood: warm [wiki: fir-tree-rabbit-hole]
-type: storyline
-story: all
+# ① The Tale of Peter Rabbit：Peter 闖進花園
+- 媽媽警告孩子：不准去 McGregor 的花園 ｜ "don't go into Mr. McGregor's garden." [wiki: peter-rabbit]
+- Peter 偏偏跑進去，先吃了萵苣和豆子 ｜ "First he ate some lettuces and some French beans" [wiki: lettuces]
+- 被追時麻雀鼓勵他，他才扭身逃出，留下外套 ｜ "but Peter wriggled out just in time, leaving his jacket behind him." [wiki: family-five-stories]
+- 外套和鞋子被拿去掛在稻草人身上 ｜ "Mr. McGregor hung up the little jacket and the shoes for a scarecrow to frighten the blackbirds." [wiki: peter-rabbit]
+img: illustration-16.jpg
+mood: warm [wiki: mr-mcgregors-garden]
+story: peter-rabbit

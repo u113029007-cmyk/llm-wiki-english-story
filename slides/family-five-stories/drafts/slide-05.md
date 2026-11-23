@@ -1,8 +1,8 @@
-# ① The Tale of Peter Rabbit：Peter 闖進花園
-- 媽媽警告孩子：不准去 McGregor 的花園 ｜ "don't go into Mr. McGregor's garden." [wiki: peter-rabbit]
-- Peter 不聽話，直接跑進花園 ｜ "But Peter, who was very naughty, ran straight away to Mr. McGregor's garden." [wiki: peter-rabbit]
-- 被 Mr. McGregor 追，他自己扭身逃出，留下外套 ｜ "but Peter wriggled out just in time, leaving his jacket behind him." [wiki: family-five-stories]
-- 外套和鞋子被拿去掛在稻草人身上 ｜ "Mr. McGregor hung up the little jacket and the shoes for a scarecrow to frighten the blackbirds." [wiki: peter-rabbit]
-img: illustration-16.jpg
+# ② The Tale of Benjamin Bunny：回花園拿衣服
+- 表哥/表弟 Benjamin 看到 Peter 的衣服掛在稻草人身上（coat 就是第一篇的 jacket） ｜ "Peter's coat and shoes were plainly to be seen upon the scarecrow" [wiki: benjamin-bunny]
+- Benjamin 說，進花園要爬下梨樹 ｜ "the proper way to get in is to climb down a pear-tree." [wiki: benjamin-bunny]
+- 兩隻小兔子躲進籃子，貓坐在上面 ｜ "She sat there for five hours." [wiki: benjamin-bunny]
+- Benjamin 的爸爸趕來，把貓關進溫室 ｜ "When old Mr. Bunny had driven the cat into the greenhouse, he locked the door." [wiki: benjamin-bunny]
+img: illustration-100.jpg
 mood: warm [wiki: mr-mcgregors-garden]
-story: peter-rabbit
+story: benjamin-bunny

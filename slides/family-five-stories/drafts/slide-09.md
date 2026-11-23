@@ -1,8 +1,8 @@
-# ⑤ The Tale of Mrs. Tittlemouse：林鼠的家
-- 主角換成一隻林鼠 ｜ "Once upon a time there was a wood mouse, and her name was Mrs. Tittlemouse." [wiki: mrs-tittlemouse]
-- 她非常愛乾淨 ｜ "Mrs. Tittlemouse was a most terribly tidy particular little mouse" [wiki: mrs-tittlemouse]
-- 不請自來的客人把她的家弄亂 ｜ "I am not in the habit of letting lodgings; this is an intrusion!" [wiki: mrs-tittlemouse]
-- 客人走後，她大掃除了兩週 ｜ "began a spring cleaning which lasted a fortnight." [wiki: mrs-tittlemouse]
-img: illustration-415.jpg
-mood: bright [wiki: mrs-tittlemouse-house]
-story: mrs-tittlemouse
+# 讀完五篇才看得出來①：一個家族
+- Peter 和 Benjamin 是 cousin（表或堂，原文沒說） ｜ "he had heard about cats from his cousin, little Benjamin Bunny." [wiki: family-five-stories]
+- Peter 是 Benjamin 爸爸的 nephew（姪子/外甥） ｜ "Then he took out his nephew Peter." [wiki: benjamin-bunny]
+- Benjamin 長大後娶了 Flopsy ｜ "When Benjamin Bunny grew up, he married his Cousin Flopsy." [wiki: family-five-stories]
+- （推論）③ 救了孩子的林鼠，就是 ⑤ 的主角 ｜ "she was called Thomasina Tittlemouse, a wood mouse with a long tail." [wiki: family-five-stories]
+mood: warm [wiki: benjamin-family-rabbit-hole]
+type: tree
+story: all

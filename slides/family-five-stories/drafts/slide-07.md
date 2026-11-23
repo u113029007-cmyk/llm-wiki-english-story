@@ -1,8 +1,8 @@
-# ③ The Tale of the Flopsy Bunnies：小兔子進了麻袋
-- 長大的 Benjamin 娶了表姊/表妹 Flopsy ｜ "When Benjamin Bunny grew up, he married his Cousin Flopsy." [wiki: flopsy-bunnies]
-- 他們的孩子吃了萵苣，在垃圾堆睡著 ｜ "they were overcome with slumber" [wiki: flopsy-bunnies]
-- Mr. McGregor 把他們數著裝進麻袋 ｜ "One, two, three, four! five! six leetle rabbits!" [wiki: flopsy-bunnies]
-- 林鼠 Thomasina 咬破麻袋救了他們 ｜ "But Mrs. Tittlemouse was a resourceful person." [wiki: resourceful]
-img: illustration-368.jpg
-mood: warm [wiki: mr-mcgregors-rubbish-heap]
-story: flopsy-bunnies
+# ④ The Tale of Mr. Tod：救回被偷的孩子
+- 兔子們很怕 Mr. Tod，半哩外就聞得到他 ｜ "they could smell him half a mile off." [wiki: mr-tod-character]
+- Benjamin 追 Tommy Brock 時遇到 Peter，向他求助 ｜ "Cousin Peter! Peter Rabbit, Peter Rabbit!" [wiki: cousin]
+- 孩子被關在 Mr. Tod 家的烤爐裡 ｜ "The young family were alive; shut up in the oven!" [wiki: mr-tod]
+- Peter 守門，Benjamin 進屋把孩子救出來 ｜ "Run in, Cousin Benjamin! Run in and get them! while I watch at the door." [wiki: family-five-stories]
+img: illustration-485.jpg
+mood: dark [wiki: bull-banks-house]
+story: mr-tod

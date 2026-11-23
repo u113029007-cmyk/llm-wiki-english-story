@@ -13,6 +13,7 @@ question: 五篇故事整合起來在說什麼？彼此怎麼連結？
 - 前四篇由同一個兔子家族串起來：Peter 一家和表親 Benjamin 一家，從小孩寫到成家、有下一代。[src: peter-rabbit ¶1] [src: peter-rabbit ¶27] [src: flopsy-bunnies ¶5] [src: mr-tod ¶12]
 - 第五篇的主角是林鼠 Mrs. Tittlemouse，（推論）她和第三篇救小兔子的 Thomasina Tittlemouse 是同一隻，這是第五篇接上家族故事的唯一一條線。[src: flopsy-bunnies ¶14] [src: mrs-tittlemouse ¶2] [src: mrs-tittlemouse ¶53]
 - 每篇都有一次危險，地點從花園、垃圾堆，移到 Mr. Tod 的家；脫身方式每篇不同，不是每次都靠別人救。[src: peter-rabbit ¶18] [src: benjamin-bunny ¶49] [src: flopsy-bunnies ¶30] [src: mr-tod ¶150]
+- 篇章的先後：（推論）① 和 ② 劇情相接（衣服掛在稻草人上，第二篇去拿回來）；③ 從 Benjamin 長大後寫起；③ 和 ④ 誰先誰後原文沒說，兩篇的小兔子數量也不同（6 隻、7 隻）；⑤ 和前四篇沒有劇情先後。[src: peter-rabbit ¶31] [src: benjamin-bunny ¶17] [src: flopsy-bunnies ¶5] [src: flopsy-bunnies ¶23] [src: mr-tod ¶32]
 - 篇章：[[peter-rabbit]]、[[benjamin-bunny]]、[[flopsy-bunnies]]、[[mr-tod]]、[[mrs-tittlemouse]]
 
 ## 家族三代
@@ -50,7 +51,7 @@ question: 五篇故事整合起來在說什麼？彼此怎麼連結？
 ## 危險在哪裡
 | 篇章 | 危險地點 | 遇到什麼 | 怎麼脫身 | 地點氛圍（推論） |
 | --- | --- | --- | --- | --- |
-| peter-rabbit | Mr. McGregor 的花園 | 被 Mr. McGregor 拿篩子追 [src: peter-rabbit ¶18] | Peter 自己扭身逃出，留下外套 [src: peter-rabbit ¶18] | 由明亮轉緊張 [src: peter-rabbit ¶10] [src: peter-rabbit ¶14] |
+| peter-rabbit | Mr. McGregor 的花園 | 被 Mr. McGregor 拿篩子追 [src: peter-rabbit ¶18] | 麻雀鼓勵他之後，Peter 扭身逃出，留下外套 [src: peter-rabbit ¶17] [src: peter-rabbit ¶18] | 由明亮轉緊張 [src: peter-rabbit ¶10] [src: peter-rabbit ¶14] |
 | benjamin-bunny | Mr. McGregor 的花園 | 貓坐在籃子上五個小時 [src: benjamin-bunny ¶41] | Benjamin 的爸爸把貓踢進溫室 [src: benjamin-bunny ¶49] | 先明亮後陰暗 [src: benjamin-bunny ¶31] [src: benjamin-bunny ¶42] |
 | flopsy-bunnies | Mr. McGregor 的垃圾堆 | 睡著被裝進麻袋 [src: flopsy-bunnies ¶23] | Mrs. Tittlemouse 咬破麻袋 [src: flopsy-bunnies ¶30] | 先溫暖悠閒後危險 [src: flopsy-bunnies ¶13] [src: flopsy-bunnies ¶17] |
 | mr-tod | Mr. Tod 在 Bull Banks 的家 | 被關在烤爐裡 [src: mr-tod ¶63] | Peter 和 Benjamin 救出 [src: mr-tod ¶150] | 陰暗、恐怖 [src: mr-tod ¶57] |
@@ -64,7 +65,7 @@ question: 五篇故事整合起來在說什麼？彼此怎麼連結？
 - 原文："It was a shocking place, and very dark." [src: mr-tod ¶57]
 - 危險的源頭在第一篇就說了：Peter 的爸爸在花園出了意外。[src: peter-rabbit ¶4]
   - 原文："Your Father had an accident there; he was put in a pie by Mrs. McGregor." [src: peter-rabbit ¶4]
-- 安全的地方是樹林和家：Peter 逃到樹林才安全。[src: peter-rabbit ¶30]
+- 第一篇 Peter 逃到花園外的樹林才安全；（推論）但不能說樹林都安全，第四篇 Mr. Tod 的家也在樹林裡。[src: peter-rabbit ¶30] [src: mr-tod ¶43]
   - 原文："was safe at last in the wood outside the garden." [src: peter-rabbit ¶30]
 - 出現地點：[[mr-mcgregors-garden]]、[[mr-mcgregors-rubbish-heap]]、[[bull-banks-house]]、[[mrs-tittlemouse-house]]、[[the-wood]]、[[fir-tree-rabbit-hole]]、[[benjamin-family-rabbit-hole]]
 - 對手：[[mr-mcgregor]]、[[mr-tod-character]]、[[tommy-brock]]

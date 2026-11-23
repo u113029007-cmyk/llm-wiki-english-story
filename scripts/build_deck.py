@@ -73,20 +73,20 @@ MAP = ('<svg class="map" viewBox="0 0 300 340" aria-hidden="true">'
 TREE = ('<svg class="tree" viewBox="0 0 300 372" role="img" aria-label="家族關係圖">'
  '<defs><marker id="tr-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>'
  '<g fill="none" stroke="currentColor" stroke-width="1.2">'
- '<rect x="15" y="22" width="120" height="38" rx="6"/><rect x="150" y="22" width="146" height="38" rx="6"/>'
+ '<rect x="15" y="22" width="120" height="38" rx="6"/><rect x="150" y="22" width="146" height="52" rx="6"/>'
  '<rect x="15" y="122" width="130" height="58" rx="6"/><rect x="175" y="130" width="110" height="40" rx="6"/>'
- '<rect x="85" y="248" width="130" height="40" rx="6"/><rect x="65" y="318" width="170" height="42" rx="6" stroke-dasharray="5 4"/>'
- '<path d="M75 60V122" marker-end="url(#tr-ar)"/><path d="M225 60V130" marker-end="url(#tr-ar)"/><path d="M145 150H175" />'
- '<path d="M80 180V214H230V170"/><path d="M150 214V248" marker-end="url(#tr-ar)"/><path d="M150 318V288" marker-end="url(#tr-ar)"/></g>'
+ '<rect x="85" y="248" width="130" height="40" rx="6"/><rect x="70" y="318" width="150" height="42" rx="6"/><path d="M220 339H232" stroke-dasharray="3 3"/>'
+ '<path d="M75 60V122" marker-end="url(#tr-ar)"/><path d="M225 74V130" marker-end="url(#tr-ar)"/><path d="M145 150H175" />'
+ '<path d="M80 180V214H230V170"/><path d="M150 214V248" marker-end="url(#tr-ar)"/><path d="M145 318V288" marker-end="url(#tr-ar)"/></g>'
  '<g fill="var(--ink)" text-anchor="middle" font-size="11">'
  '<text x="75" y="38" font-weight="700">Mrs. Rabbit</text><text x="75" y="53" font-size="10">兔媽媽</text>'
- '<text x="223" y="38" font-weight="700" font-size="10.5">old Mr. Benjamin Bunny</text><text x="225" y="53" font-size="10">Benjamin 的爸爸</text>'
- '<text x="80" y="140" font-weight="700">Peter・Flopsy</text><text x="80" y="155" font-weight="700">Mopsy・Cottontail</text><text x="80" y="171" font-size="10">四個兄弟姊妹</text>'
+ '<text x="223" y="38" font-weight="700" font-size="10.5">old Mr. Benjamin Bunny</text><text x="225" y="52" font-size="10">Benjamin 的爸爸</text><text x="225" y="67" font-size="8.5" fill="var(--muted)">第四篇叫 old Mr. Bouncer（推論）</text>'
+ '<text x="4" y="14" text-anchor="start" font-size="9" fill="var(--accent)" font-weight="700">上一代</text><text x="4" y="116" text-anchor="start" font-size="9" fill="var(--accent)" font-weight="700">這一代</text><text x="4" y="244" text-anchor="start" font-size="9" fill="var(--accent)" font-weight="700">下一代</text><text x="80" y="140" font-weight="700">Peter・Flopsy</text><text x="80" y="155" font-weight="700">Mopsy・Cottontail</text><text x="80" y="171" font-size="10">四個兄弟姊妹</text>'
  '<text x="230" y="147" font-weight="700">Benjamin</text><text x="230" y="162" font-size="10">Peter 的 cousin</text>'
  '<text x="160" y="143" font-size="9">cousin</text>'
  '<text x="150" y="208" font-size="10">Benjamin 娶了 Flopsy</text>'
  '<text x="150" y="265" font-weight="700">Flopsy Bunnies</text><text x="150" y="280" font-size="10">他們的孩子們</text>'
- '<text x="150" y="335" font-weight="700">Thomasina Tittlemouse</text><text x="150" y="351" font-size="10">林鼠，第五篇主角（推論同一隻）</text>'
+ '<text x="145" y="335" font-weight="700" font-size="10.5">Thomasina Tittlemouse</text><text x="145" y="351" font-size="10">林鼠</text><text x="235" y="336" text-anchor="start" font-size="9">＝⑤ 主角</text><text x="235" y="350" text-anchor="start" font-size="8.5" fill="var(--muted)">（推論同一隻）</text>'
  '<text x="158" y="306" text-anchor="start" font-size="9">第三篇咬破麻袋救了他們</text></g></svg>')
 
 STORY = ('<svg class="tree" viewBox="0 0 320 390" role="img" aria-label="五篇故事線">'
@@ -95,7 +95,7 @@ STORY = ('<svg class="tree" viewBox="0 0 320 390" role="img" aria-label="五篇�
  '<rect x="15" y="24" width="170" height="52" rx="7"/><rect x="15" y="104" width="170" height="52" rx="7"/>'
  '<rect x="15" y="209" width="170" height="52" rx="7"/><rect x="15" y="294" width="170" height="52" rx="7"/>'
  '<rect x="205" y="209" width="110" height="52" rx="7" stroke-dasharray="5 4"/>'
- '<path d="M100 76V104" marker-end="url(#st-ar)"/><path d="M100 156V209" marker-end="url(#st-ar)"/><path d="M100 261V294" marker-end="url(#st-ar)"/>'
+ '<path d="M100 76V104" marker-end="url(#st-ar)"/><path d="M100 156V209" stroke-dasharray="4 3"/><path d="M100 261V294" stroke-dasharray="4 3"/>'
  '<path d="M185 235H205" stroke-dasharray="4 3"/><path d="M10 180H310" stroke-width=".8" stroke-dasharray="2 4"/></g>'
  '<g fill="var(--ink)" text-anchor="middle">'
  '<text x="22" y="15" text-anchor="start" font-size="11" font-weight="700" fill="var(--accent)">小時候</text>'
@@ -106,6 +106,8 @@ STORY = ('<svg class="tree" viewBox="0 0 320 390" role="img" aria-label="五篇�
  '<text x="100" y="316" font-size="12.5" font-weight="700">④ Mr. Tod</text><text x="100" y="334" font-size="11">救回被偷的孩子</text>'
  '<text x="260" y="231" font-size="11" font-weight="700">⑤ Mrs. Tittlemouse</text><text x="260" y="249" font-size="10.5">林鼠的家</text>'
  '<text x="260" y="203" font-size="9.5" fill="var(--muted)">和前面沒有劇情先後</text>'
+ '<text x="108" y="94" text-anchor="start" font-size="9.5" fill="var(--muted)">（推論）接著發生</text>'
+ '<text x="108" y="281" text-anchor="start" font-size="9.5" fill="var(--muted)">③④ 誰先原文沒說</text>'
  '<text x="260" y="280" font-size="10">③ 裡救小兔子的林鼠</text><text x="260" y="295" font-size="10">當了 ⑤ 的主角</text><text x="260" y="310" font-size="10" fill="var(--muted)">（推論同一隻）</text>'
  '</g></svg>')
 WIKIMAP = ('<svg class="tree" viewBox="0 0 300 380" role="img" aria-label="有沒有 Wiki 的差別">'
@@ -149,15 +151,15 @@ for n, f in enumerate(files, 1):
         im = img.group(1); shutil.copy(ROOT / "raw/assets/potter" / im, SD / "img" / im)
         a, b, sid = rows[im]
         left = (f'<figure><div class="mat"><img src="img/{im}" alt="Beatrix Potter 原書插圖"></div>'
-                f'<figcaption>插圖：Beatrix Potter　{(sid + " ") if len(STORIES) > 1 else ""}原文 ¶{a} 與 ¶{b} 之間</figcaption></figure>')
+                f'<figcaption>插圖：Beatrix Potter　{(sid + " ") if len(STORIES) > 1 else ""}' + (f'開頭（¶{b} 之前）' if a == 0 else f'原文 ¶{a} 與 ¶{b} 之間') + '</figcaption></figure>')
     elif typ == "map":
         left = f'<figure class="mapfig"><div class="mapwrap">{MAP}</div><figcaption>地點名稱都來自 wiki；位置為示意，原文未描述相對位置</figcaption></figure>'
     elif typ == "storyline":
-        left = f'<figure class="mapfig"><div class="mapwrap">{STORY}</div><figcaption>前四篇依劇情先後排列；⑤ 和前面沒有劇情先後</figcaption></figure>'
+        left = f'<figure class="mapfig"><div class="mapwrap">{STORY}</div><figcaption>實線：① → ② 劇情相接（推論）；虛線：先後原文沒說</figcaption></figure>'
     elif typ == "wikimap":
         left = f'<figure class="mapfig"><div class="mapwrap">{WIKIMAP}</div><figcaption>上：原始的 5 篇原文　下：Wiki 把它們連起來</figcaption></figure>'
     elif typ == "tree":
-        left = f'<figure class="mapfig"><div class="mapwrap">{TREE}</div><figcaption>關係依 wiki 角色頁的親屬連結；虛線框＝推論</figcaption></figure>'
+        left = f'<figure class="mapfig"><div class="mapwrap">{TREE}</div><figcaption>關係依 wiki 角色頁的親屬連結；標（推論）的是原文沒直接寫的</figcaption></figure>'
     else:
         left = None
     kick, _, rest = title.partition("：")
@@ -227,9 +229,9 @@ li em,.quote,.eg{font-family:"EB Garamond",Georgia,serif;font-style:italic;color
 .full .page.right{padding:5% 12% 5% 12%}
 .full .page.right::after{content:"";position:absolute;top:8%;bottom:8%;left:50%;width:1px;background:linear-gradient(transparent,var(--rule),transparent);opacity:.35}
 .full ul{display:grid;grid-template-columns:1fr 1fr;column-gap:7%;row-gap:2.2vh;position:relative;z-index:1}
-.full.t-content ul,.full.t-series ul{grid-template-columns:1fr 1fr}
-.full.t-agenda ul,.full.t-sources ul,.full.t-guide ul{grid-template-columns:1fr;width:72%;margin:0 auto}
-.full.t-agenda h2,.full.t-sources h2,.full.t-guide h2,.full.t-agenda .divider,.full.t-sources .divider,.full.t-guide .divider{margin-left:14%}
+.full.t-content ul{grid-template-columns:1fr 1fr}
+.full.t-agenda ul,.full.t-sources ul,.full.t-guide ul,.full.t-series ul{grid-template-columns:1fr;width:72%;margin:0 auto}
+.full.t-agenda h2,.full.t-sources h2,.full.t-guide h2,.full.t-series h2,.full.t-series .divider,.full.t-agenda .divider,.full.t-sources .divider,.full.t-guide .divider{margin-left:14%}
 .pair .en strong{font-weight:600;color:var(--accent);font-style:italic}
 .mapfig{height:100%}.mapfig .mapwrap{height:88%}
 .t-vocab li{background:color-mix(in srgb,var(--paper2) 70%,transparent);border:1px solid var(--rule);border-radius:4px;padding:1.4vh 1.4vh 1.4vh 2.6vh}

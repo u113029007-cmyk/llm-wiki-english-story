@@ -1,9 +1,9 @@
-# 這個 Wiki 做了什麼
-- 把 5 篇原文拆成互相連結的頁：故事 5 頁、角色 14 頁、地點 9 頁、單字 40 頁 [wiki: index]
-- 同一個角色出現在好幾篇，都連到同一頁，例如 Peter 出現在 4 篇 [wiki: peter]
-- 單字頁把不同篇的例句放在一起，例如 cousin 有 4 篇的例句 [wiki: cousin]
-- 每一句英文都標出原文段落，可以回去讀整段 [wiki: sources]
-- 五篇合起來的答案存成一頁整合頁，這份簡報就是用它做的 [wiki: family-five-stories]
-mood: bright [wiki: fir-tree-rabbit-hole]
-type: wikimap
+# 故事線：五篇的順序
+- ① Peter 闖進花園，被追到鞋子都掉了 ｜ "He lost one of his shoes among the cabbages, and the other shoe amongst the potatoes." [wiki: peter-rabbit]
+- ② 表哥/表弟 Benjamin 帶 Peter 回花園拿衣服 ｜ "They went away hand in hand, and got upon the flat top of the wall at the bottom of the wood." [wiki: benjamin-bunny]
+- ③ Benjamin 長大了，娶了 Flopsy ｜ "When Benjamin Bunny grew up, he married his Cousin Flopsy." [wiki: flopsy-bunnies]
+- ④ 兩個討人厭的角色出場：Tommy Brock 和 Mr. Tod ｜ "a story about two disagreeable people, called Tommy Brock and Mr. Tod." [wiki: mr-tod]
+- ⑤ 主角換成一隻非常愛乾淨的林鼠 ｜ "Mrs. Tittlemouse was a most terribly tidy particular little mouse" [wiki: mrs-tittlemouse]
+mood: warm [wiki: fir-tree-rabbit-hole]
+type: storyline
 story: all
