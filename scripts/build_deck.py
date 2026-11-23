@@ -19,6 +19,13 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from lint import norm
 WQ = {pg.stem: re.findall(r"[\"“]([^\"“”]+)[\"”]\s*\[src:", pg.read_text(encoding="utf-8")) for pg in (ROOT / "wiki").rglob("*.md")}
 
+VOCAB = sorted({m for f in (SD / "drafts").glob("slide-*.md") if "type: vocab" in f.read_text(encoding="utf-8")
+                for m in re.findall(r"^- ([a-z]+) ", f.read_text(encoding="utf-8"), re.M)}, key=len, reverse=True)
+
+def bold_vocab(escaped):
+    if not VOCAB: return escaped
+    return re.sub(r"\b(" + "|".join(VOCAB) + r")\b", r"<strong>\1</strong>", escaped, flags=re.I)
+
 def full_sentence(short, page):
     segs = [x.strip() for x in norm(short).split("...") if x.strip()]
     cands = [q for q in WQ.get(page, []) if all(sg in norm(q) for sg in segs) and "..." not in q]
@@ -30,7 +37,7 @@ def render_bullet(txt, typ, i, page=None):
         zh, en = m.groups(); full = full_sentence(en, page) if "..." in en else None
         btn = (f'<button class="expand" data-full="{E(full)}" data-short="{E(en)}" onclick="toggleFull(this,event)">展開</button>' if full else "")
         return (f'<li class="pair" data-text="{E(txt)}"><span class="zh">{E(zh)}</span><span class="sep"> ｜ </span>'
-                f'<span class="en">"<span class="entext">{E(en)}</span>"</span>{btn}</li>')
+                f'<span class="en">"<span class="entext">{bold_vocab(E(en))}</span>"</span>{btn}</li>')
     m = re.match(r"^(Q\d+)：(.+?) → (.+)$", txt)
     if typ == "quiz" and m:
         return (f'<li class="quiz" data-text="{E(txt)}"><span class="q">{E(m.group(1))}：{E(m.group(2))}</span>'
@@ -80,7 +87,7 @@ for n, f in enumerate(files, 1):
         left = (f'<figure><div class="mat"><img src="img/{im}" alt="Beatrix Potter 原書插圖"></div>'
                 f'<figcaption>插圖：Beatrix Potter　原文 ¶{a} 與 ¶{b} 之間</figcaption></figure>')
     elif typ == "map":
-        left = f'<div class="mapwrap">{MAP}</div>'
+        left = f'<figure class="mapfig"><div class="mapwrap">{MAP}</div><figcaption>地點名稱都來自 wiki；位置為示意，原文未描述相對位置</figcaption></figure>'
     else:
         left = None
     kick, _, rest = title.partition("：")
@@ -147,7 +154,11 @@ li em,.quote,.eg{font-family:"EB Garamond",Georgia,serif;font-style:italic;color
 .full .page.right{padding:5% 12% 5% 12%}
 .full .page.right::after{content:"";position:absolute;top:8%;bottom:8%;left:50%;width:1px;background:linear-gradient(transparent,var(--rule),transparent);opacity:.35}
 .full ul{display:grid;grid-template-columns:1fr 1fr;column-gap:7%;row-gap:2.2vh;position:relative;z-index:1}
-.full.t-agenda ul,.full.t-sources ul,.full.t-content ul{grid-template-columns:1fr 1fr}
+.full.t-content ul{grid-template-columns:1fr 1fr}
+.full.t-agenda ul,.full.t-sources ul{grid-template-columns:1fr;width:72%;margin:0 auto}
+.full.t-agenda h2,.full.t-sources h2,.full.t-agenda .divider,.full.t-sources .divider{margin-left:14%}
+.pair .en strong{font-weight:600;color:var(--accent);font-style:italic}
+.mapfig{height:100%}.mapfig .mapwrap{height:88%}
 .t-vocab li{background:color-mix(in srgb,var(--paper2) 70%,transparent);border:1px solid var(--rule);border-radius:4px;padding:1.4vh 1.4vh 1.4vh 2.6vh}
 .t-vocab li::before{left:.9vh;top:2.1vh}
 .t-vocab .eg{display:block;margin-top:.4vh}

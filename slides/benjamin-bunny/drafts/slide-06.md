@@ -1,7 +1,6 @@
 # 故事地圖
-- 親戚住在花園後面的樹林裡 ｜ "who lived in the wood at the back of Mr. McGregor's garden." [wiki: benjamin-bunny]
-- Peter 一家住在最整齊的兔子洞 ｜ "in the neatest, sandiest hole of all lived Benjamin's aunt and his cousins" [wiki: benjamin-bunny]
-- 從樹林底的牆頂看得到稻草人 ｜ "Peter's coat and shoes were plainly to be seen upon the scarecrow" [wiki: benjamin-bunny]
-- 正確的進法是爬下梨樹 ｜ "the proper way to get in is to climb down a pear-tree." [wiki: benjamin-bunny]
+- Peter 一家住在樹林裡最整齊、沙最多的兔子洞 ｜ "in the neatest, sandiest hole of all lived Benjamin's aunt and his cousins" [wiki: benjamin-bunny]
+- 樹林底有一道平頂的牆，從牆頂往下就是花園 ｜ "They went away hand in hand, and got upon the flat top of the wall at the bottom of the wood." [wiki: benjamin-bunny]
+- 花園裡有陽光照著的紅磚牆和木板小路 ｜ "They went along a little walk on planks, under a sunny, red brick wall." [wiki: benjamin-bunny]
 mood: bright [wiki: the-wood]
 type: map

@@ -9,8 +9,8 @@ with sync_playwright() as p:
     pg.click(".toc li:nth-child(9)"); pg.wait_for_timeout(1000); res["目錄跳頁到第9頁"]=pg.evaluate("i")==8
     pg.click("text=隱藏中文"); pg.wait_for_timeout(300); res["隱藏中文"]=pg.evaluate("document.body.classList.contains('no-zh')")
     pg.screenshot(path="feat_nozh.png"); pg.click("text=顯示中文")
-    before=pg.evaluate("S[8].querySelector('.entext').textContent"); pg.click(".slide.active .expand"); pg.wait_for_timeout(300)
-    after=pg.evaluate("S[8].querySelector('.entext').textContent"); res["展開完整句"]=len(after)>len(before) and "..." not in after; res["完整句內容"]=after
+    q="document.querySelector('.slide.active .expand').parentElement.querySelector('.entext').textContent"
+    before=pg.evaluate(q); pg.click(".slide.active .expand"); pg.wait_for_timeout(300); after=pg.evaluate(q); res["展開完整句"]=len(after)>len(before) and "..." not in after; res["完整句內容"]=after
     pg.click("text=A+"); res["字體放大"]=pg.evaluate("getComputedStyle(document.documentElement).getPropertyValue('--fs').trim()")
     pg.evaluate("go(15)"); pg.wait_for_timeout(1000); pg.click(".slide.active .reveal >> nth=0"); res["翻開答案"]=pg.evaluate("S[15].querySelector('.a').classList.contains('shown')")
     pg.screenshot(path="feat_quiz.png"); b.close()

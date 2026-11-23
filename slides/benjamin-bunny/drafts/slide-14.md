@@ -1,5 +1,5 @@
 # 單字複習（上）
-- cousin 表哥/表弟："nearly tumbled upon the top of his Cousin Peter." [wiki: cousin]
+- cousin 表（堂）兄弟姊妹，這裡指 Peter 所以譯表哥/表弟："nearly tumbled upon the top of his Cousin Peter." [wiki: cousin]
 - widow 寡婦："Old Mrs. Rabbit was a widow" [wiki: widow]
 - poorly 身體不舒服："He looked poorly" [wiki: poorly]
 - scarecrow 稻草人："The scarecrow in Mr. McGregor's garden" [wiki: scarecrow]

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>英文經典讀本 Wiki｜LLM Wiki 作業</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;1,400&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F6EFDD;color:#3E3527;font-family:"Noto Serif TC",serif;line-height:1.8}
+main{max-width:760px;margin:0 auto;padding:8vh 6vw}
+h1{font-family:"EB Garamond",serif;font-weight:500;font-size:2.4em;margin:0}
+.sub{color:#7D6E55;margin:.2em 0 2.5em}
+h2{font-size:1.15em;font-weight:600;border-bottom:1px solid #CDBF9F;padding-bottom:.3em;margin-top:2.2em}
+a{color:#4A6F96}
+.card{display:block;background:#FFFDF6;border:1px solid #CDBF9F;padding:1.2em 1.4em;margin:1em 0;text-decoration:none;color:inherit;border-radius:4px}
+.card b{color:#9C4A2F;font-size:1.1em}
+.card span{display:block;color:#7D6E55;font-size:.92em}
+li{margin:.3em 0}
+</style></head><body><main>
+<h1>English Classics Wiki</h1>
+<p class="sub">英文經典讀本 Wiki｜用 LLM Wiki 做一份教學 HTML 簡報</p>
+
+<a class="card" href="slides/benjamin-bunny/deck.html"><b>教學簡報：The Tale of Benjamin Bunny</b><span>給英文初學者的故事導讀，17 頁，中英對照，電子書式閱讀（目錄、隱藏中文、展開完整句、字體大小）</span></a>
+
+<h2>LLM Wiki</h2>
+<ul>
+<li><a class="gh" data-path="tree/main/wiki">wiki/</a>：Wiki 本體（72 頁，依 Karpathy LLM Wiki 架構，可用 Obsidian 開啟 wiki 資料夾）</li>
+<li><a class="gh" data-path="blob/main/wiki/index.md">wiki/index.md</a>：目錄　｜　<a class="gh" data-path="blob/main/wiki/sources.md">wiki/sources.md</a>：來源與版權檢查</li>
+<li><a class="gh" data-path="blob/main/AGENTS.md">AGENTS.md</a>：Wiki 規則（schema）；CLAUDE.md 只有一行 @AGENTS.md</li>
+</ul>
+
+<h2>流程與檢查紀錄</h2>
+<ul>
+<li><a class="gh" data-path="blob/main/wiki/log.md">wiki/log.md</a>：每次 ingest、lint、審查、修正的時間紀錄</li>
+<li><a class="gh" data-path="blob/main/.agents/workflows/topic-slides.md">.agents/workflows/topic-slides.md</a>：簡報 graph 規格</li>
+<li><a class="gh" data-path="blob/main/slides/benjamin-bunny/report.md">slides/benjamin-bunny/report.md</a>：簡報各關卡檢查紀錄</li>
+<li><a class="gh" data-path="tree/main/reviews">reviews/</a>：兩次新對話 AI 審查的指令與報告</li>
+<li><a class="gh" data-path="tree/main/scripts">scripts/</a>：lint、切篇、分段閱讀、覆蓋率、出處檢查、渲染與渲染檢查腳本</li>
+<li><a class="gh" data-path="commits/main">commit 紀錄</a></li>
+</ul>
+<p class="sub">原文：Beatrix Potter《Short Fiction》，Standard Ebooks 版。作者兼插畫家 Beatrix Potter 卒於 1943 年，台灣著作權保護期已屆滿。</p>
+</main>
+<script>
+const seg=location.hostname.endsWith('github.io')?location.pathname.split('/').filter(Boolean)[0]:null;
+const user=location.hostname.split('.')[0];
+document.querySelectorAll('a.gh').forEach(a=>{a.href=seg?`https://github.com/${user}/${seg}/${a.dataset.path}`:a.dataset.path.replace(/^(tree|blob)\/main\//,'').replace('commits/main','#');});
+</script></body></html>

@@ -13,7 +13,7 @@ sources: [benjamin-bunny, mr-tod]
 
 ## 個性與特徵
 - 抽兔子菸草的菸斗，手拿細鞭子。[src: benjamin-bunny ¶46]
-- 一點也不怕貓。[src: benjamin-bunny ¶48]
+- 根本不把貓放在眼裡（原文 had no opinion whatever of cats）。[src: benjamin-bunny ¶48]
 - 會帶 Benjamin 去花園拿萵苣當週日晚餐。[src: benjamin-bunny ¶27]
 
 ## 做了什麼
