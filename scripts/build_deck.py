@@ -179,8 +179,8 @@ li em,.quote,.eg{font-family:"EB Garamond",Georgia,serif;font-style:italic;color
 .full .page.right::after{content:"";position:absolute;top:8%;bottom:8%;left:50%;width:1px;background:linear-gradient(transparent,var(--rule),transparent);opacity:.35}
 .full ul{display:grid;grid-template-columns:1fr 1fr;column-gap:7%;row-gap:2.2vh;position:relative;z-index:1}
 .full.t-content ul,.full.t-series ul{grid-template-columns:1fr 1fr}
-.full.t-agenda ul,.full.t-sources ul{grid-template-columns:1fr;width:72%;margin:0 auto}
-.full.t-agenda h2,.full.t-sources h2,.full.t-agenda .divider,.full.t-sources .divider{margin-left:14%}
+.full.t-agenda ul,.full.t-sources ul,.full.t-guide ul{grid-template-columns:1fr;width:72%;margin:0 auto}
+.full.t-agenda h2,.full.t-sources h2,.full.t-guide h2,.full.t-agenda .divider,.full.t-sources .divider,.full.t-guide .divider{margin-left:14%}
 .pair .en strong{font-weight:600;color:var(--accent);font-style:italic}
 .mapfig{height:100%}.mapfig .mapwrap{height:88%}
 .t-vocab li{background:color-mix(in srgb,var(--paper2) 70%,transparent);border:1px solid var(--rule);border-radius:4px;padding:1.4vh 1.4vh 1.4vh 2.6vh}

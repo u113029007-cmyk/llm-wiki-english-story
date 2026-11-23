@@ -1,8 +1,7 @@
-# 五篇的共同模式
-- （推論）每篇都有危險，第一篇 Peter 自己逃出來 ｜ "but Peter wriggled out just in time, leaving his jacket behind him." [wiki: family-five-stories]
-- 第二篇靠 Benjamin 的爸爸 ｜ "When old Mr. Bunny had driven the cat into the greenhouse, he locked the door." [wiki: benjamin-bunny]
-- 第三篇靠林鼠 ｜ "But Mrs. Tittlemouse was a resourceful person." [wiki: resourceful]
-- 第四篇靠長大的 Peter 和 Benjamin ｜ "Run in, Cousin Benjamin! Run in and get them!" [wiki: family-five-stories]
-- 安全的地方是樹林和家 ｜ "was safe at last in the wood outside the garden." [wiki: family-five-stories]
-mood: bright [wiki: the-wood]
-type: series
+# 第三章：Mrs. Tittlemouse 的家
+- 她非常愛乾淨 ｜ "Mrs. Tittlemouse was a most terribly tidy particular little mouse" [wiki: tidy]
+- 不請自來的蜜蜂佔了她的儲藏室 ｜ "I am not in the habit of letting lodgings; this is an intrusion!" [wiki: mrs-tittlemouse]
+- 客人走後，她大掃除了兩週 ｜ "began a spring cleaning which lasted a fortnight." [wiki: mrs-tittlemouse]
+- （推論）這篇的危險換成了家被弄亂 ｜ "And without any invitation!" [wiki: mrs-tittlemouse]
+img: illustration-434.jpg
+mood: bright [wiki: mrs-tittlemouse-house]

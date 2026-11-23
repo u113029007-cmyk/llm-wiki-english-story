@@ -1,7 +1,7 @@
-# 上一代：兩個家長
-- Peter 的媽媽是寡婦 ｜ "Old Mrs. Rabbit was a widow" [wiki: widow]
-- 她警告孩子不准去 McGregor 的花園 ｜ "don't go into Mr. McGregor's garden." [wiki: peter-rabbit]
-- Benjamin 的爸爸叫 old Mr. Benjamin Bunny ｜ "The name of little Benjamin's papa was old Mr. Benjamin Bunny." [wiki: family-five-stories]
-- （推論）第四篇的 old Mr. Bouncer 也是他 ｜ "He lived with his son Benjamin Bunny and his daughter-in-law Flopsy" [wiki: family-five-stories]
-img: illustration-1.jpg
-mood: warm [wiki: fir-tree-rabbit-hole]
+# 第一章：家族樹
+- Peter 和 Benjamin 是表哥/表弟（cousin） ｜ "he had heard about cats from his cousin, little Benjamin Bunny." [wiki: family-five-stories]
+- Benjamin 長大後娶了 Flopsy ｜ "When Benjamin Bunny grew up, he married his Cousin Flopsy." [wiki: family-five-stories]
+- 他們的孩子統稱 Flopsy Bunnies ｜ "six leetle rabbits!" [wiki: family-five-stories]
+- （推論）救了孩子的林鼠，就是第五篇的主角 ｜ "she was called Thomasina Tittlemouse, a wood mouse with a long tail." [wiki: family-five-stories]
+mood: warm [wiki: benjamin-family-rabbit-hole]
+type: tree

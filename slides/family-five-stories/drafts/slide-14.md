@@ -1,7 +1,7 @@
-# 第三章：Mrs. Tittlemouse 的家
-- 她非常愛乾淨 ｜ "Mrs. Tittlemouse was a most terribly tidy particular little mouse" [wiki: tidy]
-- 不請自來的蜜蜂佔了她的儲藏室 ｜ "I am not in the habit of letting lodgings; this is an intrusion!" [wiki: mrs-tittlemouse]
-- 客人走後，她大掃除了兩週 ｜ "began a spring cleaning which lasted a fortnight." [wiki: mrs-tittlemouse]
-- （推論）這篇的危險換成了家被弄亂 ｜ "And without any invitation!" [wiki: mrs-tittlemouse]
-img: illustration-434.jpg
-mood: bright [wiki: mrs-tittlemouse-house]
+# 第三章：Mr. Tod 的家
+- 第四篇的壞角色是兩隻動物 ｜ "a story about two disagreeable people, called Tommy Brock and Mr. Tod." [wiki: mr-tod]
+- 兔子遠遠就聞得到 Mr. Tod ｜ "they could smell him half a mile off." [wiki: mr-tod-character]
+- 他的家又可怕又暗 ｜ "It was a shocking place, and very dark." [wiki: family-five-stories]
+- 小兔子被關在烤爐裡，後來被 Peter 和 Benjamin 救出 ｜ "The young family were alive; shut up in the oven!" [wiki: family-five-stories]
+img: illustration-485.jpg
+mood: dark [wiki: bull-banks-house]

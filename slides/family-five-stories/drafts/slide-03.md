@@ -1,8 +1,8 @@
-# 五篇一覽
-- ① Peter Rabbit：Peter 不聽話，跑進 McGregor 的花園 ｜ "But Peter, who was very naughty, ran straight away to Mr. McGregor's garden." [wiki: peter-rabbit]
-- ② Benjamin Bunny：兩隻小兔子回花園拿衣服 ｜ "the proper way to get in is to climb down a pear-tree." [wiki: benjamin-bunny]
-- ③ Flopsy Bunnies：小兔子吃太多萵苣睡著，被裝進麻袋 ｜ "They certainly had a very soporific effect upon the Flopsy Bunnies!" [wiki: flopsy-bunnies]
-- ④ Mr. Tod：兩個討人厭的角色，小兔子被偷走 ｜ "a story about two disagreeable people, called Tommy Brock and Mr. Tod." [wiki: mr-tod]
-- ⑤ Mrs. Tittlemouse：愛乾淨的林鼠和不請自來的客人 ｜ "Once upon a time there was a wood mouse, and her name was Mrs. Tittlemouse." [wiki: mrs-tittlemouse]
-mood: warm [wiki: fir-tree-rabbit-hole]
-type: series
+# 這個 Wiki 怎麼幫你用小故事學英文
+- 每篇故事一頁：照原文段落順序寫劇情，重要的地方附上英文原句 [wiki: peter-rabbit]
+- 角色和地點各有一頁，同一個角色出現在好幾篇，都連到同一頁 [wiki: peter]
+- 單字各有一頁：中文解釋加原文例句，同一個字在不同篇的例句放在一起 [wiki: cousin]
+- 每一句英文都標出原文段落，可以回去讀整段 [wiki: sources]
+- 目前收錄 Beatrix Potter 的 5 篇短篇，這份簡報把它們串成一個故事集來看 [wiki: potter-overview]
+mood: bright [wiki: fir-tree-rabbit-hole]
+type: guide

@@ -1,6 +1,7 @@
-# 第二章：Peter 從調皮到冷靜
-- 小時候的 Peter 很調皮，不聽媽媽的話 ｜ "But Peter, who was very naughty" [wiki: family-five-stories]
-- 長大後開了自己的苗圃 ｜ "Flopsy's brother, Peter Rabbit, who kept a nursery garden." [wiki: family-five-stories]
-- 第四篇換成 Peter 指揮救人 ｜ "Run in, Cousin Benjamin! Run in and get them! while I watch at the door." [wiki: family-five-stories]
-img: illustration-359.jpg
-mood: warm [wiki: benjamin-family-rabbit-hole]
+# 第五篇怎麼接上？
+- 第三篇裡出現一隻長尾巴的林鼠 ｜ "she was called Thomasina Tittlemouse, a wood mouse with a long tail." [wiki: family-five-stories]
+- 第五篇的主角也是林鼠 ｜ "Once upon a time there was a wood mouse, and her name was Mrs. Tittlemouse." [wiki: family-five-stories]
+- 第五篇出現她的全名 Mrs. Thomasina Tittlemouse ｜ "And without any invitation!" [wiki: mrs-tittlemouse]
+- （推論）兩篇是同一隻老鼠，原文沒有直接說；第五篇只靠她接上家族故事 ｜ "she was called Thomasina Tittlemouse" [wiki: thomasina-tittlemouse]
+img: illustration-364.jpg
+mood: bright [wiki: mrs-tittlemouse-house]

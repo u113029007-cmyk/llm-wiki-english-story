@@ -1,7 +1,7 @@
-# 第三章：危險的源頭是花園
-- 第一篇就說了：Peter 的爸爸在花園出了意外 ｜ "Your Father had an accident there; he was put in a pie by Mrs. McGregor." [wiki: family-five-stories]
-- Peter 被追時自己扭身逃出，留下外套 ｜ "but Peter wriggled out just in time, leaving his jacket behind him." [wiki: family-five-stories]
-- 第二篇兩隻小兔子被貓困住 ｜ "She sat there for five hours." [wiki: family-five-stories]
-- Benjamin 的爸爸把貓踢進溫室 ｜ "kicked it into the greenhouse" [wiki: greenhouse]
-img: illustration-16.jpg
-mood: warm [wiki: mr-mcgregors-garden]
+# 第二章：Benjamin 從帶路到緊張
+- 小時候的 Benjamin 在花園裡很自在 ｜ "Benjamin, on the contrary, was perfectly at home" [wiki: family-five-stories]
+- 他教 Peter 怎麼進花園 ｜ "the proper way to get in is to climb down a pear-tree." [wiki: benjamin-bunny]
+- 第四篇孩子被偷，他跑去找 Peter 求助 ｜ "Cousin Peter! Peter Rabbit, Peter Rabbit!" [wiki: cousin]
+- （推論）兩人角色互換：這次換 Benjamin 緊張 ｜ "Benjamin Bunny picked his way to the oven nervously" [wiki: family-five-stories]
+img: illustration-521.jpg
+mood: warm [wiki: benjamin-family-rabbit-hole]

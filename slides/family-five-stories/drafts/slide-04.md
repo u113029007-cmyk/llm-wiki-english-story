@@ -1,7 +1,8 @@
-# 第一章：家族樹
-- Peter 和 Benjamin 是表哥/表弟（cousin） ｜ "he had heard about cats from his cousin, little Benjamin Bunny." [wiki: family-five-stories]
-- Benjamin 長大後娶了 Flopsy ｜ "When Benjamin Bunny grew up, he married his Cousin Flopsy." [wiki: family-five-stories]
-- 他們的孩子統稱 Flopsy Bunnies ｜ "six leetle rabbits!" [wiki: family-five-stories]
-- （推論）救了孩子的林鼠，就是第五篇的主角 ｜ "she was called Thomasina Tittlemouse, a wood mouse with a long tail." [wiki: family-five-stories]
-mood: warm [wiki: benjamin-family-rabbit-hole]
-type: tree
+# 五篇一覽
+- ① Peter Rabbit：Peter 不聽話，跑進 McGregor 的花園 ｜ "But Peter, who was very naughty, ran straight away to Mr. McGregor's garden." [wiki: peter-rabbit]
+- ② Benjamin Bunny：兩隻小兔子回花園拿衣服 ｜ "the proper way to get in is to climb down a pear-tree." [wiki: benjamin-bunny]
+- ③ Flopsy Bunnies：小兔子吃太多萵苣睡著，被裝進麻袋 ｜ "They certainly had a very soporific effect upon the Flopsy Bunnies!" [wiki: flopsy-bunnies]
+- ④ Mr. Tod：兩個討人厭的角色，小兔子被偷走 ｜ "a story about two disagreeable people, called Tommy Brock and Mr. Tod." [wiki: mr-tod]
+- ⑤ Mrs. Tittlemouse：愛乾淨的林鼠和不請自來的客人 ｜ "Once upon a time there was a wood mouse, and her name was Mrs. Tittlemouse." [wiki: mrs-tittlemouse]
+mood: warm [wiki: fir-tree-rabbit-hole]
+type: series
