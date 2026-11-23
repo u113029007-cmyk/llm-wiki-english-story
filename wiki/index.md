@@ -15,6 +15,7 @@ type: index
 - [[benjamin-bunny]]：The Tale of Benjamin Bunny，Benjamin 帶 Peter 回花園拿衣服
 - [[flopsy-bunnies]]：The Tale of the Flopsy Bunnies，小兔子吃萵苣睡著被裝進麻袋
 - [[mr-tod]]：The Tale of Mr. Tod，小兔子被 Tommy Brock 偷走，Peter 和 Benjamin 去救
+- [[mrs-tittlemouse]]：The Tale of Mrs. Tittlemouse，愛乾淨的林鼠和不請自來的 Mr. Jackson
 
 ### 角色
 - [[peter]]：調皮的主角，穿藍外套
@@ -24,7 +25,8 @@ type: index
 - [[mrs-mcgregor]]：Mr. McGregor 的太太
 - [[old-mr-benjamin-bunny]]：Benjamin 的爸爸（第四篇叫 old Mr. Bouncer）
 - [[flopsy-bunnies-children]]：Benjamin 和 Flopsy 的孩子們
-- [[thomasina-tittlemouse]]：咬破麻袋救小兔子的林鼠
+- [[thomasina-tittlemouse]]：林鼠，第三篇救小兔子、第五篇主角（推論為同一隻）
+- [[mr-jackson]]：住在濕水溝、愛吃蜂蜜的 Mr. Jackson
 - [[mr-tod-character]]：Mr. Tod（推論為狐狸）
 - [[tommy-brock]]：Tommy Brock（原文稱 the badger）
 - [[benjamin-bunny-character]]：Peter 的表哥/表弟，第二篇主角
@@ -38,6 +40,7 @@ type: index
 - [[benjamin-family-rabbit-hole]]：Benjamin、Flopsy 和 old Mr. Bouncer 一家的兔子洞
 - [[mr-tod-stick-house]]：Mr. Tod 在樹林裡的木棍屋
 - [[bull-banks-house]]：Mr. Tod 在 Bull Banks 頂上的家
+- [[mrs-tittlemouse-house]]：Mrs. Tittlemouse 在樹籬下的家
 
 ### 單字
-- [[naughty]]、[[mischief]]、[[lettuces]]、[[radishes]]、[[parsley]]、[[frightened]]、[[sieve]]、[[camomile-tea]]、[[cousin]]、[[widow]]、[[poorly]]、[[scarecrow]]、[[clogs]]、[[onions]]、[[basket]]、[[greenhouse]]、[[soporific]]、[[slumber]]、[[sack]]、[[rubbish]]、[[doleful]]、[[despair]]、[[resourceful]]、[[improvident]]、[[disagreeable]]、[[badger]]、[[snoring]]、[[oven]]、[[tunnel]]、[[furious]]、[[pail]]、[[grinning]]
+- [[naughty]]、[[mischief]]、[[lettuces]]、[[radishes]]、[[parsley]]、[[frightened]]、[[sieve]]、[[camomile-tea]]、[[cousin]]、[[widow]]、[[poorly]]、[[scarecrow]]、[[clogs]]、[[onions]]、[[basket]]、[[greenhouse]]、[[soporific]]、[[slumber]]、[[sack]]、[[rubbish]]、[[doleful]]、[[despair]]、[[resourceful]]、[[improvident]]、[[disagreeable]]、[[badger]]、[[snoring]]、[[oven]]、[[tunnel]]、[[furious]]、[[pail]]、[[grinning]]、[[tidy]]、[[storeroom]]、[[cross]]、[[intrusion]]、[[honey]]、[[visitors]]、[[toad]]、[[spring-cleaning]]

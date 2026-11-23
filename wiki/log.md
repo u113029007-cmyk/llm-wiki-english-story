@@ -110,3 +110,14 @@ type: log
 - #31：新增 places/benjamin-family-rabbit-hole，並由 mr-tod 故事頁、old-mr-benjamin-bunny、flopsy、benjamin-bunny-character、flopsy-bunnies-children、potter-overview、index 連入。依新規則，未與冷杉樹下的洞合併，並標（推論）說明。
 - #32：Cottontail 山上的家、Mr. Tod 的柳樹住處寫進 mr-tod 故事頁「其他地點」；Cottontail 的黑兔丈夫寫進 mr-tod 配角；Peter 的苗圃寫進 flopsy-bunnies 故事頁「其他地點」。
 - lint：第 1 輪全過（61 頁、550 個出處）。審查報告 1 的 37 個問題全部處理完畢。
+
+## [2026-11-23] ingest | The Tale of Mrs. Tittlemouse（第 5 篇）
+- 觸發：Joanna 說「ingest mrs-tittlemouse」（並確認 #31 要建頁）。
+- 選篇依據：用腳本計算 20 篇中提到前 4 篇角色名的次數，除已 ingest 的 4 篇外只有 mrs-tittlemouse 明顯相關，且 ¶53 出現 Mrs. Thomasina Tittlemouse。
+- plan_reading.py：72 段，分 2 段（¶1-36、¶37-72）；筆記 notes/mrs-tittlemouse.md。
+- 新增頁面：stories/mrs-tittlemouse；characters/mr-jackson；places/mrs-tittlemouse-house；vocabulary/tidy、storeroom、cross、intrusion、honey、visitors、toad、spring-cleaning（spring-cleaning 同時引 mr-tod ¶149，跨篇單字）。
+- 更新頁面：thomasina-tittlemouse（加第五篇內容與跨篇推論）、mr-tod、potter-overview、index。
+- 依新規則標（推論）：Mrs. Tittlemouse 與第三篇 Thomasina 為同一隻（兩篇皆稱 wood mouse、全名相同）；Mr. Jackson 是蟾蜍（只有熊蜂罵他 toad，敘述未直說）。
+- lint 第 1 輪失敗 1 處：引句後兩個出處排序錯（¶55 排在 ¶57 引句後），與 flopsy-bunnies 那次是同一類錯誤，第 2 次出現。修正後第 2 輪全過（72 頁、644 個出處、109 個英文引句）。
+- 自我重讀修正 2 處：(1)「沒有兔子出場」是全篇歸納，改標（推論）；(2) 拿掉 mr-tod 與 mrs-tittlemouse 之間的「前一篇／下一篇」：前 4 篇的順序依劇情接續，第 5 篇與第 4 篇無劇情接續，raw 也沒有出版年份，不能排先後。
+- 5 / 5 ingest 完成。
